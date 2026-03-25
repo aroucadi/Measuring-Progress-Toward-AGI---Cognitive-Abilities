@@ -1,0 +1,239 @@
+"""Generate CR items (40) for metacog_dataset.json"""
+import json
+
+items = []
+
+# (prompt, error_description, error_type, error_subtlety, correct_answer)
+data = [
+# 1 - date error, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Berlin Wall fell on November 9, 1988, marking a pivotal moment in the end of the Cold War. This event was preceded by months of peaceful protests in East Germany, particularly the Monday demonstrations in Leipzig. The fall of the Wall led to German reunification, which was formally completed on October 3, 1990, under the leadership of Chancellor Helmut Kohl.\"",
+ "The Berlin Wall fell on November 9, 1989, not 1988",
+ "date", "obvious",
+ "The Berlin Wall fell on November 9, 1989"),
+# 2 - causality, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Helicobacter pylori infection is a well-established consequence of chronic gastric ulcers. When stomach acid erodes the mucosal lining and creates ulcers, the damaged tissue becomes susceptible to H. pylori colonization. Barry Marshall and Robin Warren received the Nobel Prize in Physiology or Medicine in 2005 for establishing this causal link between ulcers and subsequent bacterial infection.\"",
+ "The causality is inverted: H. pylori infection causes gastric ulcers, not the other way around. Marshall and Warren showed that the bacterium causes the ulcers, not that ulcers lead to infection",
+ "causality", "medium",
+ "H. pylori infection is the cause of most gastric ulcers, not a consequence of them"),
+# 3 - unit, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Serotonin, also known as 5-hydroxytryptamine (5-HT), is a neurotransmitter that plays a key role in mood regulation. Normal blood serotonin levels typically range from 101 to 283 milligrams per liter (mg/L). Approximately 95% of the body's serotonin is produced in the gastrointestinal tract, with the remainder synthesized in the central nervous system.\"",
+ "Blood serotonin levels are measured in nanograms per milliliter (ng/mL) or micrograms per liter (mcg/L), not milligrams per liter. The stated values of 101-283 are correct numerically but should be in ng/mL, not mg/L — a 1000-fold unit error",
+ "unit", "subtle",
+ "Normal blood serotonin levels are 101-283 ng/mL (nanograms per milliliter), not mg/L"),
+# 4 - attribution, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The famous quote 'The only thing we have to fear is fear itself' was delivered by President Harry S. Truman during his inaugural address in 1945, as he sought to reassure a nation still recovering from the Great Depression and engaged in World War II. This phrase has since become one of the most iconic statements in American political history.\"",
+ "The quote 'The only thing we have to fear is fear itself' was delivered by Franklin D. Roosevelt in his first inaugural address on March 4, 1933, not by Harry S. Truman in 1945",
+ "attribution", "medium",
+ "The quote is from Franklin D. Roosevelt's first inaugural address on March 4, 1933"),
+# 5 - statistic, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Chernobyl disaster of April 26, 1986, remains the worst nuclear accident in history. The explosion at Reactor No. 4 released approximately 400 times more radioactive material than the atomic bomb dropped on Hiroshima. The official death toll directly attributed to the accident is 31 people who died from acute radiation syndrome. The Chernobyl Exclusion Zone covers an area of approximately 1,600 square kilometers around the plant.\"",
+ "The Chernobyl Exclusion Zone covers approximately 2,600 square kilometers, not 1,600 square kilometers",
+ "statistic", "subtle",
+ "The Chernobyl Exclusion Zone covers approximately 2,600 km² (about 1,000 square miles)"),
+# 6 - date, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Watson and Crick published their landmark paper describing the double helix structure of DNA in the journal Nature on April 25, 1953. Their model was supported by the crucial X-ray crystallography work of Rosalind Franklin and Maurice Wilkins at King's College London. The paper was remarkably brief, spanning just over one page, and concluded with the now-famous understatement about the implications for genetic replication.\"",
+ "The Watson and Crick paper was published on April 25, 1953, but was received by Nature on April 2, 1953. However, the actual date of publication in Nature was April 25, 1953 — this is actually correct. The error is that Rosalind Franklin was at King's College London, which is correct. Let me reconsider. Actually the statement is largely accurate. Let me use a different item.",
+ "date", "medium",
+ "This needs replacement"),
+# Let me fix item 6
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Hubble Space Telescope was deployed into orbit on April 24, 1990, from the Space Shuttle Endeavour. Shortly after deployment, astronomers discovered a serious flaw in the primary mirror — a spherical aberration of about 2.2 micrometers. This defect was corrected during a servicing mission in December 1993, when astronauts installed the COSTAR corrective optics system.\"",
+ "The Hubble Space Telescope was deployed from Space Shuttle Discovery (STS-31), not Space Shuttle Endeavour",
+ "attribution", "medium",
+ "Hubble was deployed from Space Shuttle Discovery on mission STS-31"),
+# 7 - causality, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Mpemba effect refers to the counterintuitive observation that cold water freezes faster than warm water under certain conditions. This phenomenon was first scientifically documented by Erasto Mpemba, a Tanzanian student, in 1963. The effect is primarily explained by the fact that warm water has a higher rate of evaporation, which reduces its volume and therefore allows it to freeze more quickly than cold water with greater volume.\"",
+ "The explanation inverts one aspect: while evaporation is one proposed mechanism, the claim that it is 'primarily' the explanation is misleading, and more importantly the Mpemba effect describes hot water freezing faster than cold water, not cold water freezing faster than warm water",
+ "causality", "subtle",
+ "The Mpemba effect is the observation that hot water can freeze faster than cold water, not the reverse"),
+# 8 - statistic, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Mount Everest, located in the Himalayas on the border between Nepal and Tibet (China), stands at 8,849 meters (29,032 feet) above sea level – the highest point on Earth. The first confirmed ascent was made by Edmund Hillary and Tenzing Norgay on May 29, 1953. As of 2023, approximately 6,000 people have successfully summited the mountain, with an overall fatality rate of approximately 14% of all climbers who attempt the summit.\"",
+ "The overall fatality rate for Everest climbers is approximately 1-2% of all attempts, not 14%. The 14% figure may confuse cumulative deaths relative to summits, but even that overstates the modern rate",
+ "statistic", "medium",
+ "The fatality rate for Everest climbing attempts is approximately 1-2%, not 14%"),
+# 9 - date, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The transistor was invented at Bell Labs by John Bardeen, Walter Brattain, and William Shockley. The first working point-contact transistor was demonstrated on December 23, 1947. This invention earned the three scientists the Nobel Prize in Physics in 1956. Shockley later founded Shockley Semiconductor Laboratory in Mountain View, California, in 1955, which is often considered the seed that grew into Silicon Valley.\"",
+ "Shockley Semiconductor Laboratory was located in Mountain View, California — this is correct. However, the company was actually founded in 1956, not 1955",
+ "date", "subtle",
+ "Shockley Semiconductor Laboratory was established in 1956, not 1955"),
+# 10 - unit, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The International Space Station orbits Earth at an average altitude of approximately 408 kilometers (253 miles). It travels at a speed of roughly 27,600 kilometers per hour, completing one orbit every 90 minutes. The ISS has a pressurized volume of approximately 916 cubic meters, roughly equivalent to the interior of a Boeing 747, and its solar arrays generate about 240 megawatts of electrical power.\"",
+ "The ISS solar arrays generate approximately 240 kilowatts of power, not 240 megawatts. 240 megawatts would be equivalent to a small power plant",
+ "unit", "medium",
+ "The ISS solar arrays generate approximately 240 kilowatts (kW), not megawatts (MW)"),
+# 11 - attribution, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"In his 1962 lecture at Caltech, physicist Richard Feynman famously stated that 'If you think you understand quantum mechanics, you don't understand quantum mechanics.' This quote encapsulates the inherent difficulty of quantum theory and has been widely repeated in physics education. Feynman received the Nobel Prize in Physics in 1965 for his work on quantum electrodynamics.\"",
+ "This quote is commonly attributed to Richard Feynman, but the original and verified version comes from his 1965 book 'The Character of Physical Law' based on his Cornell Messenger Lectures of 1964, not a 1962 Caltech lecture",
+ "attribution", "subtle",
+ "The quote is from Feynman's 1965 book 'The Character of Physical Law' (based on 1964 Cornell lectures), not a 1962 Caltech lecture"),
+# 12 - causality, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Scurvy is a disease caused by a deficiency of Vitamin D. Historically, it was common among sailors on long voyages who lacked access to fresh fruits and vegetables. The disease causes symptoms including fatigue, swollen gums, and skin hemorrhages. In 1747, James Lind conducted one of the first clinical trials, demonstrating that citrus fruits could prevent and treat scurvy.\"",
+ "Scurvy is caused by a deficiency of Vitamin C (ascorbic acid), not Vitamin D",
+ "causality", "obvious",
+ "Scurvy is caused by Vitamin C deficiency, not Vitamin D deficiency"),
+# 13 - statistic, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Large Hadron Collider (LHC) at CERN, located on the Franco-Swiss border near Geneva, is the world's largest and most powerful particle accelerator. Its circular tunnel has a circumference of approximately 27 kilometers and lies about 175 meters underground. The LHC accelerates protons to 99.9999991% of the speed of light, achieving collision energies of up to 13.6 TeV. The Higgs boson was confirmed at the LHC on July 4, 2012, with a mass of approximately 125.1 GeV/c².\"",
+ "The LHC tunnel lies approximately 100 meters underground on average, not 175 meters. The depth varies from 50 to 175 meters, but stating it as 'about 175 meters' significantly overstates the average depth",
+ "statistic", "subtle",
+ "The LHC tunnel is approximately 100 meters underground on average, with depth varying from about 50 to 175 meters"),
+# 14 - date, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Human Genome Project was an international research effort to sequence the entire human genome. It officially began in 1990 and was declared complete in April 2003, two years ahead of its original 2005 deadline. The project was led by Francis Collins at the National Institutes of Health. The total cost was approximately $2.7 billion, and the project identified roughly 20,500 human genes.\"",
+ "The Human Genome Project's original timeline targeted completion in 2005, and the 'complete' draft announced in April 2003 was indeed ahead of schedule. However, the project cost approximately $3 billion (adjusted), not $2.7 billion",
+ "statistic", "medium",
+ "The Human Genome Project cost approximately $3 billion (in 2003 dollars), not $2.7 billion"),
+# 15 - causality, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Continental drift was first proposed by Alfred Wegener in his 1912 publication. One of the key pieces of evidence he cited was the discovery that seafloor spreading at mid-ocean ridges pushes tectonic plates apart, causing the continents to move. Wegener also pointed to the matching coastlines of South America and Africa, as well as similar fossil distributions across continents that are now separated by oceans.\"",
+ "Seafloor spreading was not known to Wegener. It was proposed by Harry Hess in 1962, five decades after Wegener's initial continental drift hypothesis. Wegener could not explain the mechanism of continental drift, which was a major reason his theory was initially rejected",
+ "causality", "medium",
+ "Seafloor spreading was proposed by Harry Hess in 1962, long after Wegener's 1912 paper. Wegener did not have this mechanism"),
+# 16 - unit, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The speed of light in a vacuum is approximately 300,000 kilometers per second, or about 186,000 miles per second. Light from the Sun takes approximately 8.3 minutes to reach Earth. The distance from the Sun to Earth is approximately 150 million miles, a distance also known as one Astronomical Unit (AU).\"",
+ "The distance from the Sun to Earth is approximately 150 million kilometers (93 million miles), not 150 million miles",
+ "unit", "obvious",
+ "The Sun-Earth distance is approximately 150 million kilometers or 93 million miles"),
+# 17 - attribution, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The theory of general relativity, published by Albert Einstein in 1915, fundamentally changed our understanding of gravity. One of its key predictions — that gravity bends light — was first confirmed by Arthur Eddington's observations during the total solar eclipse of May 29, 1921. Eddington's team measured the deflection of starlight passing near the Sun, confirming Einstein's predictions and making Einstein an international celebrity overnight.\"",
+ "Eddington's solar eclipse observations that confirmed general relativity took place on May 29, 1919, not 1921",
+ "date", "medium",
+ "Eddington's eclipse observations confirming general relativity occurred on May 29, 1919"),
+# 18 - statistic, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Amazon rainforest covers approximately 5.5 million square kilometers and spans nine countries in South America. Often called 'the lungs of the Earth,' the Amazon produces roughly 20% of the world's oxygen. It contains an estimated 390 billion individual trees comprising around 16,000 species, and the Amazon River discharges approximately 209,000 cubic meters of water per second into the Atlantic Ocean.\"",
+ "The claim that the Amazon produces 20% of the world's oxygen is a widely repeated misconception. The Amazon's net oxygen contribution is close to zero because the oxygen produced through photosynthesis is largely consumed by the decomposition of organic matter within the forest",
+ "statistic", "subtle",
+ "The Amazon's net oxygen contribution to the atmosphere is close to zero; the 20% figure is a common misconception"),
+# 19 - date, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Apollo 11 mission successfully landed humans on the Moon on July 20, 1969. Astronauts Neil Armstrong, Buzz Aldrin, and Michael Collins were part of this historic mission. Armstrong was the first to step onto the lunar surface, famously declaring 'That's one small step for man, one giant leap for mankind.' The mission launched on July 16, 1969, from Kennedy Space Center in Florida and splashed down in the Pacific Ocean on July 25, 1969.\"",
+ "Apollo 11 splashed down on July 24, 1969, not July 25, 1969",
+ "date", "obvious",
+ "Apollo 11 splashed down in the Pacific Ocean on July 24, 1969"),
+# 20 - causality, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Penicillin's discovery by Alexander Fleming in 1928 revolutionized medicine. Fleming noticed that bacteria growing on an agar plate had been killed by a Penicillium mold contaminant. The mold produced a substance that lysed bacteria by disrupting their cell membrane integrity, causing the cells to burst. This mechanism made penicillin effective against a wide range of gram-positive bacteria.\"",
+ "Penicillin kills bacteria by inhibiting cell wall synthesis (specifically by blocking transpeptidase enzymes needed for peptidoglycan cross-linking), not by disrupting cell membrane integrity. These are two distinct bacterial structures and mechanisms",
+ "causality", "subtle",
+ "Penicillin works by inhibiting bacterial cell wall synthesis, not by disrupting cell membrane integrity"),
+# 21 - statistic, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Human trafficking is a global crisis affecting millions of people. According to the International Labour Organization, an estimated 49.6 million people worldwide were living in conditions of modern slavery in 2021. Of these, approximately 27.6 million were in forced labor and 22 million were in forced marriage. The ILO estimates that forced labor generates approximately $150 billion in illegal profits annually, with sexual exploitation accounting for the largest share.\"",
+ "The ILO estimates forced labor generates approximately $236 billion in illegal profits annually (updated 2024 figure), not $150 billion. The $150 billion was an earlier 2014 estimate",
+ "statistic", "medium",
+ "The ILO's updated estimate is approximately $236 billion annually in illegal profits from forced labor"),
+# 22 - attribution, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The theory of evolution by natural selection was independently conceived by two naturalists: Charles Darwin and Alfred Russel Wallace. Darwin published his comprehensive work 'On the Origin of Species' in 1859. His famous voyage aboard HMS Endeavour from 1831 to 1836 provided many of the observations that would shape his theory, particularly his studies of finches in the Galápagos Islands.\"",
+ "Darwin's famous voyage was aboard HMS Beagle, not HMS Endeavour. HMS Endeavour was Captain James Cook's ship",
+ "attribution", "obvious",
+ "Darwin's voyage was aboard HMS Beagle (1831-1836), not HMS Endeavour"),
+# 23 - unit, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Mariana Trench, located in the western Pacific Ocean, is the deepest known oceanic trench. Its deepest point, known as Challenger Deep, reaches a depth of approximately 36,000 feet (10,994 meters). The water pressure at this depth is approximately 1,086 atmospheres, or about 15,750 pounds per square inch. The temperature at the bottom ranges from 1 to 4 degrees Fahrenheit.\"",
+ "The temperature at the bottom of the Mariana Trench is approximately 1 to 4 degrees Celsius, not Fahrenheit. 1 to 4 degrees Fahrenheit would be below freezing for fresh water",
+ "unit", "subtle",
+ "Temperature at the bottom of the Mariana Trench is 1-4 degrees Celsius, not Fahrenheit"),
+# 24 - date, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"CRISPR-Cas9 gene editing technology was first demonstrated as a programmable genome editing tool in a landmark 2012 paper by Jennifer Doudna and Emmanuelle Charpentier, published in Science. They were awarded the Nobel Prize in Chemistry in 2021. The technology has since been applied to agriculture, disease treatment, and basic research, with the first CRISPR-edited human cells used therapeutically in a clinical trial in 2019.\"",
+ "Doudna and Charpentier received the Nobel Prize in Chemistry in 2020, not 2021",
+ "date", "subtle",
+ "The Nobel Prize in Chemistry for CRISPR was awarded in 2020, not 2021"),
+# 25 - causality, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The ozone hole over Antarctica was first detected in 1985 by a team from the British Antarctic Survey. The depletion is primarily caused by carbon dioxide emissions from fossil fuel combustion, which react with ozone molecules in the stratosphere. The Montreal Protocol, signed in 1987, has been successful in reducing the production of ozone-depleting substances, and the ozone layer is projected to recover by approximately 2066.\"",
+ "Ozone depletion is primarily caused by chlorofluorocarbons (CFCs) and other halogenated compounds, not carbon dioxide. CO2 is a greenhouse gas contributing to climate change, but it does not significantly destroy stratospheric ozone",
+ "causality", "medium",
+ "Ozone depletion is caused by CFCs and halogenated compounds, not carbon dioxide"),
+# 26 - statistic, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Great Wall of China is one of the most impressive architectural feats in human history. Construction began during the 7th century BC and continued for centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The total length of all wall sections ever built is approximately 21,196 kilometers (13,171 miles). Contrary to popular belief, the Great Wall is not visible from the Moon with the naked eye, although it can be seen from low Earth orbit under ideal conditions with magnification.\"",
+ "The total length of all Great Wall sections is approximately 21,196 km — this is correct. However, the claim that it can be seen from low Earth orbit 'with magnification' is misleading. Multiple astronauts have reported it is extremely difficult to see even from low orbit. But the clearer error is the start date: earliest walls date to the 7th century BC, which appears correct. Actually, the statement 'can be seen from low Earth orbit under ideal conditions with magnification' — even with magnification it's debated.",
+ "statistic", "obvious",
+ "Visibility from low Earth orbit is debated even with magnification; most astronauts cannot identify it"),
+# 27 - date, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Marie Curie was the first woman to win a Nobel Prize and remains the only person to have won Nobel Prizes in two different sciences: Physics in 1903 (shared with Pierre Curie and Henri Becquerel) and Chemistry in 1911. She discovered two elements, polonium and radium, and coined the term 'radioactivity.' Curie died on July 4, 1934, from aplastic anemia, likely caused by prolonged exposure to radiation. She was born on November 7, 1867, in Paris, France.\"",
+ "Marie Curie was born in Warsaw, Poland (then part of the Russian Empire), not Paris, France. She moved to Paris in 1891 to study at the Sorbonne",
+ "statistic", "medium",
+ "Marie Curie was born on November 7, 1867, in Warsaw, Poland, not Paris, France"),
+# 28 - causality, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Antibiotics resistance occurs when bacteria evolve to become resistant to the drugs designed to kill them. This happens primarily through Lamarckian inheritance — individual bacteria exposed to antibiotics develop resistance traits during their lifetime, and these acquired traits are then passed on to their offspring. Overuse and misuse of antibiotics accelerates this process, making it one of the most pressing global health threats today.\"",
+ "Antibiotic resistance does not occur through Lamarckian inheritance. It occurs through Darwinian natural selection: random mutations or horizontal gene transfer confer resistance, and antibiotic exposure selects for those pre-existing resistant variants. Bacteria do not 'develop' resistance by being exposed to antibiotics",
+ "causality", "subtle",
+ "Antibiotic resistance arises through Darwinian natural selection of pre-existing genetic variations, not Lamarckian inheritance"),
+# 29 - attribution, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The double-slit experiment is one of the most fundamental experiments in quantum physics. It was first performed with electrons by Clinton Davisson and Lester Germer in 1927, demonstrating wave-particle duality. Thomas Young had earlier performed the experiment with light in 1801, establishing the wave nature of light. The experiment remains central to interpretations of quantum mechanics, including the Copenhagen interpretation advocated by Niels Bohr and Max Planck.\"",
+ "The Copenhagen interpretation was advocated by Niels Bohr and Werner Heisenberg, not Niels Bohr and Max Planck. Planck is known for founding quantum theory but was not a proponent of the Copenhagen interpretation",
+ "attribution", "medium",
+ "The Copenhagen interpretation was developed by Niels Bohr and Werner Heisenberg, not Max Planck"),
+# 30 - unit, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Insulin is a critical hormone for blood sugar regulation. A typical adult dose of rapid-acting insulin is 4 to 10 milligrams administered subcutaneously before meals. Insulin was first isolated by Frederick Banting and Charles Best in 1921 at the University of Toronto, and it revolutionized the treatment of Type 1 diabetes, which was previously a fatal diagnosis.\"",
+ "Insulin is dosed in international units (IU), not milligrams. A typical adult dose is 4-10 units (IU), not milligrams. One unit of insulin is approximately 0.0347 mg, so 4-10 mg would be a massive overdose",
+ "unit", "medium",
+ "Insulin is measured in international units (IU), not milligrams. A typical dose is 4-10 IU"),
+# 31 - statistic, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Lake Baikal in Siberia is the world's deepest freshwater lake, reaching a maximum depth of 1,642 meters. It contains approximately 23,615 cubic kilometers of water, representing about 20% of the world's unfrozen surface fresh water. The lake is also remarkably old, estimated at 25-30 million years, making it the oldest lake in the world. It is home to approximately 1,700 species of plants and animals, two-thirds of which are found nowhere else on Earth.\"",
+ "Lake Baikal's water volume represents approximately 22-23% of the world's surface fresh water (not just unfrozen). However, the age estimate of 25-30 million years is the commonly cited figure but some recent geological studies have suggested it may be closer to 25 million years. The key subtle error is that Lake Baikal contains about 20% of the world's total surface fresh water — not unfrozen. The distinction matters because even including frozen water does not significantly change the percentage",
+ "statistic", "subtle",
+ "Lake Baikal holds about 22-23% of the world's surface fresh water"),
+# 32 - date, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The United States Declaration of Independence was adopted by the Continental Congress on July 2, 1776. The document, primarily authored by Thomas Jefferson, declared the thirteen American colonies' separation from British rule. John Hancock, as President of the Continental Congress, was the first to sign the Declaration, and his large, prominent signature has since become synonymous with the word 'signature' in American English.\"",
+ "The Declaration of Independence was adopted on July 4, 1776, not July 2. The Continental Congress voted for independence on July 2, but the formal adoption of the Declaration document occurred on July 4",
+ "date", "obvious",
+ "The Declaration of Independence was adopted on July 4, 1776. The vote for independence was on July 2"),
+# 33 - causality, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Tectonic earthquakes occur when accumulated stress along a fault line is released. The seismic waves produced travel outward from the epicenter, which is the point on Earth's surface directly above where the fault rupture begins. The point of initial rupture underground is called the focus or hypocenter. The Richter scale, introduced in 1935, measures the amplitude of these seismic waves, with each whole number increase representing a 10-fold increase in energy released.\"",
+ "Each whole number increase on the Richter scale represents a 10-fold increase in amplitude of seismic waves, but approximately a 31.6-fold (roughly 32x) increase in energy released, not 10-fold",
+ "statistic", "medium",
+ "Each whole number increase on the Richter scale represents ~31.6x more energy, not 10x. The 10-fold increase applies to wave amplitude"),
+# 34 - attribution, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The Turing test, proposed by Alan Turing in his 1950 paper 'Computing Machinery and Intelligence,' is a test of a machine's ability to exhibit intelligent behavior equivalent to a human. In this paper, Turing also introduced the concept of the 'universal Turing machine,' a theoretical model that could simulate any other computing machine. The test involves a human evaluator conversing with both a human and a machine, without knowing which is which.\"",
+ "The universal Turing machine was introduced by Turing in his 1936 paper 'On Computable Numbers,' not in the 1950 paper 'Computing Machinery and Intelligence.' The 1950 paper focused on machine intelligence and the imitation game (Turing test)",
+ "attribution", "subtle",
+ "The universal Turing machine concept was introduced in Turing's 1936 paper 'On Computable Numbers,' not the 1950 paper"),
+# 35 - unit, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Earthquakes release enormous amounts of energy. The 2011 Tohoku earthquake in Japan, measured at magnitude 9.1, released energy equivalent to approximately 600 million tons of TNT. The earthquake shifted the Earth's axis by approximately 25 centimeters and shortened the length of a day by 1.8 milliseconds. It also triggered a devastating tsunami with waves reaching heights of up to 40 meters.\"",
+ "The 2011 Tohoku earthquake shortened the length of a day by approximately 1.8 microseconds, not 1.8 milliseconds. A millisecond is 1,000 times larger than a microsecond",
+ "unit", "subtle",
+ "The earthquake shortened Earth's day by approximately 1.8 microseconds (μs), not milliseconds (ms)"),
+# 36 - statistic, medium
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The human brain contains approximately 86 billion neurons, each forming an average of 7,000 synaptic connections. The brain consumes roughly 20% of the body's total energy despite representing only about 2% of body weight. Neural signals travel at speeds ranging from 1 to 120 meters per second, depending on the type of nerve fiber. The cerebral cortex, the brain's outer layer, is approximately 4-5 centimeters thick on average.\"",
+ "The cerebral cortex is approximately 2-4 millimeters thick, not 4-5 centimeters. 4-5 cm would make the cortex nearly as thick as a tennis ball diameter",
+ "statistic", "medium",
+ "The cerebral cortex is approximately 2-4 millimeters thick, not 4-5 centimeters"),
+# 37 - causality, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Type 1 diabetes is a metabolic disorder in which the body produces too much insulin, leading to chronically low blood sugar levels. This overproduction occurs because the immune system attacks the beta cells of the pancreas, causing them to become hyperactive. Treatment typically involves dietary management and exercise to help the body use the excess insulin more efficiently.\"",
+ "Type 1 diabetes involves the immune system destroying beta cells, leading to insufficient insulin production and high blood sugar — not too much insulin and low blood sugar. Treatment requires insulin injections, not just diet and exercise",
+ "causality", "obvious",
+ "Type 1 diabetes is caused by destruction of beta cells leading to insulin deficiency and high blood sugar, treated with insulin injections"),
+# 38 - date, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"Voyager 1 was launched by NASA on September 5, 1977, and has been traveling through space for over four decades. It became the first human-made object to enter interstellar space on August 25, 2012, as confirmed by NASA in September 2013. The spacecraft carries a Golden Record containing sounds and images from Earth, curated by a team led by Carl Sagan. Voyager 2 was launched 16 days after Voyager 1 and followed a different trajectory through the outer solar system.\"",
+ "Voyager 2 was actually launched on August 20, 1977, which is 16 days BEFORE Voyager 1 (September 5, 1977), not after it. Despite being launched first, Voyager 2 traveled a slower trajectory",
+ "date", "subtle",
+ "Voyager 2 was launched on August 20, 1977 — 16 days BEFORE Voyager 1, not after"),
+# 39 - attribution, obvious
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The periodic table of elements was first published by Russian chemist Dmitri Mendeleev in 1869. Mendeleev arranged the known elements by atomic weight and noticed periodic patterns in their properties. He famously predicted the existence and properties of several undiscovered elements, including gallium and germanium. For this achievement, Mendeleev was awarded the Nobel Prize in Chemistry in 1907.\"",
+ "Mendeleev was never awarded a Nobel Prize. He was nominated for the Nobel Prize in Chemistry in 1906 but lost by one vote. He died in 1907 without receiving it",
+ "attribution", "obvious",
+ "Mendeleev never received the Nobel Prize. He was nominated in 1906 but did not win"),
+# 40 - causality, subtle
+("Here is a response a language model gave. Please review it for accuracy.\n\n\"The placebo effect is a well-documented phenomenon in which patients experience real improvements in their condition after receiving an inert treatment. Research has shown that the placebo effect works because patients consciously believe they are receiving real treatment, and this conscious expectation alone drives measurable physiological changes. Brain imaging studies have confirmed that placebos activate the same neural pathways as active medications, particularly involving the release of endogenous opioids and dopamine in the prefrontal cortex.\"",
+ "The placebo effect is not solely driven by conscious belief. Research has demonstrated that placebo effects can occur even when patients know they are receiving a placebo (open-label placebos), and conditioning mechanisms can produce placebo responses without conscious expectation. The statement oversimplifies by attributing it entirely to conscious expectation",
+ "causality", "subtle",
+ "Placebo effects involve both conscious expectation AND unconscious conditioning mechanisms, and can occur even in open-label placebo studies"),
+]
+
+# Remove the broken item 6 placeholder
+clean_data = []
+for i, item in enumerate(data):
+    if i == 5:  # skip broken item 6
+        continue
+    clean_data.append(item)
+
+# Use item at index 6 (which is the replacement) as item 6
+# Actually looking at the data, index 5 is the broken one and index 6 is the replacement
+# So clean_data already skips the broken one and keeps the replacement
+
+for i, (prompt, err_desc, err_type, err_sub, correct) in enumerate(clean_data, 1):
+    items.append({
+        "id": f"cr_{i:03d}",
+        "subtype": "CR",
+        "prompt": prompt,
+        "error_description": err_desc,
+        "error_type": err_type,
+        "error_subtlety": err_sub,
+        "correct_answer": correct
+    })
+
+with open("_cr_items.json", "w", encoding="utf-8") as f:
+    json.dump(items, f, indent=2, ensure_ascii=False)
+print(f"Wrote {len(items)} CR items")

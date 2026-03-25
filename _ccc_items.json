@@ -1,0 +1,1452 @@
+[
+  {
+    "id": "ccc_001",
+    "subtype": "CCC",
+    "prompt": "A patient presents with a rare genetic condition that affects 1 in 8,000 people. A new diagnostic blood test has a sensitivity of 96% and a specificity of 98%. The patient tests positive. State your confidence as a percentage at each step of your reasoning.\n\nStep 1: Determine the prior probability of having the condition.\nStep 2: Apply Bayes' theorem to calculate the posterior probability after a positive test.\nStep 3: Consider that the patient also has a family history suggesting a 5x higher baseline risk. Recalculate.\nStep 4: Given the final probability, recommend whether further confirmatory testing is needed.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Establish base rate of 1/8000",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Apply Bayes theorem with test characteristics",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Adjust for family history modifier",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Clinical decision based on uncertain posterior",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_002",
+    "subtype": "CCC",
+    "prompt": "A forensic analyst must determine the probability that a specific suspect handled a weapon found at a crime scene. State your confidence as a percentage at each reasoning step.\n\nStep 1: A partial fingerprint was recovered from the weapon. The fingerprint examiner reports an 8-point match out of a possible 12 minutiae points.\nStep 2: The weapon was found outdoors in rain, and the analyst estimates the fingerprint was exposed to weather for 6-10 hours before collection.\nStep 3: The suspect claims they handled the weapon at a sporting goods store 3 weeks prior to the crime.\nStep 4: DNA collected from the grip area shows a mixture of at least 3 contributors, with the suspect included as a possible minor contributor.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate partial fingerprint match strength",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for environmental degradation",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Consider alternative innocent explanation",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate ambiguous DNA mixture evidence",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_003",
+    "subtype": "CCC",
+    "prompt": "An analyst must estimate the real return of a private equity investment over 10 years. State your confidence as a percentage at each step.\n\nStep 1: The fund's historical gross IRR has been 18% over the past 5 years based on 3 realized exits.\nStep 2: Management fees and carried interest reduce net returns. Estimate the fee drag.\nStep 3: The current fund is investing in a different sector (biotech vs. previous software focus). Adjust expected returns.\nStep 4: Account for a potential recession in years 3-5, which historically reduces PE returns by 30-45% during the downturn period.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess historical performance with small sample",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Estimate fee impact on returns",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Adjust for sector pivot uncertainty",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Model recession scenario impact",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_004",
+    "subtype": "CCC",
+    "prompt": "Estimate the number of excess deaths attributable to a newly identified environmental toxin in a metropolitan area over the next 20 years. State your confidence as a percentage at each step.\n\nStep 1: The toxin has been detected in groundwater at 3 of 7 monitoring wells at concentrations of 15-40 ppb. The WHO guideline is 10 ppb.\nStep 2: Based on animal studies, the dose-response relationship suggests a relative risk of 1.3 for certain cancers at chronic exposure levels above 20 ppb. Extrapolate to humans.\nStep 3: Estimate the exposed population, given that the contamination plume affects approximately 4 neighborhoods with unknown migration and demographic patterns.\nStep 4: Project mortality over 20 years accounting for latency periods, population turnover, and potential remediation that may begin in 3-5 years.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Characterize contamination extent",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Apply animal-to-human dose-response extrapolation",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Estimate exposed population with incomplete data",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Project long-term mortality with multiple unknowns",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_005",
+    "subtype": "CCC",
+    "prompt": "A physician evaluates whether a 55-year-old male patient's chest pain is cardiac in origin. State your confidence as a percentage at each step.\n\nStep 1: The patient has hypertension and smokes 10 cigarettes per day. Using the Framingham risk score, estimate baseline 10-year cardiac risk.\nStep 2: An ECG shows non-specific ST-T wave changes. How does this modify your assessment?\nStep 3: A troponin test comes back at 0.06 ng/mL (borderline; normal <0.04, clearly elevated >0.10). Update your probability estimate.\nStep 4: The patient mentions the pain started while carrying heavy furniture and improves with ibuprofen. Reassess.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Estimate baseline cardiovascular risk",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Interpret ambiguous ECG findings",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate borderline troponin result",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate musculoskeletal alternative hypothesis",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_006",
+    "subtype": "CCC",
+    "prompt": "An intelligence analyst must assess the probability that a foreign country is developing a new class of hypersonic missile. State your confidence as a percentage at each step.\n\nStep 1: Satellite imagery shows construction activity at a known missile test facility that is consistent with, but not exclusive to, hypersonic vehicle testing infrastructure.\nStep 2: A signals intelligence intercept references 'Project Vostok-7' in communications between the defense ministry and a known aerospace contractor.\nStep 3: A human intelligence source (reliability rating: C3 on the Admiralty Scale) reports hearing about a scramjet engine test from a secondary contact.\nStep 4: Open-source intelligence reveals the country's recent academic publications on scramjet propulsion have stopped, suggesting possible classification of the research.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Interpret ambiguous satellite imagery",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate SIGINT reference to unknown project",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess low-reliability HUMINT source",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Interpret publication gap as potential evidence",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_007",
+    "subtype": "CCC",
+    "prompt": "A pediatrician must determine the likelihood that a 6-year-old child's recurrent abdominal pain is caused by celiac disease. State your confidence as a percentage at each step.\n\nStep 1: The child has had recurrent abdominal pain for 6 months with intermittent diarrhea. The prevalence of celiac disease in the general pediatric population is approximately 1%.\nStep 2: A tissue transglutaminase (tTG-IgA) antibody test comes back positive at 45 U/mL (normal <20). The test sensitivity is 93% and specificity is 97%.\nStep 3: The family reports that the child's symptoms partially improve on a gluten-free diet, but they did not strictly eliminate all gluten sources.\nStep 4: A referral for small bowel biopsy is scheduled, but the child has a concurrent viral gastroenteritis that may affect histological interpretation.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Establish baseline prevalence as prior",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Update with positive serology",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate ambiguous dietary response",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 4,
+        "description": "Consider confounded biopsy interpretation",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_008",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a tech startup will achieve a successful exit (IPO or acquisition >$100M) within 5 years. State your confidence as a percentage at each step.\n\nStep 1: The startup is a Series B SaaS company with $8M ARR growing at 80% year-over-year. Historical base rates suggest ~10% of Series B startups achieve exits >$100M.\nStep 2: The company's net dollar retention is 135%, placing it in the top quartile. Adjust your estimate.\nStep 3: The macro environment shows rising interest rates and a 40% decline in SaaS valuations over the past 18 months. Factor in market conditions.\nStep 4: The founding CEO was just replaced by a hired executive. Research shows CEO transitions at this stage reduce successful exit probability by approximately 25-35%.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply base rate for Series B exits",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Adjust for strong unit economics",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Factor in adverse macro conditions",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Account for leadership transition risk",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_009",
+    "subtype": "CCC",
+    "prompt": "A forensic accountant must estimate the probability of fraud in a company's financial statements. State your confidence as a percentage at each step.\n\nStep 1: An anonymous whistleblower tip alleges revenue manipulation. Historically, about 40% of such tips lead to confirmed findings.\nStep 2: Benford's Law analysis of the company's revenue figures shows a statistically significant deviation in the leading digits of quarterly revenue entries (p=0.03).\nStep 3: The company recently changed auditing firms, and the new auditor issued a qualified opinion citing insufficient documentation for 15% of recorded receivables.\nStep 4: Management provides documentation showing the Benford's deviation is due to a large government contract with fixed payment amounts, and the auditor qualification was due to a system migration data gap.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate whistleblower tip base rate",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess statistical anomaly in financial data",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Integrate auditor qualification signal",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 4,
+        "description": "Reassess with management explanations",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_010",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a new respiratory virus detected in Southeast Asia will cause a pandemic within 12 months. State your confidence as a percentage at each step.\n\nStep 1: The virus is a novel paramyxovirus with a case fatality rate of 4.2% based on 120 confirmed cases across 3 countries.\nStep 2: Phylogenetic analysis suggests the virus recently jumped from fruit bats, and its receptor binding domain shows partial adaptation to human ACE2 receptors.\nStep 3: Five healthcare workers have been infected, but genomic analysis cannot confirm whether transmission was human-to-human or from a common animal source.\nStep 4: Mathematical modeling with currently available data estimates R0 between 0.6 and 1.8, with wide confidence intervals due to limited case data.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess initial severity and geographic spread",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate zoonotic adaptation potential",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Interpret ambiguous healthcare worker infections",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate uncertain R0 estimates",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_011",
+    "subtype": "CCC",
+    "prompt": "A radiologist must assess whether a lung nodule found on CT scan is malignant. State your confidence as a percentage at each step.\n\nStep 1: A 12mm solid pulmonary nodule is found in a 62-year-old former smoker (30 pack-years, quit 5 years ago). The Lung-RADS 4B classification gives a >15% probability of malignancy.\nStep 2: The nodule has irregular (spiculated) margins and is located in the right upper lobe, both features associated with higher malignancy risk.\nStep 3: A PET scan shows moderate FDG uptake (SUVmax = 3.2). However, the patient recently had pneumonia in the same lobe, which can cause false-positive PET results.\nStep 4: A CT-guided biopsy returns 'atypical cells, favor reactive changes' — an indeterminate pathology result that neither confirms nor excludes malignancy.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply initial risk stratification",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate morphological features",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Interpret confounded PET results",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Assess indeterminate biopsy",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_012",
+    "subtype": "CCC",
+    "prompt": "Determine the probability that a newly discovered exoplanet in the habitable zone could support liquid water. State your confidence as a percentage at each step.\n\nStep 1: The planet orbits a K-type star at 0.75 AU with an estimated equilibrium temperature of 265K, placing it within the conservative habitable zone.\nStep 2: Transit spectroscopy shows tentative absorption features consistent with either water vapor or methane in the atmosphere, but the signal-to-noise ratio is only 2.3 sigma.\nStep 3: The planet's mass is estimated at 3.2 Earth masses with density suggesting a rocky composition, but tidal locking is likely, creating extreme temperature gradients.\nStep 4: Climate models for tidally locked planets at this stellar flux produce divergent results, with some showing stable liquid water on the dayside and others showing atmospheric collapse.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess orbital parameters and habitability",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate weak spectroscopic evidence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Account for tidal locking effects",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate conflicting climate models",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_013",
+    "subtype": "CCC",
+    "prompt": "An archaeologist must assess the probability that a newly discovered underwater structure is a human-built harbor from the Bronze Age. State your confidence as a percentage at each step.\n\nStep 1: Sonar mapping reveals linear stone formations at 8m depth off the coast of Crete, with right-angle intersections suggesting artificial construction.\nStep 2: Carbon-14 dating of organic material trapped between the stones yields dates of 1450-1250 BCE, consistent with Late Bronze Age Minoan maritime activity.\nStep 3: However, a geological survey shows that natural beach rock formations in this region can produce similar geometric patterns through diagenetic cementation.\nStep 4: Three ceramic fragments found nearby are of Minoan type, but currents and tsunamis could have transported them from known onshore settlements 2km away.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate geometric evidence of construction",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess radiocarbon dating relevance",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Consider natural formation alternative",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Evaluate displaced artifact evidence",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_014",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a defendant is guilty of insider trading based on the following evidence chain. State your confidence as a percentage at each step.\n\nStep 1: The defendant purchased 50,000 shares of Company X three days before a major acquisition announcement, yielding a $2.1M profit.\nStep 2: Phone records show two calls between the defendant and a board member of Company X in the week before the purchase, each lasting under 2 minutes.\nStep 3: The defendant's trading history shows they had made similar-sized speculative trades 4 times in the previous 2 years, with 2 resulting in large gains and 2 in losses.\nStep 4: The board member's attorney argues the calls discussed a charity golf event, and provides a text message chain about golf logistics on nearby dates.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate suspicious trade timing",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess communications evidence",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Consider pattern of speculative trading",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 4,
+        "description": "Evaluate exculpatory explanation",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_015",
+    "subtype": "CCC",
+    "prompt": "Assess the probability that a particular batch of pharmaceuticals is contaminated. State your confidence as a percentage at each step.\n\nStep 1: Two patients from the same hospital reported unusual adverse events (severe nausea and visual disturbances) within 48 hours of receiving the same batch of a blood pressure medication.\nStep 2: The batch passed all standard quality control tests at the manufacturing facility, including dissolution testing and content uniformity.\nStep 3: GC-MS analysis of retained samples reveals a trace compound not in the standard screening panel, present at 0.05% concentration, matching a known degradation product of the active ingredient under high-humidity storage.\nStep 4: The hospital's pharmacy records show the medication was stored at compliant temperatures, but the storage room's humidity sensor had been malfunctioning for 3 weeks prior.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate adverse event signal strength",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Integrate passed QC results",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess trace contaminant finding",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 4,
+        "description": "Connect storage conditions to degradation pathway",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_016",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a newly discovered manuscript is an authentic lost work by a known Renaissance artist. State your confidence as a percentage at each step.\n\nStep 1: Radiocarbon dating of the parchment places it between 1480-1530 CE, consistent with the artist's active period (1490-1520).\nStep 2: Handwriting analysis by two experts yields conflicting opinions: one rates it as 'highly consistent' with known samples while the other notes anomalies in letter spacing.\nStep 3: The ink composition, analyzed via X-ray fluorescence, matches the iron gall ink formulations common in the artist's region but not uniquely attributable to their workshop.\nStep 4: Provenance research traces the manuscript to a 19th-century private collection known to contain both authentic works and forgeries.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate dating evidence",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess conflicting expert handwriting analysis",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate non-unique ink evidence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider mixed-reliability provenance",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_017",
+    "subtype": "CCC",
+    "prompt": "A structural engineer must assess the probability that a 40-year-old concrete bridge requires immediate load restrictions. State your confidence as a percentage at each step.\n\nStep 1: Visual inspection reveals map cracking on 3 of 12 support columns and surface spalling on the underside of 2 deck sections.\nStep 2: Core samples show the concrete compressive strength is 28 MPa, which is 70% of the original design specification of 40 MPa.\nStep 3: Chloride ion penetration testing shows concentrations above threshold in 2 cores, indicating active corrosion, but rebar condition via ground-penetrating radar appears normal with no section loss detected.\nStep 4: The bridge currently carries 15% more traffic than its 1984 design specification, and ambient temperature cycling in the region has become more extreme over the past decade.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess visual deterioration indicators",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate reduced concrete strength",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Reconcile conflicting corrosion indicators",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in loading and environmental stressors",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_018",
+    "subtype": "CCC",
+    "prompt": "A cybersecurity analyst must assess the probability that a detected network anomaly represents an active intrusion by a nation-state actor. State your confidence as a percentage at each step.\n\nStep 1: Network monitoring detected an unusual outbound data transfer of 2.3 GB to an IP address in Eastern Europe over a 4-hour window during off-hours.\nStep 2: The destination IP was previously flagged in a threat intelligence feed as associated with APT28 infrastructure, but the feed has a 15% false positive rate.\nStep 3: Log analysis shows the data transfer originated from a service account with elevated privileges that had not been used in 90 days.\nStep 4: The service account's credentials were found in a legacy configuration file accessible to 23 employees, and a departing employee had accessed this file 2 weeks prior.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate suspicious data transfer pattern",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess threat intelligence attribution",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Investigate dormant privileged account usage",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 4,
+        "description": "Consider insider threat vs APT hypothesis",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_019",
+    "subtype": "CCC",
+    "prompt": "Determine the likelihood that a recently excavated fossil represents a new dinosaur species rather than a known species. State your confidence as a percentage at each step.\n\nStep 1: The fossil includes a partial skull and 4 cervical vertebrae recovered from Late Cretaceous sediments (72-68 MYA) in Montana, a region with extensive Tyrannosaur and Hadrosaur finds.\nStep 2: The skull exhibits a unique combination of a shortened snout and enlarged orbit that don't match any known species in the regional database, but the specimen is only 40% complete.\nStep 3: CT scanning reveals pneumatic sinuses in the skull that are intermediate in morphology between two known closely related species, which could indicate a transitional form or ontogenetic variation.\nStep 4: Histological analysis of a femur cross-section suggests the individual was a sub-adult, raising the possibility that the unusual features are juvenile characteristics of a known species.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess geological and morphological context",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate unique morphological features with incomplete specimen",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Consider transitional vs ontogenetic explanations",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Account for sub-adult developmental variation",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_020",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a city's new traffic algorithm will reduce average commute times by at least 15%. State your confidence as a percentage at each step.\n\nStep 1: Simulation models using historical traffic data predict a 20% commute time reduction, but the model's prediction accuracy on previous projects averaged 60% (it tended to overestimate benefits).\nStep 2: A pilot test on a 3-intersection corridor showed a 12% reduction, but these intersections were selected for their suitability to the algorithm and may not represent the full network.\nStep 3: The city's population growth rate of 3% annually will add approximately 8,000 vehicles to the road network each year, partially offsetting any algorithmic gains.\nStep 4: Two major construction projects scheduled in the next 18 months will close key arterials, potentially reducing the effective optimizable network by 25%.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate simulation predictions with known bias",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Interpret limited pilot results",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Account for population growth effects",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in construction disruptions",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_021",
+    "subtype": "CCC",
+    "prompt": "A toxicologist must determine whether a worker's illness is caused by occupational exposure. State your confidence as a percentage at each step.\n\nStep 1: The worker developed peripheral neuropathy after 8 months at a chemical plant. The condition affects roughly 2-3% of the general adult population.\nStep 2: Biological monitoring shows blood levels of n-hexane (a known neurotoxin used at the plant) at 15 mcg/L. The occupational exposure limit corresponds to blood levels of 20 mcg/L, but individual susceptibility varies widely.\nStep 3: The worker's symptoms are consistent with n-hexane neuropathy but also match diabetic neuropathy, and the worker has a fasting glucose of 118 mg/dL (pre-diabetic range).\nStep 4: Two other workers in the same department reported similar tingling sensations, but neither has sought medical evaluation or undergone nerve conduction studies.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Establish baseline neuropathy prevalence",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate sub-threshold but notable exposure",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Consider competing diagnosis",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Assess weak cluster signal",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_022",
+    "subtype": "CCC",
+    "prompt": "Assess the probability that a climate tipping point for Atlantic Meridional Overturning Circulation (AMOC) collapse will be reached by 2100. State your confidence as a percentage at each step.\n\nStep 1: AMOC flow has weakened by approximately 15% since the mid-20th century based on proxy measurements, though direct observational records only span 20 years.\nStep 2: Most CMIP6 climate models project continued weakening but do not show full collapse by 2100 under SSP2-4.5 scenarios. However, none of these models include freshwater input from Greenland ice sheet acceleration.\nStep 3: A 2023 study using statistical early-warning indicators suggests AMOC may be approaching a bifurcation point, but the methodology has been challenged by three independent research groups.\nStep 4: Paleoclimate records show AMOC has collapsed multiple times in Earth's history, typically when freshwater forcing exceeded 0.1 Sv, and current estimates of Greenland meltwater input are 0.01-0.04 Sv with uncertain acceleration rates.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess observed weakening trend",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate model projections with known limitations",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Consider contested statistical early-warning analysis",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Compare current forcing to paleoclimate thresholds",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_023",
+    "subtype": "CCC",
+    "prompt": "Evaluate the probability that a proposed gene therapy trial will show clinically significant improvement in patients with a rare muscle wasting disease. State your confidence as a percentage at each step.\n\nStep 1: The therapy uses an AAV9 vector to deliver a functional copy of the defective gene. In animal models (mdx mice), treated animals showed a 40% improvement in grip strength compared to controls.\nStep 2: The human disease involves a different mutation spectrum than the mouse model, and only 60% of patient mutations are expected to be correctable by the single construct.\nStep 3: The trial's primary endpoint is a 6-minute walk test improvement at 12 months, but natural history studies show high variability in disease progression (SD = 45% of mean change).\nStep 4: A competing gene therapy for a similar condition recently failed Phase 2 due to dose-limiting immune responses to the AAV vector in 30% of participants.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate preclinical efficacy evidence",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for genotype coverage limitations",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess underpowered endpoint with high variability",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in safety signal from related program",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_024",
+    "subtype": "CCC",
+    "prompt": "Estimate the maximum sustainable fish harvest for a depleted North Atlantic cod population. State your confidence as a percentage at each step.\n\nStep 1: Stock assessment models estimate the current spawning stock biomass at 35% of the historical maximum, with significant uncertainty in recent recruitment estimates.\nStep 2: Oceanographic data shows that water temperatures in the stock's primary spawning grounds have increased by 1.2 degrees C over the past 20 years, potentially shifting recruitment dynamics.\nStep 3: Predation pressure from an expanding grey seal population has increased juvenile mortality by an estimated 15-40% (the range reflects model uncertainty).\nStep 4: Unreported bycatch and discards are estimated to add 10-30% to official catch statistics, but these estimates are derived from limited observer coverage.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess uncertain stock status",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Factor in climate-driven recruitment changes",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Account for uncertain predation estimates",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Adjust for poorly quantified unreported catch",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_025",
+    "subtype": "CCC",
+    "prompt": "A venture capitalist must assess the probability that a quantum computing startup will deliver a commercially viable error-corrected quantum computer within 7 years. State your confidence as a percentage at each step.\n\nStep 1: The startup has demonstrated a 72-qubit processor with two-qubit gate fidelities of 99.5%, among the best published results for their chosen modality (superconducting transmons).\nStep 2: Error-corrected quantum computing requires estimated 1,000-10,000 physical qubits per logical qubit. Scaling from 72 to the minimum ~100,000 physical qubits represents a >1000x increase.\nStep 3: The company's cooling infrastructure costs $4M annually for the current system. Scaling projections suggest $200M+ for a full-scale system, but novel dilution refrigerator designs could potentially reduce this.\nStep 4: Three well-funded competitors (Google, IBM, and a Chinese state-backed program) are pursuing the same modality with larger teams, and the startup's key technical advantage is a proprietary calibration algorithm.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate current technical achievements",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess massive scaling challenge",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Factor in uncertain infrastructure costs",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider competitive landscape threats",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_026",
+    "subtype": "CCC",
+    "prompt": "Determine the probability that a reported archaeological discovery of pre-Columbian Viking artifacts in the American Midwest is authentic. State your confidence as a percentage at each step.\n\nStep 1: A farmer in Minnesota unearthed a corroded iron object and two stone fragments with possible runic inscriptions while plowing. The objects were found at a depth of 40 cm in glacial till.\nStep 2: Metallurgical analysis of the iron object shows it is consistent with Norse iron smelting techniques, but also with early 19th-century American blacksmithing.\nStep 3: The runic inscriptions on the stones use a mix of older Futhark and younger Futhark characters, which runologists note is unusual but not impossible for the 11th century.\nStep 4: Historical records show that Swedish and Norwegian immigrants settled the area in the 1870s, and at least two known runic stone hoaxes were perpetrated in the region between 1880-1920.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate find context and stratigraphy",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess ambiguous metallurgical evidence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate inconsistent runic evidence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider strong hoax precedent",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_027",
+    "subtype": "CCC",
+    "prompt": "A medical examiner must determine the probability that a death was caused by a specific drug overdose rather than natural cardiac arrest. State your confidence as a percentage at each step.\n\nStep 1: The deceased is a 48-year-old male found unresponsive at home. He had a documented history of hypertension and a prescription for oxycodone following back surgery 6 weeks prior.\nStep 2: Toxicology shows blood oxycodone levels of 0.4 mg/L. The therapeutic range is 0.01-0.1 mg/L, and lethal concentrations typically exceed 0.4 mg/L, but chronic users can tolerate higher levels.\nStep 3: Autopsy reveals cardiac hypertrophy (heart weight 520g, normal <400g) and moderate coronary artery disease (60% stenosis), either of which could independently cause sudden death.\nStep 4: Scene investigation found the oxycodone bottle with 8 remaining pills of 30 prescribed 10 days ago (suggesting usage of ~2.2 pills/day vs prescribed 1 pill every 8 hours).\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Establish competing risk factors",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate drug level in context of tolerance",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Assess significant cardiac pathology as alternative",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate scene evidence of possible overuse",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_028",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability of a magnitude 7.0+ earthquake in a specific seismic zone within the next 30 years. State your confidence as a percentage at each step.\n\nStep 1: Historical records spanning 400 years show 6 earthquakes of M7.0+ in this zone, suggesting a rough recurrence interval of ~65 years. The last M7.0+ event was 85 years ago.\nStep 2: GPS measurements of crustal strain show an accumulated slip deficit equivalent to a M7.3 earthquake, consistent with the seismic gap hypothesis.\nStep 3: However, recent studies suggest that 40-60% of accumulated strain in this zone may be released through slow-slip events and microseismicity rather than large earthquakes.\nStep 4: Coulomb stress transfer modeling from a nearby M6.2 earthquake 3 years ago shows both stress-loading and stress-shadow effects on different fault segments in the zone.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply historical recurrence statistics",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate geodetic strain evidence",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Account for aseismic strain release",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Integrate complex stress transfer effects",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_029",
+    "subtype": "CCC",
+    "prompt": "A climate scientist must estimate how much global mean sea level will rise by 2100 under current emission trajectories. State your confidence as a percentage at each step.\n\nStep 1: IPCC AR6 projects 0.43-0.84m of sea level rise under SSP2-4.5 by 2100. This central estimate has moderate confidence based on thermal expansion and glacier melt models.\nStep 2: Recent observations of Antarctic ice sheet dynamics suggest mass loss could be accelerating faster than AR6 models projected, with marine ice cliff instability potentially adding 0.2-0.6m.\nStep 3: However, the marine ice cliff instability hypothesis has been challenged by ice-sheet models that include buttressing feedback mechanisms, which suggest the additional contribution may be limited to 0.05-0.15m.\nStep 4: Socioeconomic projections are uncertain: if aggressive climate policies are enacted, the emissions pathway may shift to SSP1-2.6, reducing the thermal expansion component by 30-40%.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply IPCC central projection",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for accelerating ice sheet loss",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate competing ice dynamics models",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in uncertain policy trajectories",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_030",
+    "subtype": "CCC",
+    "prompt": "A food safety inspector must assess the probability that a batch of imported frozen shrimp is contaminated with banned antibiotic residues. State your confidence as a percentage at each step.\n\nStep 1: The shipment originates from a country where 8% of tested aquaculture products in the past year have exceeded maximum residue limits for chloramphenicol.\nStep 2: Rapid screening of 5 samples from the 2,000-unit shipment shows no detectable residues using an immunoassay test with 90% sensitivity and 95% specificity.\nStep 3: The exporting farm is a new supplier with no prior inspection history, and satellite imagery shows its ponds are located 500m downstream from a livestock operation.\nStep 4: The farm's quality certificate was issued by a laboratory that was suspended by the accreditation body 3 months after issuing the certificate, though it was accredited at the time of testing.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply country-level contamination base rate",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate limited negative screening results",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess environmental contamination risk factors",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider reliability of quality documentation",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_031",
+    "subtype": "CCC",
+    "prompt": "An epidemiologist must estimate the vaccine effectiveness of a new influenza vaccine during a season with antigenic drift. State your confidence as a percentage at each step.\n\nStep 1: Pre-season clinical trials showed 62% efficacy against the matched strain in adults 18-64, with confidence intervals of 48-72%.\nStep 2: Mid-season viral surveillance reveals that 35% of circulating strains have undergone antigenic drift, reducing expected cross-reactivity by an estimated 40-60%.\nStep 3: Observational data from 3 sentinel surveillance sites show adjusted VE of 38% (95% CI: 12-56%), but these early-season estimates are based on only 420 test-negative cases.\nStep 4: The predominant circulating clade shows a novel hemagglutinin mutation not previously characterized, making the degree of immune escape unpredictable based on historical patterns alone.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply pre-season efficacy data",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Adjust for observed antigenic drift",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Integrate early observational VE with wide CIs",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Account for uncharacterized viral mutation",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_032",
+    "subtype": "CCC",
+    "prompt": "A hiring committee must predict whether a candidate will be a top-10% performer after 2 years. State your confidence as a percentage at each step.\n\nStep 1: The candidate's resume shows experience at two prestigious companies and an advanced degree from a top-10 program. Meta-analyses show structured resume screening predicts job performance with r=0.18.\nStep 2: In a structured interview, the candidate scored in the 80th percentile against a calibrated rubric. Structured interviews predict performance with r=0.44.\nStep 3: The candidate's reference from their most recent employer was enthusiastic but vague. The previous employer did not respond. Reference validity studies show r=0.13 on average.\nStep 4: A work sample test requiring completion of a realistic project showed strong technical skills but raised concerns about collaboration during the group component. Work sample validity is typically r=0.33.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate resume screening with low predictive validity",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Integrate interview performance",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Factor in weak reference signal",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Reconcile mixed work sample results",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_033",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that autonomous vehicles will reduce traffic fatalities by at least 50% in a major US city within 15 years. State your confidence as a percentage at each step.\n\nStep 1: Current autonomous vehicle technology (Level 4) by leading companies shows a crash rate per mile that is approximately 60% lower than human drivers in controlled deployment zones.\nStep 2: However, deployment is currently limited to geofenced areas with good weather, mapped roads, and low-complexity traffic. Expanding to the full road network introduces edge cases that increase the crash rate by an estimated 3-5x.\nStep 3: Regulatory approval timelines are uncertain — no US city has approved full Level 5 deployment, and public acceptance polling shows 55% of respondents would not ride in a fully autonomous vehicle.\nStep 4: The expected transition period will involve mixed fleets of autonomous and human-driven vehicles, and simulation studies show that mixed traffic can paradoxically increase certain types of accidents during the transition phase.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess current controlled deployment performance",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for real-world complexity scaling",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Factor in regulatory and social adoption barriers",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider mixed fleet transition risks",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_034",
+    "subtype": "CCC",
+    "prompt": "A neurologist must estimate the probability that a patient's seizure disorder will be controlled with the next medication trial. State your confidence as a percentage at each step.\n\nStep 1: The patient has failed two first-line antiepileptic drugs (levetiracetam and lamotrigine) due to inadequate seizure control. Population data shows that after 2 failed drugs, the probability of the third achieving seizure freedom drops to approximately 15%.\nStep 2: MRI shows a small area of focal cortical dysplasia in the right temporal lobe, which has mixed implications: it identifies the epileptogenic focus for potential surgical targeting, but also suggests a structural lesion that may be pharmacoresistant.\nStep 3: EEG shows the patient has both focal seizures from the right temporal region and occasional generalized spike-wave discharges, suggesting a dual pathology that complicates treatment.\nStep 4: Pharmacogenomic testing reveals the patient is an intermediate metabolizer of CYP2C19, meaning dosing of certain drugs (including the proposed clobazam) must be carefully adjusted, adding uncertainty to achieving therapeutic levels.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply population base rate for third-line treatment",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Assess structural lesion implications",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate dual pathology complication",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in pharmacogenomic dosing uncertainty",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_035",
+    "subtype": "CCC",
+    "prompt": "Assess the probability that a new battery technology will achieve commercial viability (cost <$80/kWh, 1000+ cycles) within 5 years. State your confidence as a percentage at each step.\n\nStep 1: Lab prototypes of solid-state lithium-sulfur batteries from a university spin-out have demonstrated energy density of 500 Wh/kg with 800 cycles at the coin-cell level.\nStep 2: Scaling from coin cells to pouch cells typically reduces performance by 20-40%, and the company has not yet demonstrated pouch cell results.\nStep 3: The current projected manufacturing cost at pilot scale is $150/kWh, requiring a 47% cost reduction to meet the $80/kWh target. Historical cost learning curves for new battery chemistries show 15-25% reduction per doubling of cumulative production.\nStep 4: Two major automotive OEMs have signed letters of intent contingent on performance milestones, but neither has committed capital for manufacturing scale-up.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate lab-scale performance results",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for known coin-to-pouch scaling losses",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess cost reduction feasibility",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Evaluate market commitment strength",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_036",
+    "subtype": "CCC",
+    "prompt": "A public health official must estimate the probability that a tuberculosis outbreak in a shelter will exceed 20 cases within 3 months. State your confidence as a percentage at each step.\n\nStep 1: An active TB case was confirmed in a resident who had been symptomatic and living in the shelter's dormitory (shared by 45 people) for approximately 3 weeks before diagnosis.\nStep 2: Initial screening with tuberculin skin tests shows 12 of 38 tested residents are TST-positive, but 8 of those report prior positive tests from previous exposure, leaving only 4 likely new conversions.\nStep 3: The shelter has poor ventilation (measured at 2 air changes per hour vs. the recommended 6-12 for congregate settings), but the season is spring and windows have been opened since the index case was identified.\nStep 4: Whole-genome sequencing of the M. tuberculosis isolate shows it belongs to the Beijing lineage, which is associated with higher transmissibility and multidrug resistance rates of 15-20% in similar settings.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess exposure parameters and index case infectiousness",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Interpret screening results with confounders",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate environmental risk factors",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Account for strain characteristics",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_037",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a particular section of ancient papyrus text, currently unreadable due to damage, contains a lost portion of a known philosophical work. State your confidence as a percentage at each step.\n\nStep 1: The papyrus was recovered from Herculaneum and dates to approximately 50 BCE. Multispectral imaging has revealed 37 legible words from a section previously thought completely lost.\nStep 2: Vocabulary analysis shows that 31 of the 37 words appear in the known works of Philodemus, the philosopher most represented in the Herculaneum collection. However, 5 words are common Greek terms found across many authors.\nStep 3: The recovered text discusses 'the nature of anger and its remediation,' which matches the subject matter of Philodemus's lost Book IV of 'On Anger,' but could also belong to a commentary on Chrysippus's work on passions.\nStep 4: The handwriting appears consistent with the scribe known as 'Scribe 15' who copied other Philodemus texts, but paleographic comparison is limited by damage to key diagnostic letterforms.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess provenance and dating context",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate vocabulary correspondence",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Consider competing authorship hypotheses",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Assess limited paleographic evidence",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_038",
+    "subtype": "CCC",
+    "prompt": "A central banker must estimate the probability that a 50-basis-point rate hike will bring inflation below 3% within 18 months without triggering a recession. State your confidence as a percentage at each step.\n\nStep 1: Current CPI inflation is 4.8%, and the Phillips curve relationship estimated from the past 20 years suggests each 100bp of tightening reduces inflation by 0.6-0.9 percentage points over 12-18 months.\nStep 2: However, the current inflation is partly driven by supply-side factors (energy prices, supply chain disruptions) that monetary policy cannot directly address. Decomposition suggests 40% of current inflation is supply-driven.\nStep 3: The economy is showing mixed signals: unemployment is at 3.8% (historically low) but PMI indicators have fallen below 50 for two consecutive months, and yield curve inversions signal recession risk at 35-45% per the New York Fed model.\nStep 4: Fiscal policy is expansionary with a government spending package recently passed, which could offset 30-50% of the monetary tightening effect on demand.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply monetary transmission estimates",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Adjust for supply-side inflation components",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate recession risk indicators",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in offsetting fiscal expansion",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_039",
+    "subtype": "CCC",
+    "prompt": "Determine the probability that a wildfire currently burning in remote terrain will reach a residential community 30 km downwind within 72 hours. State your confidence as a percentage at each step.\n\nStep 1: The fire has burned 5,000 hectares over 3 days with an average rate of spread of 1.2 km/day in the current fuel type (mixed conifer forest with moderate fire behavior).\nStep 2: Weather forecasts predict wind shifts to a direction aligning with the community, with sustained winds of 30-45 km/h and relative humidity dropping to 12% over the next 48 hours. These conditions could increase spread rates by 3-5x.\nStep 3: Between the fire and the community lies a 2-km-wide valley with a river and previous fire scar from 4 years ago with reduced fuel loads, which historically serve as partial barriers but can be breached by ember transport.\nStep 4: The firefighting response includes 3 air tankers and 12 ground crews, but crew fatigue after 3 days and a simultaneous large fire 200 km away has diverted 40% of available resources.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Extrapolate from current fire behavior",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Project impact of incoming weather change",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate natural barrier effectiveness",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in constrained suppression capacity",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_040",
+    "subtype": "CCC",
+    "prompt": "An ecotoxicologist must estimate the probability that a newly detected contaminant in a municipal water supply poses a significant cancer risk to the population. State your confidence as a percentage at each step.\n\nStep 1: Perfluorohexanoic acid (PFHxA) has been measured at 120 ppt in finished drinking water. There is no EPA maximum contaminant level for PFHxA, though the advisory level for the related PFOS is 70 ppt.\nStep 2: Animal carcinogenicity studies show liver tumors in male rats at doses 10,000x higher than estimated human exposure from this water supply. However, the relevance of rodent liver tumors to human cancer risk is debated.\nStep 3: Epidemiological studies of PFAS-exposed communities show mixed results: 2 studies found significant associations with kidney cancer (OR=1.3-1.5), while 3 others found no association after adjusting for co-exposures.\nStep 4: The contamination source is an upstream industrial facility that also releases 4 other PFAS compounds at lower concentrations. Mixture toxicity effects are largely uncharacterized but assumed to be at least additive.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate exposure relative to related compound guidelines",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Extrapolate from high-dose animal studies",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Assess conflicting epidemiological evidence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider uncharacterized mixture effects",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_041",
+    "subtype": "CCC",
+    "prompt": "A geologist must assess the probability that a proposed mining site contains economically recoverable lithium deposits. State your confidence as a percentage at each step.\n\nStep 1: Geochemical survey of surface samples shows lithium concentrations of 800-1,200 ppm in clay minerals, above the typical economic threshold of 500-1,000 ppm for clay-hosted deposits.\nStep 2: However, only 3 exploratory drill cores have been completed to 100m depth, and lithium grades decrease with depth, averaging 600 ppm below 60m.\nStep 3: The proposed extraction method (acid leaching) achieves 70-85% recovery rates in lab tests on the site's clay mineralogy, but pilot-scale operations for similar deposits have achieved only 50-65% recovery.\nStep 4: Current lithium market prices are $25,000/ton, and the project's breakeven analysis requires prices above $18,000/ton, but market analysts project prices could fall to $12,000-$20,000/ton within 5 years as new supply comes online.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate surface geochemistry against economic thresholds",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess grade decline with limited drill data",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Factor in lab-to-pilot recovery scaling losses",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider commodity price uncertainty",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_042",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a new social media platform will reach 50 million monthly active users within 2 years of launch. State your confidence as a percentage at each step.\n\nStep 1: The platform has a novel feature (AI-curated collaborative storytelling) and has attracted 500,000 users in its first month through invite-only beta. Historical data shows that <5% of apps reaching 500K users in month 1 achieve 50M within 2 years.\nStep 2: Day-7 retention is 42%, compared to an industry average of 13% for social apps. This puts it in the top 5% of social app launches on this metric.\nStep 3: However, 70% of current users are in the 18-24 demographic, and platforms with narrow demographic appeal historically struggle to cross into mainstream adoption without significant feature changes.\nStep 4: Meta has announced a similar collaborative storytelling feature for Instagram, expected to launch in 6 months, and their platform has 2 billion existing MAUs for distribution.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply historical base rate for user growth",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Evaluate exceptional retention metrics",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Assess demographic concentration risk",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in incumbent competitive response",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_043",
+    "subtype": "CCC",
+    "prompt": "A materials scientist must predict whether a new alloy will pass aerospace certification testing for turbine blade applications. State your confidence as a percentage at each step.\n\nStep 1: Laboratory tensile testing shows the nickel-based superalloy achieves a yield strength of 1,050 MPa at 1,000°C, exceeding the minimum specification of 900 MPa by 17%.\nStep 2: Creep testing at 1,000°C and 150 MPa shows rupture life of 8,500 hours, just above the certification threshold of 8,000 hours. However, only 6 specimens were tested and one failed at 7,200 hours, which was attributed to a casting defect.\nStep 3: Environmental testing in simulated combustion gases shows an oxidation rate 25% higher than the incumbent alloy at peak operating temperatures, which may reduce component life under real-world conditions.\nStep 4: The alloy contains 4% rhenium, and supply chain analysis shows that rhenium prices have doubled in 18 months with projected shortages, which may lead the certification board to require demonstration of a reduced-rhenium variant.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate tensile performance margin",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Assess marginal creep performance with outlier",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Factor in elevated oxidation rates",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider supply chain certification complications",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_044",
+    "subtype": "CCC",
+    "prompt": "Assess the likelihood that a proposed canal restoration project will successfully reestablish a self-sustaining population of native freshwater mussels within 10 years. State your confidence as a percentage at each step.\n\nStep 1: Water quality modeling predicts that restoration will reduce turbidity by 60% and return dissolved oxygen levels to species-suitable ranges (>6 mg/L) within 2 years of completion.\nStep 2: The nearest surviving mussel population is 45 km upstream, and natural recolonization studies for similar species show dispersal rates of 0.5-3 km per year via host fish movement.\nStep 3: The host fish species (darter) required for mussel larval development has not been found in the canal section for 8 years, and its return depends on successful installation of fish passage structures at 2 existing barriers.\nStep 4: A 2019 mussel reintroduction attempt at a similar site 80 km away achieved initial survival of transplanted individuals but failed to establish recruitment after 4 years, potentially due to fluctuating water levels from upstream dam operations.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Project post-restoration water quality improvement",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess natural recolonization feasibility",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate critical host fish dependency",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Learn from failed analogous restoration",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_045",
+    "subtype": "CCC",
+    "prompt": "An astronomer must estimate the probability that a candidate gravitational wave signal represents a neutron star merger rather than instrumental noise. State your confidence as a percentage at each step.\n\nStep 1: The candidate signal has a signal-to-noise ratio of 8.2 in the LIGO Livingston detector, above the detection threshold of 8.0 but below the high-confidence threshold of 12.\nStep 2: The signal was also detected in the LIGO Hanford detector with SNR of 5.1, below the single-detector threshold, but the time delay and signal morphology are consistent with a real astrophysical source.\nStep 3: Template matching analysis shows the best-fit template is consistent with a binary neutron star merger at a distance of 180 Mpc, but a noise glitch template also provides a reasonable fit (Bayes factor between signal and noise models: 3.2).\nStep 4: No electromagnetic counterpart was detected by partner observatories within 6 hours of the trigger, despite 60% sky coverage at the estimated distance. However, not all neutron star mergers produce detectable electromagnetic signals.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate marginal signal-to-noise ratio",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess sub-threshold multi-detector consistency",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Compare signal vs noise model fits",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Interpret non-detection of counterpart",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_046",
+    "subtype": "CCC",
+    "prompt": "A data scientist must predict whether a machine learning model deployed in production will maintain its performance above baseline for the next 6 months without retraining. State your confidence as a percentage at each step.\n\nStep 1: The model was trained on 18 months of data and achieved an AUC of 0.91 in production during its first month, compared to a baseline AUC of 0.82. Model monitoring shows no distribution drift in the first 30 days.\nStep 2: However, the model's primary use case is fraud detection, and threat intelligence reports indicate that fraud tactics in this sector shift significantly every 3-4 months.\nStep 3: Historical analysis of similar models shows mean time-to-degradation of 4.2 months (SD=1.8 months), with 30% of models falling below baseline within 3 months.\nStep 4: The company implemented an automated retraining pipeline, but it requires human approval for each retraining cycle, and the average approval time has been 11 days, during which the model operates on stale parameters.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Assess initial strong performance and stability",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Factor in known adversarial distribution shift",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Apply historical model degradation rates",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Account for retraining pipeline latency",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_047",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a proposed offshore wind farm will generate at least 80% of its projected annual energy output in its first operating year. State your confidence as a percentage at each step.\n\nStep 1: The wind resource assessment, based on 3 years of on-site lidar measurements, predicts a P50 capacity factor of 45%, which would exceed the 80% production target. P90 estimates suggest 39% capacity factor.\nStep 2: The selected turbine model (15 MW class) has been deployed at only 2 other offshore sites, with first-year availability averaging 88% compared to the manufacturer's warranted 95%. Wake losses between turbines add 5-8% energy reduction.\nStep 3: The grid connection requires a new 66kV submarine cable running 35 km to shore. Similar cable installations have experienced curtailment events averaging 12 days per year due to grid congestion and maintenance, reducing annual output by 3-5%.\nStep 4: Met-ocean data indicates the site experiences winter storm conditions that may require turbine shutdowns for 15-25 days annually, and climate models suggest increasing storm frequency in the project area.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate favorable wind resource assessment",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for turbine reliability and wake losses",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Factor in grid connection constraints",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Consider weather-related operational shutdowns",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_048",
+    "subtype": "CCC",
+    "prompt": "A conservation biologist must evaluate the probability that a critically endangered species will avoid extinction within 50 years under the current management plan. State your confidence as a percentage at each step.\n\nStep 1: The current population is estimated at 340 individuals in 3 fragmented subpopulations. Population viability analysis using census data suggests a 65% probability of persistence over 50 years under current conditions.\nStep 2: Genetic analysis reveals effective population size of only 85 individuals and inbreeding coefficients above 0.10 in the smallest subpopulation, suggesting potential inbreeding depression that PVA models may not fully capture.\nStep 3: The management plan includes a habitat corridor connecting two subpopulations, but land acquisition for the corridor is only 60% complete and faces opposition from a landowner coalition affecting the remaining parcels.\nStep 4: Climate envelope modeling suggests that 30-50% of current habitat will become unsuitable within 30 years, potentially requiring assisted migration to newly suitable areas 200 km north.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Apply PVA persistence estimate",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Account for genetic vulnerability beyond PVA",
+        "certainty_level": "low"
+      },
+      {
+        "step": 3,
+        "description": "Evaluate incomplete management plan implementation",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in climate-driven habitat loss",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_049",
+    "subtype": "CCC",
+    "prompt": "A forensic linguist must determine the probability that two anonymous threatening letters were written by the same author. State your confidence as a percentage at each step.\n\nStep 1: Stylometric analysis of both letters shows similar sentence length distributions (mean 14.2 vs 15.1 words) and vocabulary richness scores (TTR 0.68 vs 0.71), placing them in the same quartile among the reference corpus.\nStep 2: Both letters contain the unusual spelling 'definately' and use semicolons atypically (before conjunctions), patterns found in approximately 3% of the reference population independently.\nStep 3: However, Letter A uses primarily passive voice constructions (65% of sentences) while Letter B is predominantly active voice (78% of sentences), representing a significant stylistic divergence.\nStep 4: Content analysis reveals that Letter A discusses workplace grievances coherently while Letter B contains disorganized ideological rhetoric, possibly indicating different emotional states or an intentional style shift to avoid detection.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate general stylometric consistency",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 2,
+        "description": "Assess rare shared idiosyncratic markers",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Account for significant voice divergence",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Interpret content-level differences",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  },
+  {
+    "id": "ccc_050",
+    "subtype": "CCC",
+    "prompt": "Estimate the probability that a satellite's solar array will survive and function for its planned 15-year mission lifetime. State your confidence as a percentage at each step.\n\nStep 1: The solar array uses triple-junction GaAs cells with a beginning-of-life efficiency of 29.5%. The manufacturer's qualification tests showed 95% reliability over 15 years of equivalent thermal cycling (10,000 cycles) in vacuum.\nStep 2: The satellite orbits at 800 km altitude through the South Atlantic Anomaly for approximately 12 minutes per orbit, exposing the arrays to elevated proton flux. Radiation degradation models predict 18% power loss by year 15, leaving a 7% margin above minimum power requirements.\nStep 3: Two previous satellites using the same solar array design experienced anomalous electrostatic discharge events in years 8 and 11 of their missions, causing partial string failures that reduced power output by 5-8%.\nStep 4: A micrometeoroid impact risk assessment estimates a 12% cumulative probability of a strike causing >3% array damage over the mission lifetime, based on updated debris environment models that show increasing orbital debris density at this altitude.\n\nState your confidence as a percentage at each step of your reasoning.",
+    "steps": [
+      {
+        "step": 1,
+        "description": "Evaluate ground qualification test results",
+        "certainty_level": "high"
+      },
+      {
+        "step": 2,
+        "description": "Assess radiation degradation margin",
+        "certainty_level": "medium"
+      },
+      {
+        "step": 3,
+        "description": "Account for on-orbit anomaly precedent",
+        "certainty_level": "low"
+      },
+      {
+        "step": 4,
+        "description": "Factor in micrometeoroid and debris risk",
+        "certainty_level": "low"
+      }
+    ],
+    "expected_confidence_pattern": "decreasing",
+    "scoring_method": "confidence_slope"
+  }
+]
