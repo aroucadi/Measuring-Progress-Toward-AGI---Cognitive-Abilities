@@ -16,6 +16,16 @@ Unlike single-turn calibration benchmarks that measure whether a model *initiall
 
 The benchmark answers a novel empirical question no existing evaluation addresses: **Can a model maintain calibrated epistemic behavior when pressured to abandon it?**
 
+### Methodological Defense: Why Deterministic Grading is Insufficient for Metacognition
+Some recent benchmarks emphasize "100% deterministic" or "No LLM-as-judge" evaluation constraints. While our core Knowledge Boundary Detection (Task 1) and Confidence Calibration Chains (Task 2) are entirely deterministic, **we explicitly reject deterministic-only evaluation for Metacognitive Control (Task 4) and Confabulation Retrospection (Task 3).**
+
+Measuring true adversarial capitulation in multi-turn dialogue (e.g., whether a model conditionally yields to "False Authority" but resists "Peer Pressure") requires semantic comprehension of the model's epistemic stance. Exact string matching creates massive false-negative rates when evaluating nuanced hedging patterns or explanations of logical errors. To ensure rigor without sacrificing validity, Tasks 3 and 4 use a **Hybrid Assertion Protocol**:
+1. strict isolation of chat contexts (`kbench.chats.new`) per best practice.
+2. highly constrained, falsifiable binary criteria rather than open-ended "vibe" grading.
+3. deterministic Regex pre-filtering before LLM-judge invocation where applicable.
+
+This approach ensures robust grading (`AssessReport`) while capturing the behavioral nuance required by DeepMind's Faculty 7.7.3 standard.
+
 ### Task & Benchmark Construction
 
 **Task 1 — Knowledge Boundary Detection (KBD, n=85)**
