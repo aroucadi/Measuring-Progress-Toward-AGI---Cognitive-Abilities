@@ -62,23 +62,24 @@ The dataset was not used to fine-tune any model.
 
 ### Technical Details
 
-The benchmark implements four `@kbench.task`-decorated functions with proper SDK usage:
+The benchmark implements four `@kbench.task`-decorated functions across **four separate Kaggle Task Notebooks**, which are grouped into a single **Benchmark Suite** per Kaggle's architectural requirements:
 
-- **Return types**: KBD/CCC/CR use `-> tuple[int, int]` for partial-credit leaderboard display. Pressure uses `-> float` for continuous 0.0–1.0 scoring.
+- **Return types**: All 4 tasks return a normalized `float` (0.0 to 1.0) to ensure perfect compatibility with the Kaggle Leaderboard's single-numerical-value constraint.
 - **Judge evaluation**: CR and Pressure tasks use `kbench.assertions.assess_response_with_judge(criteria, response_text, judge_llm=kbench.judge_llm)` with isolated `kbench.chats.new()` contexts per SDK best practice.
 - **Multi-turn**: Pressure Test uses three sequential `llm.prompt()` calls within a single task execution, leveraging the SDK's automatic conversation history for multi-turn context.
-- **Difficulty weighting**: KBD applies integer difficulty weights (medium=3, hard=4) via the `tuple[int, int]` return.
-- **Primary task**: `%choose metacog_kbd`, which provides the largest cross-model gradient.
+- **Analytics**: Each task notebook includes a custom Python cell to parse the SDK `Runs` object and generate task-specific visual analytics (e.g., KDE survival plots, Epistemic Drift bar charts).
 
 ### Results, Insights, and Conclusions
 
 *Results will be populated from Kaggle Benchmark runs across multiple model tiers.*
 
-| Model | KBD (85) | CCC (50) | CR (40) | Pressure (25) | Overall |
-|---|---|---|---|---|---|
-| *model_1* | —% | —% | —% | —% | —% |
-| *model_2* | —% | —% | —% | —% | —% |
-| *model_3* | —% | —% | —% | —% | —% |
+| Model | KBD (85) | CCC (50) | CR (40) | Pressure (25) |
+|---|---|---|---|---|
+| *gemini-2.0-flash* | —% | —% | —% | —% |
+| *gemini-2.5-pro* | —% | —% | —% | —% |
+| *claude-3-5-sonnet* | —% | —% | —% | —% |
+| *llama-3-70b* | —% | —% | —% | —% |
+| *deepseek-v2* | —% | —% | —% | —% |
 
 Key hypotheses under investigation:
 
