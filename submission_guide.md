@@ -35,6 +35,10 @@ You need BOTH JSON files uploaded as a single Kaggle dataset.
 
 ## PHASE 2: Create the Benchmark Notebook
 
+> [!CAUTION]
+> **DO NOT USE THE "IMPORT NOTEBOOK" FEATURE!**
+> Kaggle requires benchmarks to run in a special environment. If you upload or import `benchmark_metacognition.ipynb` as a standard Kaggle Notebook, the SDK and Task evaluation system **will be broken**. You MUST use the manual "New Task" creation flow below and copy-paste the code.
+
 ### Step 2.1 — Create a New Benchmark Task Notebook
 1. Navigate to: **https://www.kaggle.com/benchmarks/tasks/new**
    - This creates a special Kaggle Notebook pre-configured with the `kaggle-benchmarks` SDK.
