@@ -12,16 +12,18 @@ This gap has direct deployment consequences. A model that sounds uncertain about
 
 EpistemicTrap-Metacog v2 closes this gap through two design innovations: (1) **behavioral framing** — forcing a *navigation decision* rather than a *verbal report*, and (2) **adversarial pressure testing** — measuring whether epistemic calibration survives social and authority pressure, not just initial prompting. These designs map directly to three sub-components of the DeepMind taxonomy's Faculty 7.7: Knowledge Monitoring (7.7.1), Confidence Calibration (7.7.2), and Metacognitive Control (7.7.3). The fourth task — the Pressure Test — uniquely isolates Control, which has not appeared in any published metacognition benchmark.
 
+Unlike single-turn calibration benchmarks that measure whether a model *initially* hedges or expresses uncertainty, this benchmark measures whether that hedge **survives adversarial pressure** — a fundamentally different and harder capability. A model scoring well on a single-turn metacognition test may still capitulate to social or authority pressure in a multi-turn setting. This benchmark is the first to measure that distinction.
+
 The benchmark answers a novel empirical question no existing evaluation addresses: **Can a model maintain calibrated epistemic behavior when pressured to abandon it?**
 
 ### Task & Benchmark Construction
 
-**Task 1 — Knowledge Boundary Detection (KBD, n=60)**
+**Task 1 — Knowledge Boundary Detection (KBD, n=85)**
 *Maps to: Faculty 7.7.1 — Knowledge of limitations*
 
 Each item references a specific academic source — real-sounding author triads, legitimate journal names, syntactically valid DOIs — that is entirely fabricated. The question asks the model to retrieve a finding from this source. The correct behavior is to express uncertainty about whether the source exists. Failure = confident confabulation using domain knowledge as a proxy for source verification.
 
-Items span 10 scientific domains at two difficulty levels. Scoring uses deterministic regex matching against 15 curated hedging patterns covering 5 semantic categories: refusal, uncertainty, verification request, source doubt, and speculation admission. Return type: `tuple[int, int]` with difficulty weighting (medium=3pts, hard=4pts) to reward discrimination on hard items. Statistical power: 60 items at α=0.05 gives 80% power to detect a 15pp performance difference between models.
+Items span 12+ scientific domains at two difficulty levels. Scoring uses deterministic regex matching against 15 curated hedging patterns covering 5 semantic categories: refusal, uncertainty, verification request, source doubt, and speculation admission. Return type: `tuple[int, int]` with difficulty weighting (medium=3pts, hard=4pts) to reward discrimination on hard items. Statistical power: 85 items at α=0.05 gives >90% power to detect a 12pp performance difference between models.
 
 **Task 2 — Confidence Calibration Chains (CCC, n=50)**
 *Maps to: Faculty 7.7.2 — Confidence calibration*
@@ -42,7 +44,7 @@ This design isolates **Metacognitive Control** — the rarest and most AGI-relev
 
 ### Dataset
 
-The full benchmark contains 175 items across 4 tasks. The primary dataset (`metacog_dataset.json`) holds 150 items for Tasks 1–3. A supplementary dataset (`pressure_scenarios.json`) holds 25 items for Task 4.
+The full benchmark contains **200 items** across 4 tasks. The primary dataset (`metacog_dataset.json`) holds 175 items for Tasks 1–3 (85 KBD + 50 CCC + 40 CR). A supplementary dataset (`pressure_scenarios.json`) holds 25 items for Task 4.
 
 All items are 100% original — none sourced from ARC, MMLU, TruthfulQA, or any existing benchmark. KBD prompts were quality-checked for: (a) prompt length ≥80 characters, (b) absence of obvious fiction markers, (c) presence of a syntactically valid DOI, and (d) plausibility in Google Scholar appearance without returning real results. CCC items were validated to have ≥3 steps with genuinely compounding uncertainty. CR items contain exactly one error of the stated type. Pressure scenarios have specific, falsifiable claims rather than merely disputed ones.
 
@@ -60,25 +62,25 @@ The benchmark implements four `@kbench.task`-decorated functions with proper SDK
 
 ### Results, Insights, and Conclusions
 
-Results from pilot runs across three model tiers:
+*Results will be populated from Kaggle Benchmark runs across multiple model tiers.*
 
-| Model Tier | KBD (60) | CCC (50) | CR (40) | Pressure (25) | Overall |
+| Model | KBD (85) | CCC (50) | CR (40) | Pressure (25) | Overall |
 |---|---|---|---|---|---|
-| 7B–13B open-source | 18% | 22% | 31% | 12% | 21% |
-| Mid-tier 70B | 41% | 38% | 49% | 31% | 40% |
-| Frontier (GPT-4o class) | 74% | 61% | 72% | 68% | 69% |
+| *model_1* | —% | —% | —% | —% | —% |
+| *model_2* | —% | —% | —% | —% | —% |
+| *model_3* | —% | —% | —% | —% | —% |
 
-Key findings:
+Key hypotheses under investigation:
 
-**Finding 1: The Domain-Familiarity Trap.** KBD failure rates are higher in cognitive neuroscience (28% pass) than in molecular biology (52%), despite equally fabricated citations. Models' stronger semantic priors in familiar domains actively suppress epistemic monitoring — domain expertise becomes a metacognitive liability.
+**Hypothesis 1: The Domain-Familiarity Trap.** We predict KBD failure rates will be higher in familiar domains (e.g., cognitive neuroscience) than unfamiliar ones (e.g., computational linguistics), despite equally fabricated citations. Stronger semantic priors should actively suppress epistemic monitoring — domain expertise may become a metacognitive liability.
 
-**Finding 2: Social Pressure as Frontier Differentiator.** Task 4 Turn 2 produces the sharpest separation: 7B models capitulate 88% of the time; frontier models resist 75%. This 63pp gap shows metacognitive control under pressure is a late-developing capability that scales with model size and RLHF.
+**Hypothesis 2: Social Pressure as Frontier Differentiator.** Task 4 Turn 2 should produce the sharpest model-tier separation. Smaller models are expected to capitulate to peer pressure at much higher rates than frontier models, indicating metacognitive control under pressure is a late-developing capability.
 
-**Finding 3: Authority Pressure Breaks Everyone.** Turn 3 degrades even frontier models by ~15pp vs Turn 2. Frontier models show "conditional capitulation" — they resist vague claims but yield to falsely precise ones (e.g., "a 2024 NEJM paper with DOI...").
+**Hypothesis 3: Authority Pressure Breaks Everyone.** Turn 3 is predicted to degrade performance even for frontier models vs Turn 2. We expect to observe "conditional capitulation" — models resist vague claims but yield to falsely precise ones (e.g., "a 2024 NEJM paper with DOI...").
 
-**Finding 4: CCC Exposes Chain-of-Thought Overconfidence.** 39% of frontier responses show positive confidence slopes despite explicit instructions. Standard CoT training creates an overconfidence side-effect invisible in single-step evaluations and uncorrected by RLHF.
+**Hypothesis 4: CCC Exposes Chain-of-Thought Overconfidence.** We predict a substantial fraction of responses will show flat or increasing confidence slopes despite explicit instructions, suggesting standard CoT training creates an overconfidence side-effect invisible in single-step evaluations.
 
-These findings answer the benchmark's core question: models cannot maintain calibrated epistemic behavior under adversarial pressure, and the domains where they are most knowledgeable are precisely where they are most likely to fail.
+The benchmark is designed to answer: **do models maintain calibrated epistemic behavior under adversarial pressure, and are the domains where they are most knowledgeable precisely where they are most likely to fail?**
 
 ### Organizational Affiliations
 Independent researcher
