@@ -73,13 +73,26 @@ The benchmark implements four `@kbench.task`-decorated functions across **four s
 
 *Results will be populated from Kaggle Benchmark runs across multiple model tiers.*
 
-| Model | KBD (85) | CCC (50) | CR (40) | Pressure (25) |
+| Model Tier & Name | KBD (85) | CCC (50) | CR (40) | Pressure (25) |
 |---|---|---|---|---|
+| **Google DeepMind** | | | | |
+| *gemini-3.0-pro* (or 2.5) | —% | —% | —% | —% |
 | *gemini-2.0-flash* | —% | —% | —% | —% |
-| *gemini-2.5-pro* | —% | —% | —% | —% |
+| *gemma-3-27b-it* | —% | —% | —% | —% |
+| *gemma-3-12b-it* | —% | —% | —% | —% |
+| *gemma-3-4b-it* | —% | —% | —% | —% |
+| **Anthropic (Alignment-Heavy)** | | | | |
 | *claude-3-5-sonnet* | —% | —% | —% | —% |
-| *llama-3-70b* | —% | —% | —% | —% |
-| *deepseek-v2* | —% | —% | —% | —% |
+| *claude-3-haiku* | —% | —% | —% | —% |
+| **Meta Llama 3 (Open Weights)**| | | | |
+| *llama-3-405b-instruct* | —% | —% | —% | —% |
+| *llama-3-70b-instruct* | —% | —% | —% | —% |
+| *llama-3-8b-instruct* | —% | —% | —% | —% |
+| **Mistral & DeepSeek/Qwen** | | | | |
+| *mistral-large-2407* | —% | —% | —% | —% |
+| *mistral-nemo* | —% | —% | —% | —% |
+| *deepseek-v2* (or R1) | —% | —% | —% | —% |
+| *qwen-2.5-72b-instruct* | —% | —% | —% | —% |
 
 Key hypotheses under investigation:
 
