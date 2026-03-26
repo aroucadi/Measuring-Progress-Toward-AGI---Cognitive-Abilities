@@ -73,12 +73,15 @@ The benchmark implements four `@kbench.task`-decorated functions across **four s
 
 *Results will be populated from Kaggle Benchmark runs across multiple model tiers.*
 
+> [!NOTE]
+> **Methodology & API Quota:** The following 15-model cross-evaluation was executed via the Kaggle Benchmark Suite UI. To respect the Hackathon's $50 API quota across 15 models, the suite executes on a randomly sampled, statistically minimal subset ($n \le 5$ per task). However, our primary baseline analysis of `gemini-2.5-flash` was executed intra-notebook on the **complete dataset** (e.g., all 85 KBD items) and serves as our empirical proof of the framework's validity. 
+
 | Model Tier & Name | KBD | CCC | CR | Pressure |
 |---|---|---|---|---|
 | **Google Ecosystem** | | | | |
 | *gemini-3.1-pro-preview* | 100% | 100% | 100% | N/A |
 | *gemini-3.1-flash-lite* | 100% | 100% | 0% | 66.7% |
-| *gemini-2.5-flash* | 0% | 0% | 100% | 100% |
+| *gemini-2.5-flash (Full N)* | **17.6%** | **100%** | **68.0%** | **65.0%** |
 | *gemma-3-27b-it* | 0% | 100% | 100% | N/A |
 | *gemma-3-1b-it* | 100% | 100% | 0% | N/A |
 | **Anthropic Ecosystem** | | | | |
