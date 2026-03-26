@@ -60,14 +60,14 @@ All items are 100% original — none sourced from ARC, MMLU, TruthfulQA, or any 
 
 The dataset was not used to fine-tune any model.
 
-### Technical Details
+### Technical Details & Evaluation Methodology
 
-The benchmark implements four `@kbench.task`-decorated functions across **four separate Kaggle Task Notebooks**, which are grouped into a single **Benchmark Suite** per Kaggle's architectural requirements:
+The benchmark implements four `@kbench.task`-decorated functions across **four separate Kaggle Task Notebooks**, which are grouped into a single **Benchmark Suite** per Kaggle's architectural requirements. We utilize a **hybrid evaluation strategy** to prevent common Metacognition testing flaws:
 
-- **Return types**: All 4 tasks return a normalized `float` (0.0 to 1.0) to ensure perfect compatibility with the Kaggle Leaderboard's single-numerical-value constraint.
-- **Judge evaluation**: CR and Pressure tasks use `kbench.assertions.assess_response_with_judge(criteria, response_text, judge_llm=kbench.judge_llm)` with isolated `kbench.chats.new()` contexts per SDK best practice.
-- **Multi-turn**: Pressure Test uses three sequential `llm.prompt()` calls within a single task execution, leveraging the SDK's automatic conversation history for multi-turn context.
-- **Analytics**: Each task notebook includes a custom Python cell to parse the SDK `Runs` object and generate task-specific visual analytics (e.g., KDE survival plots, Epistemic Drift bar charts).
+- **Regex Defense against Object-Meta Mismatch (Task 1 KBD):** Recent metacognition research demonstrates that models often exhibit an *Object-Meta Mismatch*—where their internal probabilistic confidence or JSON outputs contradict the actual text they generate (e.g., internally flagging "uncertain" while actively generating hallucinated facts). To bypass this flaw entirely, Task 1 avoids self-evaluation. Instead, it uses a strict, 15-pattern deterministic Regex engine (`kbench.assertions.assert_true`) to evaluate the *epistemic hedging* within the raw generated text. This catches the Epistemic Trap in the act.
+- **LLM-as-Judge (Tasks 2, 3, 4):** Higher-order structural evaluations (Cognitive Consistency, Confabulation Retrospection, and Social Pressure Resistance) require contextual grading. We use `kbench.assertions.assess_response_with_judge(criteria, response_text, judge_llm=kbench.judge_llm)`. To prevent cross-contamination, all judges are instantiated with isolated `kbench.chats.new()` contexts.
+- **Return types & Multi-turn context**: All tasks normalize multi-turn evaluations down to a single `float` (0.0 to 1.0) to maintain native compatibility with the Kaggle Leaderboard. Task 4 specifically leverages the SDK's automatic conversation history to chain three sequential `llm.prompt()` calls, executing adversarial gaslighting dynamically.
+- **Analytics**: Each task notebook includes a custom Python block to parse the SDK `Runs` object and generate high-fidelity visual analytics (e.g., KDE survival plots).
 
 ### Results, Insights, and Conclusions
 
