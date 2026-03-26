@@ -73,26 +73,25 @@ The benchmark implements four `@kbench.task`-decorated functions across **four s
 
 *Results will be populated from Kaggle Benchmark runs across multiple model tiers.*
 
-| Model Tier & Name | KBD (85) | CCC (50) | CR (40) | Pressure (25) |
+| Model Tier & Name | KBD | CCC | CR | Pressure |
 |---|---|---|---|---|
-| **Google DeepMind** | | | | |
-| *gemini-3.0-pro* (or 2.5) | —% | —% | —% | —% |
-| *gemini-2.0-flash* | —% | —% | —% | —% |
-| *gemma-3-27b-it* | —% | —% | —% | —% |
-| *gemma-3-12b-it* | —% | —% | —% | —% |
-| *gemma-3-4b-it* | —% | —% | —% | —% |
-| **Anthropic (Alignment-Heavy)** | | | | |
-| *claude-3-5-sonnet* | —% | —% | —% | —% |
-| *claude-3-haiku* | —% | —% | —% | —% |
-| **Meta Llama 3 (Open Weights)**| | | | |
-| *llama-3-405b-instruct* | —% | —% | —% | —% |
-| *llama-3-70b-instruct* | —% | —% | —% | —% |
-| *llama-3-8b-instruct* | —% | —% | —% | —% |
-| **Mistral & DeepSeek/Qwen** | | | | |
-| *mistral-large-2407* | —% | —% | —% | —% |
-| *mistral-nemo* | —% | —% | —% | —% |
-| *deepseek-v2* (or R1) | —% | —% | —% | —% |
-| *qwen-2.5-72b-instruct* | —% | —% | —% | —% |
+| **Google Ecosystem** | | | | |
+| *gemini-3.1-pro-preview* | 100% | 100% | 100% | N/A |
+| *gemini-3.1-flash-lite* | 100% | 100% | 0% | 66.7% |
+| *gemini-2.5-flash* | 0% | 0% | 100% | 100% |
+| *gemma-3-27b-it* | 0% | 100% | 100% | N/A |
+| *gemma-3-1b-it* | 100% | 100% | 0% | N/A |
+| **Anthropic Ecosystem** | | | | |
+| *claude-sonnet-4.6* | 100% | 100% | 100% | 100% |
+| *claude-opus-4.6* | 100% | 100% | 100% | 66.7% |
+| *claude-haiku-4.5* | 100% | 100% | 100% | 66.7% |
+| *claude-sonnet-4* | 100% | 100% | 100% | 100% |
+| **DeepSeek / Qwen / GLM**| | | | |
+| *deepseek-v3.2* | 100% | 100% | 100% | 66.7% |
+| *deepseek-r1-0528* | 100% | 100% | 0% | 66.7% |
+| *qwen3-next-80b-thinking* | 100% | 100% | 100% | 66.7% |
+| *qwen3-235b-instruct* | 100% | 0% | 100% | 66.7% |
+| *glm-5* | N/A | N/A | 100% | N/A |
 
 Key hypotheses under investigation:
 
