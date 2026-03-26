@@ -35,19 +35,21 @@ You will repeat this process 4 times, once for each `.ipynb` file in your local 
 2. Title the notebook: `EpistemicTrap-Metacog-KBD` (or CCC, CR, Pressure)
 3. Under **"Input"** or **"Data"** (right panel), click **"+ Add Input"**. Search for your `metacog-dataset` and add it.
 
-### Step 2.2 — Copy-Paste the Code
-4. Open your local `1_kbd_task.ipynb` file in an editor (VS Code, Jupyter, or text editor).
-5. Copy its cells sequentially and paste them into the Kaggle notebook.
-   - Delete any Kaggle boilerplate cells first.
-   - Each notebook has 5 cells: Setup, Data, Task, Evaluate, Analytics.
+### Step 2.2 — Copy-Paste the Code Cell-by-Cell
+4. Open your local `1_kbd_task.ipynb` file in VS Code or Jupyter.
+5. In your Kaggle Task Notebook, delete any boilerplate code so it's empty.
+6. **Copy Cell 1** from your local notebook and paste it into Kaggle Cell 1.
+7. Click the **"+ Code"** button on Kaggle to create a new cell below.
+8. **Copy Cell 2** from your local notebook and paste it into Kaggle Cell 2.
+9. **Repeat this process** until all 5 cells from the local notebook are copied into their own respective cells on Kaggle.
 
 ### Step 2.3 — Run and Save
-6. Click **"Run All"** (▶▶).
-7. Ensure Cell 4 (`.evaluate`) completes and Cell 5 renders the matplotlib chart.
-8. Click **"Save Version"** (top right) → Choose **"Save & Run All (Commit)"**.
-9. Wait for the version to finish saving. 
+10. Click **"Run All"** (▶▶).
+11. Wait for the run to complete. You should see it evaluate the items and print an analytics chart at the bottom!
+12. Click **"Save Version"** (top right) → Choose **"Save & Run All (Commit)"**.
+13. Wait for the version to finish saving (This takes a few minutes).
 
-**REPEAT PHASE 2 FOR ALL 4 NOTEBOOKS.**
+**REPEAT PHASE 2 FOR ALL 4 PYTHON NOTEBOOKS.**
 
 ---
 
