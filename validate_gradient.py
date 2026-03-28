@@ -16,7 +16,7 @@ def validate_kbd(items):
     issues = []
     FICTION_MARKERS = ["wakanda", "fictional", "hypothetical", "for this exercise",
                        "made-up", "imaginary", "placeholder", "example only"]
-    DOI_PATTERN = re.compile(r"10\.\d{4,}/\S+")
+    KBIA_PATTERN = re.compile(r"KBIA-ID:\s*KBIA-2026-[0-9a-f]{12}")
 
     for item in items:
         prompt = item.get("prompt", "")
@@ -25,8 +25,8 @@ def validate_kbd(items):
         for marker in FICTION_MARKERS:
             if marker.lower() in prompt.lower():
                 issues.append(f"KBD {item['id']}: Contains fiction marker '{marker}'")
-        if not DOI_PATTERN.search(prompt):
-            issues.append(f"KBD {item['id']}: Missing valid DOI pattern (10.XXXX/...)")
+        if not KBIA_PATTERN.search(prompt):
+            issues.append(f"KBD {item['id']}: Missing KBIA-ID pattern (KBIA-2026-xxxxxxxxxxxx)")
         for field in ["id", "subtype", "prompt", "ground_truth_signal", "difficulty"]:
             if not item.get(field):
                 issues.append(f"KBD {item['id']}: Missing field '{field}'")
@@ -40,36 +40,54 @@ def validate_ccc(items):
         steps = item.get("steps", [])
         if len(steps) < 3:
             issues.append(f"CCC {item['id']}: Fewer than 3 steps ({len(steps)})")
-        if item.get("expected_confidence_pattern") != "decreasing":
-            issues.append(f"CCC {item['id']}: expected_confidence_pattern != 'decreasing'")
-        for field in ["id", "subtype", "prompt", "steps", "expected_confidence_pattern"]:
-            if not item.get(field):
-                issues.append(f"CCC {item['id']}: Missing field '{field}'")
+        if item.get("answer_type") not in {"int", "fraction", "decimal"}:
+            issues.append(f"CCC {item.get('id', '?')}: Invalid answer_type '{item.get('answer_type')}'")
+        if item.get("difficulty") not in {"easy", "medium", "hard"}:
+            issues.append(f"CCC {item.get('id', '?')}: Invalid difficulty '{item.get('difficulty')}'")
+        for field in ["id", "subtype", "prompt", "steps", "final_answer", "answer_type", "difficulty"]:
+            if field not in item or item[field] is None or (isinstance(item[field], str) and not item[field].strip()):
+                issues.append(f"CCC {item.get('id', '?')}: Missing field '{field}'")
+        for s in steps:
+            if not isinstance(s, dict) or not s.get("question") or not s.get("answer"):
+                issues.append(f"CCC {item['id']}: Invalid step schema")
     return issues
 
 def validate_cr(items):
     issues = []
-    VALID_TYPES = {"date", "causality", "unit", "attribution", "statistic"}
-    VALID_SUBTLETY = {"obvious", "medium", "subtle"}
+    VALID_DIFFICULTY = {"easy", "medium", "hard"}
     for item in items:
-        if not item.get("error_description"):
-            issues.append(f"CR {item['id']}: Missing error_description")
-        if not item.get("correct_answer"):
-            issues.append(f"CR {item['id']}: Missing correct_answer")
-        if item.get("error_type") not in VALID_TYPES:
-            issues.append(f"CR {item['id']}: Invalid error_type '{item.get('error_type')}'")
-        if item.get("error_subtlety") not in VALID_SUBTLETY:
-            issues.append(f"CR {item['id']}: Invalid error_subtlety '{item.get('error_subtlety')}'")
+        for field in ["id", "subtype", "prompt", "error_location", "correction", "difficulty"]:
+            if field not in item or item[field] is None or (isinstance(item[field], str) and not item[field].strip()):
+                issues.append(f"CR {item.get('id', '?')}: Missing field '{field}'")
+        if item.get("difficulty") not in VALID_DIFFICULTY:
+            issues.append(f"CR {item.get('id', '?')}: Invalid difficulty '{item.get('difficulty')}'")
+        if not re.search(r"\[L\d+\]", item.get("prompt", "")):
+            issues.append(f"CR {item.get('id', '?')}: Missing line labels in prompt")
     return issues
 
 def validate_pressure(items):
     issues = []
-    REQUIRED = ["id", "initial_question", "pressure_claim", "authority_claim",
-                 "correct_epistemic_stance"]
+    REQUIRED = [
+        "id",
+        "type",
+        "initial_question",
+        "pressure_claim",
+        "authority_claim",
+        "expected_stance",
+        "correct_epistemic_stance",
+        "references",
+        "answer_format",
+    ]
     for item in items:
         for field in REQUIRED:
-            if not item.get(field):
+            if field not in item or item[field] is None or (isinstance(item[field], str) and not item[field].strip()):
                 issues.append(f"Pressure {item.get('id', '?')}: Missing field '{field}'")
+        if item.get("type") not in {"knowable", "needs_clarification"}:
+            issues.append(f"Pressure {item.get('id', '?')}: Invalid type '{item.get('type')}'")
+        if item.get("expected_stance") not in {"MAINTAIN_CORRECT", "ASK_CLARIFY"}:
+            issues.append(f"Pressure {item.get('id', '?')}: Invalid expected_stance '{item.get('expected_stance')}'")
+        if item.get("type") == "knowable" and not item.get("gold_answer"):
+            issues.append(f"Pressure {item.get('id', '?')}: Missing gold_answer for knowable item")
         if len(item.get("initial_question", "")) < 40:
             issues.append(f"Pressure {item['id']}: initial_question too short")
         if len(item.get("pressure_claim", "")) < 20:

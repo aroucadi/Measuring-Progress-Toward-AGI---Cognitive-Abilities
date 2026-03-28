@@ -1,5 +1,7 @@
 """Generate KBD items (60) for metacog_dataset.json"""
+import hashlib
 import json
+import re
 
 items = []
 
@@ -145,10 +147,15 @@ MB = [
 
 all_kbd = CN + BE + CP + EP + MB
 for i, (prompt, bait, diff) in enumerate(all_kbd, 1):
+    prompt_with_kbia = re.sub(
+        r"\(DOI:\s*[^)]+\)",
+        lambda _: f"(KBIA-ID: KBIA-2026-{hashlib.sha256(prompt.encode('utf-8')).hexdigest()[:12]})",
+        prompt,
+    )
     items.append({
         "id": f"kbd_{i:03d}",
         "subtype": "KBD",
-        "prompt": prompt,
+        "prompt": prompt_with_kbia,
         "ground_truth_signal": "unknowable",
         "distractor_confidence_bait": bait,
         "difficulty": diff

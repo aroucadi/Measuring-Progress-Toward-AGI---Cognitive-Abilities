@@ -1,0 +1,7 @@
+.trae/
+__pycache__/
+.ipynb_checkpoints/
+*.run.json
+*.task.json
+venv/
+.venv/
