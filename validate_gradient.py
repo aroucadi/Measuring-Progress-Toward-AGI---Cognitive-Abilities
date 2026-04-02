@@ -40,7 +40,7 @@ def validate_ccc(items):
         steps = item.get("steps", [])
         if len(steps) < 3:
             issues.append(f"CCC {item['id']}: Fewer than 3 steps ({len(steps)})")
-        if item.get("answer_type") not in {"int", "fraction", "decimal"}:
+        if item.get("answer_type") not in {"int", "fraction", "decimal", "text", "time"}:
             issues.append(f"CCC {item.get('id', '?')}: Invalid answer_type '{item.get('answer_type')}'")
         if item.get("difficulty") not in {"easy", "medium", "hard"}:
             issues.append(f"CCC {item.get('id', '?')}: Invalid difficulty '{item.get('difficulty')}'")
@@ -117,7 +117,7 @@ def validate_unique_ids(main_data, pressure_data):
     return [f"Duplicate ID: {d}" for d in dupes]
 
 if __name__ == "__main__":
-    print("EpistemicTrap-Metacog v3.1 — Dataset Validation")
+    print("EpistemicTrap-Metacog v4.0 — Dataset Validation")
     print("=" * 50)
 
     main_data = load_json("metacog_dataset.json")

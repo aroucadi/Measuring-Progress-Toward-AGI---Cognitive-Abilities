@@ -1,4 +1,4 @@
-# Complete Submission Guide: EpistemicTrap-Metacog v3.1 (MULTI-NOTEBOOK)
+# Complete Submission Guide: EpistemicTrap-Metacog v4.0 (MULTI-NOTEBOOK)
 ## Kaggle AGI Hackathon — Metacognition Track (Benchmark + Writeup)
 
 This guide is written as an end-to-end checklist so the final submission has **everything judges might look for**: datasets, tasks, benchmark suite, 5+ model evaluations, leaderboard evidence, writeup, and reproducibility artifacts.
@@ -39,7 +39,9 @@ This guide is written as an end-to-end checklist so the final submission has **e
 
 1. Run dataset validation:
    - `py validate_gradient.py`
-2. Confirm the notebooks open locally (no JSON corruption) and match counts.
+2. Run contamination attestation:
+   - `py verify_kbia_contamination.py --sample 10`
+3. Confirm the notebooks open locally (no JSON corruption) and match counts.
 3. Confirm README/writeup reflect the same Ns as the datasets.
 
 ---
@@ -96,7 +98,7 @@ Repeat the steps below for each of the four local notebooks.
 
 1. Go to: https://www.kaggle.com/benchmarks  
 2. Click **Create Benchmark**.
-3. Title suggestion: `EpistemicTrap-Metacog v3.1 (Behavioral Epistemic Survival)`
+3. Title suggestion: `EpistemicTrap-Metacog v4.0 (Behavioral Epistemic Survival)`
 4. Add the 4 tasks you created in Phase 2.
 5. Save the benchmark.
 

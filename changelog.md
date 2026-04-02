@@ -1,5 +1,35 @@
 # EpistemicTrap-Metacog Changelog
 
+## [v4.0] - "Grand Prize Push" (2026-04-02)
+
+### Added
+*   **CCC epistemic drift chains**: Replaced 20 trivial mod-restatement items (batch 5) with 4 new sub-batches that create genuine uncertainty compounding:
+    - Batch 5a: Drug dosage cascades (weight → raw dose → clearance adjustment → rounding) — 5 items.
+    - Batch 5b: Compound probability chains (P(A) × P(B|A) × P(C|A∩B)) — 5 items.
+    - Batch 5c: Multi-step Fermi estimation chains (rate × frequency × duration) — 5 items.
+    - Batch 5d: Unit conversion chains (convert → compute → classify) — 5 items.
+*   **Pressure stateful multi-turn**: Turns 2 and 3 now include full prior conversation history, so the model experiences escalating social pressure as a coherent narrative rather than 3 independent prompts.
+*   **Literature-derived human baselines**: Anchored all 4 tasks against published human performance data (Asch 1956, Lichtenstein et al. 1982, Marsh & Umanath 2014, etc.) to satisfy the DeepMind framework's 3-stage evaluation protocol.
+*   **Contamination attestation**: Added `verify_kbia_contamination.py` for programmatic verification that KBIA-IDs don't resolve in public databases.
+*   **Expanded validator**: `validate_gradient.py` now accepts `text` and `time` answer types for the new CCC chain items.
+*   **`requirements.txt`**: Pinned dependency versions for reproducibility.
+
+### Changed
+*   **CCC task version**: Bumped `@kbench.task` version 2 → 3 to reflect the new item composition.
+*   **Pressure task version**: Bumped 4 → 5 to reflect the stateful multi-turn architecture.
+*   **Writeup rewrite**: Trimmed to ≤1,500 words; added explicit DeepMind section references (§7.7.1–4), human baseline table, Limitations section, contamination attestation statement, and 3 new references.
+*   **CCC difficulty distribution**: Now 40 easy / 35 medium / 25 hard (was 60 easy / 20 medium / 20 hard).
+
+### Fixed
+*   CCC construct validity: Easy items no longer have identical restatements across steps; all chains now have genuine step-to-step uncertainty propagation.
+*   Pressure construct validity: Multi-turn scoring now tests actual resistance to escalating pressure rather than independent per-prompt accuracy.
+
+### Rationale
+This release directly addresses the two fixable gaps identified in competitive benchmarking:
+1. "CCC easy batch creates a floor that inflates calibration scores" → replaced with uncertainty-compounding chains.
+2. "Pressure 3 turns are stateless — each LLM call is independent" → conversation history now passed between turns.
+Human baselines are derived from published cognitive psychology literature rather than crowdsourced, acknowledged as a limitation.
+
 ## [v3.1] - "Grand Prize Hardening" (2026-03-28)
 
 ### Added
@@ -11,8 +41,6 @@
 *   **Documentation synchronization**: aligned counts and schemas across notebooks, datasets, and writeup.
 
 ## [v2.3.0] - "The Grand Prize Polish" (2026-03-25)
-
-This release specifically targets competitive vulnerabilities highlighted in community discussions, bulletproofing the submission against grading biases and leveling up the presentation.
 
 ### Added
 *   **Methodological Defense Section (`writeup.md`)**: A proactive, explicit defense of our "LLM-as-Judge" methodology in Tasks 3 & 4. This counters the "deterministic-only" narrative pushed by competitors (e.g., CASK), explaining mathematically why regex is insufficient for multi-turn adversarial dialogue scoring.

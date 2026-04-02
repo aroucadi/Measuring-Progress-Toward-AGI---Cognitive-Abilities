@@ -2962,502 +2962,502 @@
   {
     "id": "ccc_081",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 85 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 85 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A patient weighs 70 kg. The standard dose is 5 mg/kg. Compute the raw dose in mg. Return an integer.\nStep 2: The patient has reduced organ function requiring a 0.8 adjustment factor. Multiply the raw dose from Step 1 by 0.8. Return a number (decimal ok).\nStep 3: Round the adjusted dose from Step 2 to the nearest 50 mg. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 85 mod 4. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "A patient weighs 70 kg. The standard dose is 5 mg/kg. Compute the raw dose in mg. Return an integer.",
+        "answer": "350"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 85 is divided by 4. Return an integer.",
-        "answer": "1"
+        "question": "The patient has reduced organ function requiring a 0.8 adjustment factor. Multiply the raw dose from Step 1 by 0.8. Return a number (decimal ok).",
+        "answer": "280.0"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Round the adjusted dose from Step 2 to the nearest 50 mg. Return an integer.",
+        "answer": "300"
       }
     ],
-    "final_answer": "1",
+    "final_answer": "300",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_082",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 36 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 36 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A patient weighs 85 kg. The standard dose is 3 mg/kg. Compute the raw dose in mg. Return an integer.\nStep 2: The patient has reduced organ function requiring a 0.6 adjustment factor. Multiply the raw dose from Step 1 by 0.6. Return a number (decimal ok).\nStep 3: Round the adjusted dose from Step 2 to the nearest 25 mg. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 36 mod 4. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "A patient weighs 85 kg. The standard dose is 3 mg/kg. Compute the raw dose in mg. Return an integer.",
+        "answer": "255"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 36 is divided by 4. Return an integer.",
-        "answer": "0"
+        "question": "The patient has reduced organ function requiring a 0.6 adjustment factor. Multiply the raw dose from Step 1 by 0.6. Return a number (decimal ok).",
+        "answer": "153.0"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "Round the adjusted dose from Step 2 to the nearest 25 mg. Return an integer.",
+        "answer": "150"
       }
     ],
-    "final_answer": "0",
+    "final_answer": "150",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_083",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 37 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 37 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A patient weighs 60 kg. The standard dose is 8 mg/kg. Compute the raw dose in mg. Return an integer.\nStep 2: The patient has reduced organ function requiring a 0.7 adjustment factor. Multiply the raw dose from Step 1 by 0.7. Return a number (decimal ok).\nStep 3: Round the adjusted dose from Step 2 to the nearest 100 mg. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 37 mod 9. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "A patient weighs 60 kg. The standard dose is 8 mg/kg. Compute the raw dose in mg. Return an integer.",
+        "answer": "480"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 37 is divided by 9. Return an integer.",
-        "answer": "1"
+        "question": "The patient has reduced organ function requiring a 0.7 adjustment factor. Multiply the raw dose from Step 1 by 0.7. Return a number (decimal ok).",
+        "answer": "336.0"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Round the adjusted dose from Step 2 to the nearest 100 mg. Return an integer.",
+        "answer": "300"
       }
     ],
-    "final_answer": "1",
+    "final_answer": "300",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_084",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 99 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 99 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A patient weighs 95 kg. The standard dose is 4 mg/kg. Compute the raw dose in mg. Return an integer.\nStep 2: The patient has reduced organ function requiring a 0.9 adjustment factor. Multiply the raw dose from Step 1 by 0.9. Return a number (decimal ok).\nStep 3: Round the adjusted dose from Step 2 to the nearest 50 mg. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 99 mod 4. Return only the remainder as an integer.",
-        "answer": "3"
+        "question": "A patient weighs 95 kg. The standard dose is 4 mg/kg. Compute the raw dose in mg. Return an integer.",
+        "answer": "380"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 99 is divided by 4. Return an integer.",
-        "answer": "3"
+        "question": "The patient has reduced organ function requiring a 0.9 adjustment factor. Multiply the raw dose from Step 1 by 0.9. Return a number (decimal ok).",
+        "answer": "342.0"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "3"
+        "question": "Round the adjusted dose from Step 2 to the nearest 50 mg. Return an integer.",
+        "answer": "350"
       }
     ],
-    "final_answer": "3",
+    "final_answer": "350",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_085",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 124 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 124 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A patient weighs 55 kg. The standard dose is 6 mg/kg. Compute the raw dose in mg. Return an integer.\nStep 2: The patient has reduced organ function requiring a 0.5 adjustment factor. Multiply the raw dose from Step 1 by 0.5. Return a number (decimal ok).\nStep 3: Round the adjusted dose from Step 2 to the nearest 25 mg. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 124 mod 9. Return only the remainder as an integer.",
-        "answer": "7"
+        "question": "A patient weighs 55 kg. The standard dose is 6 mg/kg. Compute the raw dose in mg. Return an integer.",
+        "answer": "330"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 124 is divided by 9. Return an integer.",
-        "answer": "7"
+        "question": "The patient has reduced organ function requiring a 0.5 adjustment factor. Multiply the raw dose from Step 1 by 0.5. Return a number (decimal ok).",
+        "answer": "165.0"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "7"
+        "question": "Round the adjusted dose from Step 2 to the nearest 25 mg. Return an integer.",
+        "answer": "175"
       }
     ],
-    "final_answer": "7",
+    "final_answer": "175",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_086",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 35 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 35 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: The probability of rain is 30%. The probability of flight delay given rain is 50%. Compute P(rain AND flight delay given rain). Return as a decimal rounded to 4 places.\nStep 2: Given P(rain AND flight delay given rain) from Step 1, and P(cancellation given delay) is 40%, compute P(all three events). Return as a decimal rounded to 4 places.\nStep 3: Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 35 mod 3. Return only the remainder as an integer.",
-        "answer": "2"
+        "question": "The probability of rain is 30%. The probability of flight delay given rain is 50%. Compute P(rain AND flight delay given rain). Return as a decimal rounded to 4 places.",
+        "answer": "0.1500"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 35 is divided by 3. Return an integer.",
-        "answer": "2"
+        "question": "Given P(rain AND flight delay given rain) from Step 1, and P(cancellation given delay) is 40%, compute P(all three events). Return as a decimal rounded to 4 places.",
+        "answer": "0.0600"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "2"
+        "question": "Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
+        "answer": "6.00"
       }
     ],
-    "final_answer": "2",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "6.00",
+    "answer_type": "decimal",
+    "difficulty": "hard"
   },
   {
     "id": "ccc_087",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 21 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 21 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: The probability of manufacturing defect is 20%. The probability of component failure given defect is 60%. Compute P(manufacturing defect AND component failure given defect). Return as a decimal rounded to 4 places.\nStep 2: Given P(manufacturing defect AND component failure given defect) from Step 1, and P(product recall given failure) is 30%, compute P(all three events). Return as a decimal rounded to 4 places.\nStep 3: Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 21 mod 9. Return only the remainder as an integer.",
-        "answer": "3"
+        "question": "The probability of manufacturing defect is 20%. The probability of component failure given defect is 60%. Compute P(manufacturing defect AND component failure given defect). Return as a decimal rounded to 4 places.",
+        "answer": "0.1200"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 21 is divided by 9. Return an integer.",
-        "answer": "3"
+        "question": "Given P(manufacturing defect AND component failure given defect) from Step 1, and P(product recall given failure) is 30%, compute P(all three events). Return as a decimal rounded to 4 places.",
+        "answer": "0.0360"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "3"
+        "question": "Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
+        "answer": "3.60"
       }
     ],
-    "final_answer": "3",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "3.60",
+    "answer_type": "decimal",
+    "difficulty": "hard"
   },
   {
     "id": "ccc_088",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 73 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 73 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: The probability of infection is 40%. The probability of antibiotic resistance given infection is 70%. Compute P(infection AND antibiotic resistance given infection). Return as a decimal rounded to 4 places.\nStep 2: Given P(infection AND antibiotic resistance given infection) from Step 1, and P(ICU admission given resistance) is 50%, compute P(all three events). Return as a decimal rounded to 4 places.\nStep 3: Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 73 mod 4. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "The probability of infection is 40%. The probability of antibiotic resistance given infection is 70%. Compute P(infection AND antibiotic resistance given infection). Return as a decimal rounded to 4 places.",
+        "answer": "0.2800"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 73 is divided by 4. Return an integer.",
-        "answer": "1"
+        "question": "Given P(infection AND antibiotic resistance given infection) from Step 1, and P(ICU admission given resistance) is 50%, compute P(all three events). Return as a decimal rounded to 4 places.",
+        "answer": "0.1400"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
+        "answer": "14.00"
       }
     ],
-    "final_answer": "1",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "14.00",
+    "answer_type": "decimal",
+    "difficulty": "hard"
   },
   {
     "id": "ccc_089",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 174 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 174 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: The probability of software flaw is 15%. The probability of exploit given flaw is 80%. Compute P(software flaw AND exploit given flaw). Return as a decimal rounded to 4 places.\nStep 2: Given P(software flaw AND exploit given flaw) from Step 1, and P(data breach given exploit) is 25%, compute P(all three events). Return as a decimal rounded to 4 places.\nStep 3: Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 174 mod 9. Return only the remainder as an integer.",
-        "answer": "3"
+        "question": "The probability of software flaw is 15%. The probability of exploit given flaw is 80%. Compute P(software flaw AND exploit given flaw). Return as a decimal rounded to 4 places.",
+        "answer": "0.1200"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 174 is divided by 9. Return an integer.",
-        "answer": "3"
+        "question": "Given P(software flaw AND exploit given flaw) from Step 1, and P(data breach given exploit) is 25%, compute P(all three events). Return as a decimal rounded to 4 places.",
+        "answer": "0.0300"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "3"
+        "question": "Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
+        "answer": "3.00"
       }
     ],
-    "final_answer": "3",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "3.00",
+    "answer_type": "decimal",
+    "difficulty": "hard"
   },
   {
     "id": "ccc_090",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 109 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 109 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: The probability of cloud cover is 50%. The probability of rain given cloud cover is 30%. Compute P(cloud cover AND rain given cloud cover). Return as a decimal rounded to 4 places.\nStep 2: Given P(cloud cover AND rain given cloud cover) from Step 1, and P(flash flood given rain) is 60%, compute P(all three events). Return as a decimal rounded to 4 places.\nStep 3: Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 109 mod 9. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "The probability of cloud cover is 50%. The probability of rain given cloud cover is 30%. Compute P(cloud cover AND rain given cloud cover). Return as a decimal rounded to 4 places.",
+        "answer": "0.1500"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 109 is divided by 9. Return an integer.",
-        "answer": "1"
+        "question": "Given P(cloud cover AND rain given cloud cover) from Step 1, and P(flash flood given rain) is 60%, compute P(all three events). Return as a decimal rounded to 4 places.",
+        "answer": "0.0900"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Express the probability from Step 2 as a percentage rounded to 2 decimal places. Return the number only (no % sign).",
+        "answer": "9.00"
       }
     ],
-    "final_answer": "1",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "9.00",
+    "answer_type": "decimal",
+    "difficulty": "hard"
   },
   {
     "id": "ccc_091",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 103 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 103 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A standard toilet uses 6 liters per flush. Compute the water used in 5 flushes. Return an integer.\nStep 2: A person flushes approximately 5 times per day. Using the per-day water from Step 1, compute the total liters used in one year (365 days). Return an integer.\nStep 3: If water costs $0.003 per liter, compute the annual toilet-water cost from Step 2 in dollars. Return a number rounded to 2 decimal places.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 103 mod 3. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "A standard toilet uses 6 liters per flush. Compute the water used in 5 flushes. Return an integer.",
+        "answer": "30"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 103 is divided by 3. Return an integer.",
-        "answer": "1"
+        "question": "A person flushes approximately 5 times per day. Using the per-day water from Step 1, compute the total liters used in one year (365 days). Return an integer.",
+        "answer": "10950"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "If water costs $0.003 per liter, compute the annual toilet-water cost from Step 2 in dollars. Return a number rounded to 2 decimal places.",
+        "answer": "32.85"
       }
     ],
-    "final_answer": "1",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "32.85",
+    "answer_type": "decimal",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_092",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 150 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 150 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A light bulb uses 60 watts. If it runs for 8 hours, compute the energy in watt-hours. Return an integer.\nStep 2: Compute the monthly energy (30 days) at 8 hours/day from Step 1, in watt-hours. Return an integer.\nStep 3: Convert the watt-hours from Step 2 to kilowatt-hours. Return a number rounded to 1 decimal place.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 150 mod 3. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "A light bulb uses 60 watts. If it runs for 8 hours, compute the energy in watt-hours. Return an integer.",
+        "answer": "480"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 150 is divided by 3. Return an integer.",
-        "answer": "0"
+        "question": "Compute the monthly energy (30 days) at 8 hours/day from Step 1, in watt-hours. Return an integer.",
+        "answer": "14400"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "Convert the watt-hours from Step 2 to kilowatt-hours. Return a number rounded to 1 decimal place.",
+        "answer": "14.4"
       }
     ],
-    "final_answer": "0",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "14.4",
+    "answer_type": "decimal",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_093",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 189 mod 2. Return only the remainder as an integer.\nStep 2: Compute the remainder when 189 is divided by 2. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A person drinks 3 cups of coffee per day, each 250 mL. Compute daily coffee in mL. Return an integer.\nStep 2: Compute the annual coffee consumption from Step 1 in mL (365 days). Return an integer.\nStep 3: Convert the annual mL from Step 2 to liters. Return a number rounded to 1 decimal place.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 189 mod 2. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "A person drinks 3 cups of coffee per day, each 250 mL. Compute daily coffee in mL. Return an integer.",
+        "answer": "750"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 189 is divided by 2. Return an integer.",
-        "answer": "1"
+        "question": "Compute the annual coffee consumption from Step 1 in mL (365 days). Return an integer.",
+        "answer": "273750"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Convert the annual mL from Step 2 to liters. Return a number rounded to 1 decimal place.",
+        "answer": "273.8"
       }
     ],
-    "final_answer": "1",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "273.8",
+    "answer_type": "decimal",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_094",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 48 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 48 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A commuter drives 40 km per workday. Compute the weekly distance for a 5-day work week in km. Return an integer.\nStep 2: Compute the annual distance from Step 1 assuming 50 working weeks per year. Return an integer.\nStep 3: If fuel costs $0.12 per km, compute the annual fuel cost from Step 2 in dollars. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 48 mod 3. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "A commuter drives 40 km per workday. Compute the weekly distance for a 5-day work week in km. Return an integer.",
+        "answer": "200"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 48 is divided by 3. Return an integer.",
-        "answer": "0"
+        "question": "Compute the annual distance from Step 1 assuming 50 working weeks per year. Return an integer.",
+        "answer": "10000"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "If fuel costs $0.12 per km, compute the annual fuel cost from Step 2 in dollars. Return an integer.",
+        "answer": "1200"
       }
     ],
-    "final_answer": "0",
+    "final_answer": "1200",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_095",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 129 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 129 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A typist types 80 words per minute. Compute the words typed in a 45-minute session. Return an integer.\nStep 2: Assuming an average of 5 characters per word, compute the total characters from Step 1. Return an integer.\nStep 3: If each character takes 2 bytes of storage, compute the total bytes from Step 2. Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 129 mod 7. Return only the remainder as an integer.",
-        "answer": "3"
+        "question": "A typist types 80 words per minute. Compute the words typed in a 45-minute session. Return an integer.",
+        "answer": "3600"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 129 is divided by 7. Return an integer.",
-        "answer": "3"
+        "question": "Assuming an average of 5 characters per word, compute the total characters from Step 1. Return an integer.",
+        "answer": "18000"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "3"
+        "question": "If each character takes 2 bytes of storage, compute the total bytes from Step 2. Return an integer.",
+        "answer": "36000"
       }
     ],
-    "final_answer": "3",
+    "final_answer": "36000",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_096",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 118 mod 2. Return only the remainder as an integer.\nStep 2: Compute the remainder when 118 is divided by 2. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Convert 12 miles to kilometers (1 mile = 1.609 km). Return a number rounded to 2 decimal places.\nStep 2: At a speed of 60 km/h, compute the travel time for the distance from Step 1 in minutes. Return a number rounded to 1 decimal place.\nStep 3: If departure is at 14:00 and travel takes the time from Step 2, plus a 10-minute buffer, what is the arrival time in HH:MM format?",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 118 mod 2. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "Convert 12 miles to kilometers (1 mile = 1.609 km). Return a number rounded to 2 decimal places.",
+        "answer": "19.31"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 118 is divided by 2. Return an integer.",
-        "answer": "0"
+        "question": "At a speed of 60 km/h, compute the travel time for the distance from Step 1 in minutes. Return a number rounded to 1 decimal place.",
+        "answer": "19.3"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "If departure is at 14:00 and travel takes the time from Step 2, plus a 10-minute buffer, what is the arrival time in HH:MM format?",
+        "answer": "14:29"
       }
     ],
-    "final_answer": "0",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "14:29",
+    "answer_type": "time",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_097",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 131 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 131 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Convert 212°F to Celsius using C = (F-32)*5/9. Return an integer.\nStep 2: Convert the Celsius from Step 1 to Kelvin (K = C + 273.15). Return a number rounded to 2 decimal places.\nStep 3: Is the Kelvin value from Step 2 above or below the boiling point of ethanol (351.44 K)? Answer 'above' or 'below'.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 131 mod 9. Return only the remainder as an integer.",
-        "answer": "5"
+        "question": "Convert 212°F to Celsius using C = (F-32)*5/9. Return an integer.",
+        "answer": "100"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 131 is divided by 9. Return an integer.",
-        "answer": "5"
+        "question": "Convert the Celsius from Step 1 to Kelvin (K = C + 273.15). Return a number rounded to 2 decimal places.",
+        "answer": "373.15"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "5"
+        "question": "Is the Kelvin value from Step 2 above or below the boiling point of ethanol (351.44 K)? Answer 'above' or 'below'.",
+        "answer": "above"
       }
     ],
-    "final_answer": "5",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "above",
+    "answer_type": "text",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_098",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 149 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 149 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Convert 176 pounds to kilograms (1 lb = 0.4536 kg). Return a number rounded to 1 decimal place.\nStep 2: A person is 1.75 m tall and weighs the kg from Step 1. Compute BMI = weight/(height^2). Return a number rounded to 1 decimal place.\nStep 3: Classify the BMI from Step 2: 'underweight' (<18.5), 'normal' (18.5-24.9), 'overweight' (25-29.9), or 'obese' (>=30). Return only the category.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 149 mod 4. Return only the remainder as an integer.",
-        "answer": "1"
+        "question": "Convert 176 pounds to kilograms (1 lb = 0.4536 kg). Return a number rounded to 1 decimal place.",
+        "answer": "79.8"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 149 is divided by 4. Return an integer.",
-        "answer": "1"
+        "question": "A person is 1.75 m tall and weighs the kg from Step 1. Compute BMI = weight/(height^2). Return a number rounded to 1 decimal place.",
+        "answer": "26.1"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "1"
+        "question": "Classify the BMI from Step 2: 'underweight' (<18.5), 'normal' (18.5-24.9), 'overweight' (25-29.9), or 'obese' (>=30). Return only the category.",
+        "answer": "overweight"
       }
     ],
-    "final_answer": "1",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "overweight",
+    "answer_type": "text",
+    "difficulty": "medium"
   },
   {
     "id": "ccc_099",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 154 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 154 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Convert 3 US gallons to liters (1 gal = 3.785 L). Return a number rounded to 3 decimal places.\nStep 2: Convert the liters from Step 1 to milliliters. Return a number rounded to 0 decimal places (integer).\nStep 3: If a dose is 15 mL, compute how many full doses can be obtained from Step 2. Return an integer (floor).",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 154 mod 7. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "Convert 3 US gallons to liters (1 gal = 3.785 L). Return a number rounded to 3 decimal places.",
+        "answer": "11.355"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 154 is divided by 7. Return an integer.",
-        "answer": "0"
+        "question": "Convert the liters from Step 1 to milliliters. Return a number rounded to 0 decimal places (integer).",
+        "answer": "11355"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "If a dose is 15 mL, compute how many full doses can be obtained from Step 2. Return an integer (floor).",
+        "answer": "757"
       }
     ],
-    "final_answer": "0",
+    "final_answer": "757",
     "answer_type": "int",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "ccc_100",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 192 mod 6. Return only the remainder as an integer.\nStep 2: Compute the remainder when 192 is divided by 6. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Convert 25 m/s to km/h (multiply by 3.6). Return an integer.\nStep 2: Convert the km/h from Step 1 to mph (1 km = 0.6214 miles). Return a number rounded to 1 decimal place.\nStep 3: Is the speed from Step 2 above or below the US highway speed limit of 65 mph? Answer 'above' or 'below'.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 192 mod 6. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "Convert 25 m/s to km/h (multiply by 3.6). Return an integer.",
+        "answer": "90"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 192 is divided by 6. Return an integer.",
-        "answer": "0"
+        "question": "Convert the km/h from Step 1 to mph (1 km = 0.6214 miles). Return a number rounded to 1 decimal place.",
+        "answer": "55.9"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "Is the speed from Step 2 above or below the US highway speed limit of 65 mph? Answer 'above' or 'below'.",
+        "answer": "below"
       }
     ],
-    "final_answer": "0",
-    "answer_type": "int",
-    "difficulty": "easy"
+    "final_answer": "below",
+    "answer_type": "text",
+    "difficulty": "medium"
   },
   {
     "id": "cr_001",
