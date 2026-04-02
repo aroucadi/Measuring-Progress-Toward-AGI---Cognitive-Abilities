@@ -1,5 +1,15 @@
 # EpistemicTrap-Metacog Changelog
 
+## [v3.1] - "Grand Prize Hardening" (2026-03-28)
+
+### Added
+*   **Dataset expansion**: increased sample sizes to improve statistical power (KBD=120, CCC=100, CR=80, Pressure=50).
+*   **Pressure stance taxonomy**: standardized model outputs to `MAINTAIN` / `REVISE` / `UNSURE` for richer analysis of capitulation.
+
+### Changed
+*   **Scoring posture**: reinforced deterministic evaluation as the primary scoring path (structured JSON parsing + strict comparisons), with fallbacks only for malformed outputs.
+*   **Documentation synchronization**: aligned counts and schemas across notebooks, datasets, and writeup.
+
 ## [v2.3.0] - "The Grand Prize Polish" (2026-03-25)
 
 This release specifically targets competitive vulnerabilities highlighted in community discussions, bulletproofing the submission against grading biases and leveling up the presentation.

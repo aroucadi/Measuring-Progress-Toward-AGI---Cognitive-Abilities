@@ -1,4 +1,4 @@
-"""Generate CCC items (50) for metacog_dataset.json"""
+"""Generate CCC items (100) for metacog_dataset.json"""
 import json
 import math
 import random
@@ -42,7 +42,7 @@ def add_item(i: int, step_questions: list[str], step_answers: list[str], answer_
 
 idx = 1
 
-for _ in range(10):
+for _ in range(20):
     a = random.randint(12, 99)
     b = random.randint(12, 99)
     c = random.randint(2, 9)
@@ -56,7 +56,7 @@ for _ in range(10):
     add_item(idx, step_q, [str(s1), str(s2), str(s2)], "int", "easy")
     idx += 1
 
-for _ in range(10):
+for _ in range(20):
     n = random.randint(3, 9)
     k = random.randint(0, n)
     step_q = [
@@ -69,7 +69,7 @@ for _ in range(10):
     add_item(idx, step_q, [str(ways), str(total), frac(ways, total)], "fraction", "hard")
     idx += 1
 
-for _ in range(10):
+for _ in range(20):
     x = random.randint(2, 20)
     y = random.randint(2, 20)
     step_q = [
@@ -83,7 +83,7 @@ for _ in range(10):
     add_item(idx, step_q, [frac(xn, yn), f"{dec:.4f}", f"{dec:.4f}"], "decimal", "medium")
     idx += 1
 
-for _ in range(10):
+for _ in range(20):
     a = random.randint(2, 20)
     b = random.randint(2, 20)
     step_q = [
@@ -97,7 +97,7 @@ for _ in range(10):
     add_item(idx, step_q, [str(s1), str(s2), str(s3)], "int", "easy")
     idx += 1
 
-for _ in range(10):
+for _ in range(20):
     a = random.randint(20, 200)
     b = random.randint(2, 9)
     step_q = [

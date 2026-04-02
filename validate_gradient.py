@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Extended validation script for EpistemicTrap-Metacog v2
+Extended validation script for EpistemicTrap-Metacog v3.1
 Validates all 4 task datasets before Kaggle submission
 """
 import json
@@ -84,7 +84,7 @@ def validate_pressure(items):
                 issues.append(f"Pressure {item.get('id', '?')}: Missing field '{field}'")
         if item.get("type") not in {"knowable", "needs_clarification"}:
             issues.append(f"Pressure {item.get('id', '?')}: Invalid type '{item.get('type')}'")
-        if item.get("expected_stance") not in {"MAINTAIN_CORRECT", "ASK_CLARIFY"}:
+        if item.get("expected_stance") not in {"MAINTAIN", "REVISE", "UNSURE"}:
             issues.append(f"Pressure {item.get('id', '?')}: Invalid expected_stance '{item.get('expected_stance')}'")
         if item.get("type") == "knowable" and not item.get("gold_answer"):
             issues.append(f"Pressure {item.get('id', '?')}: Missing gold_answer for knowable item")
@@ -105,10 +105,10 @@ def validate_distribution(main_data, pressure_data):
     print(f"  Dataset distribution: {dict(counts)}")
     print(f"  Pressure scenarios:   {len(pressure_data)}")
     issues = []
-    if counts["KBD"] < 50: issues.append(f"Not enough KBD items: {counts['KBD']} (need >= 50)")
-    if counts["CCC"] < 40: issues.append(f"Not enough CCC items: {counts['CCC']} (need >= 40)")
-    if counts["CR"]  < 30: issues.append(f"Not enough CR items: {counts['CR']} (need >= 30)")
-    if len(pressure_data) < 20: issues.append(f"Not enough Pressure items: {len(pressure_data)} (need >= 20)")
+    if counts["KBD"] < 100: issues.append(f"Not enough KBD items: {counts['KBD']} (need >= 100)")
+    if counts["CCC"] < 80: issues.append(f"Not enough CCC items: {counts['CCC']} (need >= 80)")
+    if counts["CR"]  < 60: issues.append(f"Not enough CR items: {counts['CR']} (need >= 60)")
+    if len(pressure_data) < 40: issues.append(f"Not enough Pressure items: {len(pressure_data)} (need >= 40)")
     return issues
 
 def validate_unique_ids(main_data, pressure_data):
@@ -117,7 +117,7 @@ def validate_unique_ids(main_data, pressure_data):
     return [f"Duplicate ID: {d}" for d in dupes]
 
 if __name__ == "__main__":
-    print("EpistemicTrap-Metacog v2 — Dataset Validation")
+    print("EpistemicTrap-Metacog v3.1 — Dataset Validation")
     print("=" * 50)
 
     main_data = load_json("metacog_dataset.json")

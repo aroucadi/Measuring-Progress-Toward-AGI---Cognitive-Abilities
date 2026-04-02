@@ -252,55 +252,255 @@
   {
     "id": "ccc_011",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 6 times, compute the number of outcomes with exactly 5 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 6 flips. Return an integer.\nStep 3: Compute the probability of exactly 5 heads as a reduced fraction.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 64 + 96. Return an integer.\nStep 2: Compute (Step 1) * 5. Return an integer.\nStep 3: Report the final integer result from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "For a fair coin flipped 6 times, compute the number of outcomes with exactly 5 heads. Return an integer.",
-        "answer": "6"
+        "question": "Compute 64 + 96. Return an integer.",
+        "answer": "160"
       },
       {
         "step": 2,
-        "question": "Compute the total number of outcomes for 6 flips. Return an integer.",
-        "answer": "64"
+        "question": "Compute (Step 1) * 5. Return an integer.",
+        "answer": "800"
       },
       {
         "step": 3,
-        "question": "Compute the probability of exactly 5 heads as a reduced fraction.",
-        "answer": "3/32"
+        "question": "Report the final integer result from Step 2.",
+        "answer": "800"
       }
     ],
-    "final_answer": "3/32",
-    "answer_type": "fraction",
-    "difficulty": "hard"
+    "final_answer": "800",
+    "answer_type": "int",
+    "difficulty": "easy"
   },
   {
     "id": "ccc_012",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 53 + 60. Return an integer.\nStep 2: Compute (Step 1) * 4. Return an integer.\nStep 3: Report the final integer result from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
-        "answer": "6"
+        "question": "Compute 53 + 60. Return an integer.",
+        "answer": "113"
       },
       {
         "step": 2,
-        "question": "Compute the total number of outcomes for 4 flips. Return an integer.",
-        "answer": "16"
+        "question": "Compute (Step 1) * 4. Return an integer.",
+        "answer": "452"
       },
       {
         "step": 3,
-        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
-        "answer": "3/8"
+        "question": "Report the final integer result from Step 2.",
+        "answer": "452"
       }
     ],
-    "final_answer": "3/8",
-    "answer_type": "fraction",
-    "difficulty": "hard"
+    "final_answer": "452",
+    "answer_type": "int",
+    "difficulty": "easy"
   },
   {
     "id": "ccc_013",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 98 + 65. Return an integer.\nStep 2: Compute (Step 1) * 8. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 98 + 65. Return an integer.",
+        "answer": "163"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 8. Return an integer.",
+        "answer": "1304"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "1304"
+      }
+    ],
+    "final_answer": "1304",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_014",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 42 + 49. Return an integer.\nStep 2: Compute (Step 1) * 6. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 42 + 49. Return an integer.",
+        "answer": "91"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 6. Return an integer.",
+        "answer": "546"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "546"
+      }
+    ],
+    "final_answer": "546",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_015",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 62 + 53. Return an integer.\nStep 2: Compute (Step 1) * 5. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 62 + 53. Return an integer.",
+        "answer": "115"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 5. Return an integer.",
+        "answer": "575"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "575"
+      }
+    ],
+    "final_answer": "575",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_016",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 91 + 38. Return an integer.\nStep 2: Compute (Step 1) * 3. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 91 + 38. Return an integer.",
+        "answer": "129"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 3. Return an integer.",
+        "answer": "387"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "387"
+      }
+    ],
+    "final_answer": "387",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_017",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 93 + 35. Return an integer.\nStep 2: Compute (Step 1) * 7. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 93 + 35. Return an integer.",
+        "answer": "128"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 7. Return an integer.",
+        "answer": "896"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "896"
+      }
+    ],
+    "final_answer": "896",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_018",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 46 + 86. Return an integer.\nStep 2: Compute (Step 1) * 4. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 46 + 86. Return an integer.",
+        "answer": "132"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 4. Return an integer.",
+        "answer": "528"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "528"
+      }
+    ],
+    "final_answer": "528",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_019",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 15 + 27. Return an integer.\nStep 2: Compute (Step 1) * 6. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 15 + 27. Return an integer.",
+        "answer": "42"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 6. Return an integer.",
+        "answer": "252"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "252"
+      }
+    ],
+    "final_answer": "252",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_020",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 47 + 72. Return an integer.\nStep 2: Compute (Step 1) * 9. Return an integer.\nStep 3: Report the final integer result from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 47 + 72. Return an integer.",
+        "answer": "119"
+      },
+      {
+        "step": 2,
+        "question": "Compute (Step 1) * 9. Return an integer.",
+        "answer": "1071"
+      },
+      {
+        "step": 3,
+        "question": "Report the final integer result from Step 2.",
+        "answer": "1071"
+      }
+    ],
+    "final_answer": "1071",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_021",
     "subtype": "CCC",
     "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 6 times, compute the number of outcomes with exactly 6 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 6 flips. Return an integer.\nStep 3: Compute the probability of exactly 6 heads as a reduced fraction.",
     "steps": [
@@ -325,7 +525,257 @@
     "difficulty": "hard"
   },
   {
-    "id": "ccc_014",
+    "id": "ccc_022",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 3 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 3 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 3 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 3 flips. Return an integer.",
+        "answer": "8"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
+        "answer": "3/8"
+      }
+    ],
+    "final_answer": "3/8",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_023",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 8 times, compute the number of outcomes with exactly 6 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 8 flips. Return an integer.\nStep 3: Compute the probability of exactly 6 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 8 times, compute the number of outcomes with exactly 6 heads. Return an integer.",
+        "answer": "28"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 8 flips. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 6 heads as a reduced fraction.",
+        "answer": "7/64"
+      }
+    ],
+    "final_answer": "7/64",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_024",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 7 times, compute the number of outcomes with exactly 6 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 7 flips. Return an integer.\nStep 3: Compute the probability of exactly 6 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 7 times, compute the number of outcomes with exactly 6 heads. Return an integer.",
+        "answer": "7"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 7 flips. Return an integer.",
+        "answer": "128"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 6 heads as a reduced fraction.",
+        "answer": "7/128"
+      }
+    ],
+    "final_answer": "7/128",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_025",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 3 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 3 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 3 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 3 flips. Return an integer.",
+        "answer": "8"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
+        "answer": "3/8"
+      }
+    ],
+    "final_answer": "3/8",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_026",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 5 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 5 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 5 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
+        "answer": "5"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 5 flips. Return an integer.",
+        "answer": "32"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
+        "answer": "5/32"
+      }
+    ],
+    "final_answer": "5/32",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_027",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 8 times, compute the number of outcomes with exactly 0 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 8 flips. Return an integer.\nStep 3: Compute the probability of exactly 0 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 8 times, compute the number of outcomes with exactly 0 heads. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 8 flips. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 0 heads as a reduced fraction.",
+        "answer": "1/256"
+      }
+    ],
+    "final_answer": "1/256",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_028",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 7 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 7 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 7 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
+        "answer": "21"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 7 flips. Return an integer.",
+        "answer": "128"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
+        "answer": "21/128"
+      }
+    ],
+    "final_answer": "21/128",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_029",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 8 times, compute the number of outcomes with exactly 3 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 8 flips. Return an integer.\nStep 3: Compute the probability of exactly 3 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 8 times, compute the number of outcomes with exactly 3 heads. Return an integer.",
+        "answer": "56"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 8 flips. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 3 heads as a reduced fraction.",
+        "answer": "7/32"
+      }
+    ],
+    "final_answer": "7/32",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_030",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 3 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 3 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 3 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 3 flips. Return an integer.",
+        "answer": "8"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
+        "answer": "3/8"
+      }
+    ],
+    "final_answer": "3/8",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_031",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 9 times, compute the number of outcomes with exactly 7 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 9 flips. Return an integer.\nStep 3: Compute the probability of exactly 7 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 9 times, compute the number of outcomes with exactly 7 heads. Return an integer.",
+        "answer": "36"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 9 flips. Return an integer.",
+        "answer": "512"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 7 heads as a reduced fraction.",
+        "answer": "9/128"
+      }
+    ],
+    "final_answer": "9/128",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_032",
     "subtype": "CCC",
     "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 3 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 3 heads as a reduced fraction.",
     "steps": [
@@ -350,63 +800,38 @@
     "difficulty": "hard"
   },
   {
-    "id": "ccc_015",
+    "id": "ccc_033",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 6 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 6 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 7 times, compute the number of outcomes with exactly 6 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 7 flips. Return an integer.\nStep 3: Compute the probability of exactly 6 heads as a reduced fraction.",
     "steps": [
       {
         "step": 1,
-        "question": "For a fair coin flipped 6 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
-        "answer": "6"
+        "question": "For a fair coin flipped 7 times, compute the number of outcomes with exactly 6 heads. Return an integer.",
+        "answer": "7"
       },
       {
         "step": 2,
-        "question": "Compute the total number of outcomes for 6 flips. Return an integer.",
-        "answer": "64"
+        "question": "Compute the total number of outcomes for 7 flips. Return an integer.",
+        "answer": "128"
       },
       {
         "step": 3,
-        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
-        "answer": "3/32"
+        "question": "Compute the probability of exactly 6 heads as a reduced fraction.",
+        "answer": "7/128"
       }
     ],
-    "final_answer": "3/32",
+    "final_answer": "7/128",
     "answer_type": "fraction",
     "difficulty": "hard"
   },
   {
-    "id": "ccc_016",
+    "id": "ccc_034",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 5 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 5 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 6 times, compute the number of outcomes with exactly 4 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 6 flips. Return an integer.\nStep 3: Compute the probability of exactly 4 heads as a reduced fraction.",
     "steps": [
       {
         "step": 1,
-        "question": "For a fair coin flipped 5 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
-        "answer": "10"
-      },
-      {
-        "step": 2,
-        "question": "Compute the total number of outcomes for 5 flips. Return an integer.",
-        "answer": "32"
-      },
-      {
-        "step": 3,
-        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
-        "answer": "5/16"
-      }
-    ],
-    "final_answer": "5/16",
-    "answer_type": "fraction",
-    "difficulty": "hard"
-  },
-  {
-    "id": "ccc_017",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 6 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 6 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "For a fair coin flipped 6 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
+        "question": "For a fair coin flipped 6 times, compute the number of outcomes with exactly 4 heads. Return an integer.",
         "answer": "15"
       },
       {
@@ -416,7 +841,7 @@
       },
       {
         "step": 3,
-        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
+        "question": "Compute the probability of exactly 4 heads as a reduced fraction.",
         "answer": "15/64"
       }
     ],
@@ -425,14 +850,14 @@
     "difficulty": "hard"
   },
   {
-    "id": "ccc_018",
+    "id": "ccc_035",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 4 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 4 heads as a reduced fraction.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
     "steps": [
       {
         "step": 1,
-        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 4 heads. Return an integer.",
-        "answer": "1"
+        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
+        "answer": "4"
       },
       {
         "step": 2,
@@ -441,41 +866,16 @@
       },
       {
         "step": 3,
-        "question": "Compute the probability of exactly 4 heads as a reduced fraction.",
-        "answer": "1/16"
+        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
+        "answer": "1/4"
       }
     ],
-    "final_answer": "1/16",
+    "final_answer": "1/4",
     "answer_type": "fraction",
     "difficulty": "hard"
   },
   {
-    "id": "ccc_019",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 0 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 0 heads as a reduced fraction.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 0 heads. Return an integer.",
-        "answer": "1"
-      },
-      {
-        "step": 2,
-        "question": "Compute the total number of outcomes for 4 flips. Return an integer.",
-        "answer": "16"
-      },
-      {
-        "step": 3,
-        "question": "Compute the probability of exactly 0 heads as a reduced fraction.",
-        "answer": "1/16"
-      }
-    ],
-    "final_answer": "1/16",
-    "answer_type": "fraction",
-    "difficulty": "hard"
-  },
-  {
-    "id": "ccc_020",
+    "id": "ccc_036",
     "subtype": "CCC",
     "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 8 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 8 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
     "steps": [
@@ -500,7 +900,432 @@
     "difficulty": "hard"
   },
   {
-    "id": "ccc_021",
+    "id": "ccc_037",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 4 flips. Return an integer.",
+        "answer": "16"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
+        "answer": "1/4"
+      }
+    ],
+    "final_answer": "1/4",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_038",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 5 times, compute the number of outcomes with exactly 1 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 5 flips. Return an integer.\nStep 3: Compute the probability of exactly 1 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 5 times, compute the number of outcomes with exactly 1 heads. Return an integer.",
+        "answer": "5"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 5 flips. Return an integer.",
+        "answer": "32"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 1 heads as a reduced fraction.",
+        "answer": "5/32"
+      }
+    ],
+    "final_answer": "5/32",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_039",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 7 times, compute the number of outcomes with exactly 7 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 7 flips. Return an integer.\nStep 3: Compute the probability of exactly 7 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 7 times, compute the number of outcomes with exactly 7 heads. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 7 flips. Return an integer.",
+        "answer": "128"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 7 heads as a reduced fraction.",
+        "answer": "1/128"
+      }
+    ],
+    "final_answer": "1/128",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_040",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: For a fair coin flipped 4 times, compute the number of outcomes with exactly 2 heads. Return an integer.\nStep 2: Compute the total number of outcomes for 4 flips. Return an integer.\nStep 3: Compute the probability of exactly 2 heads as a reduced fraction.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "For a fair coin flipped 4 times, compute the number of outcomes with exactly 2 heads. Return an integer.",
+        "answer": "6"
+      },
+      {
+        "step": 2,
+        "question": "Compute the total number of outcomes for 4 flips. Return an integer.",
+        "answer": "16"
+      },
+      {
+        "step": 3,
+        "question": "Compute the probability of exactly 2 heads as a reduced fraction.",
+        "answer": "3/8"
+      }
+    ],
+    "final_answer": "3/8",
+    "answer_type": "fraction",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ccc_041",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/3 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 20/3 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "20/3"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "6.6667"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "6.6667"
+      }
+    ],
+    "final_answer": "6.6667",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_042",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 7/9 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 7/9 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "7/9"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.7778"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.7778"
+      }
+    ],
+    "final_answer": "0.7778",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_043",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 13/4 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 13/4 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "13/4"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "3.2500"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "3.2500"
+      }
+    ],
+    "final_answer": "3.2500",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_044",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 4/14 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 4/14 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "2/7"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.2857"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.2857"
+      }
+    ],
+    "final_answer": "0.2857",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_045",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 12/8 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 12/8 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "3/2"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "1.5000"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "1.5000"
+      }
+    ],
+    "final_answer": "1.5000",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_046",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 19/7 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 19/7 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "19/7"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "2.7143"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "2.7143"
+      }
+    ],
+    "final_answer": "2.7143",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_047",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 4/18 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 4/18 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "2/9"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.2222"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.2222"
+      }
+    ],
+    "final_answer": "0.2222",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_048",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 7/7 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 7/7 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "1/1"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "1.0000"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "1.0000"
+      }
+    ],
+    "final_answer": "1.0000",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_049",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 11/19 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 11/19 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "11/19"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.5789"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.5789"
+      }
+    ],
+    "final_answer": "0.5789",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_050",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 14/13 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 14/13 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "14/13"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "1.0769"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "1.0769"
+      }
+    ],
+    "final_answer": "1.0769",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_051",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 3/6 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 3/6 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "1/2"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.5000"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.5000"
+      }
+    ],
+    "final_answer": "0.5000",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_052",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 8/12 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 8/12 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "2/3"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "0.6667"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "0.6667"
+      }
+    ],
+    "final_answer": "0.6667",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_053",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/11 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Simplify the fraction 20/11 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "20/11"
+      },
+      {
+        "step": 2,
+        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
+        "answer": "1.8182"
+      },
+      {
+        "step": 3,
+        "question": "Report the decimal from Step 2 (4 decimal places).",
+        "answer": "1.8182"
+      }
+    ],
+    "final_answer": "1.8182",
+    "answer_type": "decimal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ccc_054",
     "subtype": "CCC",
     "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 19/19 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
@@ -525,88 +1350,63 @@
     "difficulty": "medium"
   },
   {
-    "id": "ccc_022",
+    "id": "ccc_055",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 13/10 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 13/15 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 13/10 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "13/10"
+        "question": "Simplify the fraction 13/15 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "13/15"
       },
       {
         "step": 2,
         "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.3000"
+        "answer": "0.8667"
       },
       {
         "step": 3,
         "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.3000"
+        "answer": "0.8667"
       }
     ],
-    "final_answer": "1.3000",
+    "final_answer": "0.8667",
     "answer_type": "decimal",
     "difficulty": "medium"
   },
   {
-    "id": "ccc_023",
+    "id": "ccc_056",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/7 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/9 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 20/7 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "20/7"
+        "question": "Simplify the fraction 20/9 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "20/9"
       },
       {
         "step": 2,
         "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "2.8571"
+        "answer": "2.2222"
       },
       {
         "step": 3,
         "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "2.8571"
+        "answer": "2.2222"
       }
     ],
-    "final_answer": "2.8571",
+    "final_answer": "2.2222",
     "answer_type": "decimal",
     "difficulty": "medium"
   },
   {
-    "id": "ccc_024",
+    "id": "ccc_057",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 2/5 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 8/8 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 2/5 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "2/5"
-      },
-      {
-        "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.4000"
-      },
-      {
-        "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.4000"
-      }
-    ],
-    "final_answer": "0.4000",
-    "answer_type": "decimal",
-    "difficulty": "medium"
-  },
-  {
-    "id": "ccc_025",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 10/10 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Simplify the fraction 10/10 to lowest terms. Return as a reduced fraction a/b.",
+        "question": "Simplify the fraction 8/8 to lowest terms. Return as a reduced fraction a/b.",
         "answer": "1/1"
       },
       {
@@ -625,314 +1425,114 @@
     "difficulty": "medium"
   },
   {
-    "id": "ccc_026",
+    "id": "ccc_058",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 17/16 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 16/20 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 17/16 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "17/16"
+        "question": "Simplify the fraction 16/20 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "4/5"
       },
       {
         "step": 2,
         "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.0625"
+        "answer": "0.8000"
       },
       {
         "step": 3,
         "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.0625"
+        "answer": "0.8000"
       }
     ],
-    "final_answer": "1.0625",
+    "final_answer": "0.8000",
     "answer_type": "decimal",
     "difficulty": "medium"
   },
   {
-    "id": "ccc_027",
+    "id": "ccc_059",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 17/5 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/14 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 17/5 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "17/5"
+        "question": "Simplify the fraction 20/14 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "10/7"
       },
       {
         "step": 2,
         "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "3.4000"
+        "answer": "1.4286"
       },
       {
         "step": 3,
         "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "3.4000"
+        "answer": "1.4286"
       }
     ],
-    "final_answer": "3.4000",
+    "final_answer": "1.4286",
     "answer_type": "decimal",
     "difficulty": "medium"
   },
   {
-    "id": "ccc_028",
+    "id": "ccc_060",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 18/18 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 12/16 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 18/18 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "1/1"
+        "question": "Simplify the fraction 12/16 to lowest terms. Return as a reduced fraction a/b.",
+        "answer": "3/4"
       },
       {
         "step": 2,
         "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.0000"
+        "answer": "0.7500"
       },
       {
         "step": 3,
         "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.0000"
+        "answer": "0.7500"
       }
     ],
-    "final_answer": "1.0000",
+    "final_answer": "0.7500",
     "answer_type": "decimal",
     "difficulty": "medium"
   },
   {
-    "id": "ccc_029",
+    "id": "ccc_061",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 13/14 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 13^2. Return an integer.\nStep 2: Compute 19^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 13/14 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "13/14"
+        "question": "Compute 13^2. Return an integer.",
+        "answer": "169"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.9286"
-      },
-      {
-        "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.9286"
-      }
-    ],
-    "final_answer": "0.9286",
-    "answer_type": "decimal",
-    "difficulty": "medium"
-  },
-  {
-    "id": "ccc_030",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 18/14 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Simplify the fraction 18/14 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "9/7"
-      },
-      {
-        "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.2857"
-      },
-      {
-        "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.2857"
-      }
-    ],
-    "final_answer": "1.2857",
-    "answer_type": "decimal",
-    "difficulty": "medium"
-  },
-  {
-    "id": "ccc_031",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 8^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 4^2. Return an integer.",
-        "answer": "16"
-      },
-      {
-        "step": 2,
-        "question": "Compute 8^2. Return an integer.",
-        "answer": "64"
+        "question": "Compute 19^2. Return an integer.",
+        "answer": "361"
       },
       {
         "step": 3,
         "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "80"
+        "answer": "530"
       }
     ],
-    "final_answer": "80",
+    "final_answer": "530",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_032",
+    "id": "ccc_062",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 10^2. Return an integer.\nStep 2: Compute 6^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 19^2. Return an integer.\nStep 2: Compute 20^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 10^2. Return an integer.",
-        "answer": "100"
-      },
-      {
-        "step": 2,
-        "question": "Compute 6^2. Return an integer.",
-        "answer": "36"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "136"
-      }
-    ],
-    "final_answer": "136",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_033",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 2^2. Return an integer.\nStep 2: Compute 18^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 2^2. Return an integer.",
-        "answer": "4"
-      },
-      {
-        "step": 2,
-        "question": "Compute 18^2. Return an integer.",
-        "answer": "324"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "328"
-      }
-    ],
-    "final_answer": "328",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_034",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 6^2. Return an integer.\nStep 2: Compute 9^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 6^2. Return an integer.",
-        "answer": "36"
-      },
-      {
-        "step": 2,
-        "question": "Compute 9^2. Return an integer.",
-        "answer": "81"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "117"
-      }
-    ],
-    "final_answer": "117",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_035",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 10^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 4^2. Return an integer.",
-        "answer": "16"
-      },
-      {
-        "step": 2,
-        "question": "Compute 10^2. Return an integer.",
-        "answer": "100"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "116"
-      }
-    ],
-    "final_answer": "116",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_036",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 17^2. Return an integer.\nStep 2: Compute 7^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 17^2. Return an integer.",
-        "answer": "289"
-      },
-      {
-        "step": 2,
-        "question": "Compute 7^2. Return an integer.",
-        "answer": "49"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "338"
-      }
-    ],
-    "final_answer": "338",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_037",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 17^2. Return an integer.\nStep 2: Compute 15^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 17^2. Return an integer.",
-        "answer": "289"
-      },
-      {
-        "step": 2,
-        "question": "Compute 15^2. Return an integer.",
-        "answer": "225"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "514"
-      }
-    ],
-    "final_answer": "514",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_038",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 17^2. Return an integer.\nStep 2: Compute 20^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 17^2. Return an integer.",
-        "answer": "289"
+        "question": "Compute 19^2. Return an integer.",
+        "answer": "361"
       },
       {
         "step": 2,
@@ -942,42 +1542,17 @@
       {
         "step": 3,
         "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "689"
+        "answer": "761"
       }
     ],
-    "final_answer": "689",
+    "final_answer": "761",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_039",
+    "id": "ccc_063",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 9^2. Return an integer.\nStep 2: Compute 9^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
-    "steps": [
-      {
-        "step": 1,
-        "question": "Compute 9^2. Return an integer.",
-        "answer": "81"
-      },
-      {
-        "step": 2,
-        "question": "Compute 9^2. Return an integer.",
-        "answer": "81"
-      },
-      {
-        "step": 3,
-        "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "162"
-      }
-    ],
-    "final_answer": "162",
-    "answer_type": "int",
-    "difficulty": "easy"
-  },
-  {
-    "id": "ccc_040",
-    "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 6^2. Return an integer.\nStep 2: Compute 6^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 6^2. Return an integer.\nStep 2: Compute 16^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
@@ -986,132 +1561,457 @@
       },
       {
         "step": 2,
+        "question": "Compute 16^2. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "292"
+      }
+    ],
+    "final_answer": "292",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_064",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 18^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 4^2. Return an integer.",
+        "answer": "16"
+      },
+      {
+        "step": 2,
+        "question": "Compute 18^2. Return an integer.",
+        "answer": "324"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "340"
+      }
+    ],
+    "final_answer": "340",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_065",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 3^2. Return an integer.\nStep 2: Compute 20^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 3^2. Return an integer.",
+        "answer": "9"
+      },
+      {
+        "step": 2,
+        "question": "Compute 20^2. Return an integer.",
+        "answer": "400"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "409"
+      }
+    ],
+    "final_answer": "409",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_066",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 2^2. Return an integer.\nStep 2: Compute 14^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 2,
+        "question": "Compute 14^2. Return an integer.",
+        "answer": "196"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "200"
+      }
+    ],
+    "final_answer": "200",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_067",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 18^2. Return an integer.\nStep 2: Compute 12^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 18^2. Return an integer.",
+        "answer": "324"
+      },
+      {
+        "step": 2,
+        "question": "Compute 12^2. Return an integer.",
+        "answer": "144"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "468"
+      }
+    ],
+    "final_answer": "468",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_068",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 6^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 4^2. Return an integer.",
+        "answer": "16"
+      },
+      {
+        "step": 2,
         "question": "Compute 6^2. Return an integer.",
         "answer": "36"
       },
       {
         "step": 3,
         "question": "Compute (Step 1) + (Step 2). Return an integer.",
-        "answer": "72"
+        "answer": "52"
       }
     ],
-    "final_answer": "72",
+    "final_answer": "52",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_041",
+    "id": "ccc_069",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 82 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 82 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 18^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 82 mod 7. Return only the remainder as an integer.",
-        "answer": "5"
+        "question": "Compute 4^2. Return an integer.",
+        "answer": "16"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 82 is divided by 7. Return an integer.",
-        "answer": "5"
+        "question": "Compute 18^2. Return an integer.",
+        "answer": "324"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "5"
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "340"
       }
     ],
-    "final_answer": "5",
+    "final_answer": "340",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_042",
+    "id": "ccc_070",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 60 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 60 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 3^2. Return an integer.\nStep 2: Compute 8^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 60 mod 9. Return only the remainder as an integer.",
-        "answer": "6"
+        "question": "Compute 3^2. Return an integer.",
+        "answer": "9"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 60 is divided by 9. Return an integer.",
-        "answer": "6"
+        "question": "Compute 8^2. Return an integer.",
+        "answer": "64"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "6"
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "73"
       }
     ],
-    "final_answer": "6",
+    "final_answer": "73",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_043",
+    "id": "ccc_071",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 75 mod 6. Return only the remainder as an integer.\nStep 2: Compute the remainder when 75 is divided by 6. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 2^2. Return an integer.\nStep 2: Compute 16^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 75 mod 6. Return only the remainder as an integer.",
-        "answer": "3"
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 75 is divided by 6. Return an integer.",
-        "answer": "3"
+        "question": "Compute 16^2. Return an integer.",
+        "answer": "256"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "3"
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "260"
       }
     ],
-    "final_answer": "3",
+    "final_answer": "260",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_044",
+    "id": "ccc_072",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 170 mod 2. Return only the remainder as an integer.\nStep 2: Compute the remainder when 170 is divided by 2. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 4^2. Return an integer.\nStep 2: Compute 5^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 170 mod 2. Return only the remainder as an integer.",
-        "answer": "0"
+        "question": "Compute 4^2. Return an integer.",
+        "answer": "16"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 170 is divided by 2. Return an integer.",
-        "answer": "0"
+        "question": "Compute 5^2. Return an integer.",
+        "answer": "25"
       },
       {
         "step": 3,
-        "question": "Report the final remainder from Step 2.",
-        "answer": "0"
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "41"
       }
     ],
-    "final_answer": "0",
+    "final_answer": "41",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_045",
+    "id": "ccc_073",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 66 mod 5. Return only the remainder as an integer.\nStep 2: Compute the remainder when 66 is divided by 5. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 5^2. Return an integer.\nStep 2: Compute 18^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 66 mod 5. Return only the remainder as an integer.",
+        "question": "Compute 5^2. Return an integer.",
+        "answer": "25"
+      },
+      {
+        "step": 2,
+        "question": "Compute 18^2. Return an integer.",
+        "answer": "324"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "349"
+      }
+    ],
+    "final_answer": "349",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_074",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 16^2. Return an integer.\nStep 2: Compute 2^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 16^2. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 2,
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "260"
+      }
+    ],
+    "final_answer": "260",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_075",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 7^2. Return an integer.\nStep 2: Compute 8^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 7^2. Return an integer.",
+        "answer": "49"
+      },
+      {
+        "step": 2,
+        "question": "Compute 8^2. Return an integer.",
+        "answer": "64"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "113"
+      }
+    ],
+    "final_answer": "113",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_076",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 3^2. Return an integer.\nStep 2: Compute 16^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 3^2. Return an integer.",
+        "answer": "9"
+      },
+      {
+        "step": 2,
+        "question": "Compute 16^2. Return an integer.",
+        "answer": "256"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "265"
+      }
+    ],
+    "final_answer": "265",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_077",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 5^2. Return an integer.\nStep 2: Compute 10^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 5^2. Return an integer.",
+        "answer": "25"
+      },
+      {
+        "step": 2,
+        "question": "Compute 10^2. Return an integer.",
+        "answer": "100"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "125"
+      }
+    ],
+    "final_answer": "125",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_078",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 2^2. Return an integer.\nStep 2: Compute 2^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 2,
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "8"
+      }
+    ],
+    "final_answer": "8",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_079",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 13^2. Return an integer.\nStep 2: Compute 10^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 13^2. Return an integer.",
+        "answer": "169"
+      },
+      {
+        "step": 2,
+        "question": "Compute 10^2. Return an integer.",
+        "answer": "100"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "269"
+      }
+    ],
+    "final_answer": "269",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_080",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 2^2. Return an integer.\nStep 2: Compute 8^2. Return an integer.\nStep 3: Compute (Step 1) + (Step 2). Return an integer.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 2^2. Return an integer.",
+        "answer": "4"
+      },
+      {
+        "step": 2,
+        "question": "Compute 8^2. Return an integer.",
+        "answer": "64"
+      },
+      {
+        "step": 3,
+        "question": "Compute (Step 1) + (Step 2). Return an integer.",
+        "answer": "68"
+      }
+    ],
+    "final_answer": "68",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_081",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 85 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 85 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 85 mod 4. Return only the remainder as an integer.",
         "answer": "1"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 66 is divided by 5. Return an integer.",
+        "question": "Compute the remainder when 85 is divided by 4. Return an integer.",
         "answer": "1"
       },
       {
@@ -1125,18 +2025,18 @@
     "difficulty": "easy"
   },
   {
-    "id": "ccc_046",
+    "id": "ccc_082",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 111 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 111 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 36 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 36 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 111 mod 3. Return only the remainder as an integer.",
+        "question": "Compute 36 mod 4. Return only the remainder as an integer.",
         "answer": "0"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 111 is divided by 3. Return an integer.",
+        "question": "Compute the remainder when 36 is divided by 4. Return an integer.",
         "answer": "0"
       },
       {
@@ -1150,18 +2050,93 @@
     "difficulty": "easy"
   },
   {
-    "id": "ccc_047",
+    "id": "ccc_083",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 42 mod 8. Return only the remainder as an integer.\nStep 2: Compute the remainder when 42 is divided by 8. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 37 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 37 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 42 mod 8. Return only the remainder as an integer.",
+        "question": "Compute 37 mod 9. Return only the remainder as an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 37 is divided by 9. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "1"
+      }
+    ],
+    "final_answer": "1",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_084",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 99 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 99 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 99 mod 4. Return only the remainder as an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 99 is divided by 4. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "3"
+      }
+    ],
+    "final_answer": "3",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_085",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 124 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 124 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 124 mod 9. Return only the remainder as an integer.",
+        "answer": "7"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 124 is divided by 9. Return an integer.",
+        "answer": "7"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "7"
+      }
+    ],
+    "final_answer": "7",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_086",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 35 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 35 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 35 mod 3. Return only the remainder as an integer.",
         "answer": "2"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 42 is divided by 8. Return an integer.",
+        "question": "Compute the remainder when 35 is divided by 3. Return an integer.",
         "answer": "2"
       },
       {
@@ -1175,68 +2150,343 @@
     "difficulty": "easy"
   },
   {
-    "id": "ccc_048",
+    "id": "ccc_087",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 200 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 200 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 21 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 21 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 200 mod 7. Return only the remainder as an integer.",
-        "answer": "4"
+        "question": "Compute 21 mod 9. Return only the remainder as an integer.",
+        "answer": "3"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 200 is divided by 7. Return an integer.",
-        "answer": "4"
+        "question": "Compute the remainder when 21 is divided by 9. Return an integer.",
+        "answer": "3"
       },
       {
         "step": 3,
         "question": "Report the final remainder from Step 2.",
-        "answer": "4"
+        "answer": "3"
       }
     ],
-    "final_answer": "4",
+    "final_answer": "3",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_049",
+    "id": "ccc_088",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 182 mod 5. Return only the remainder as an integer.\nStep 2: Compute the remainder when 182 is divided by 5. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 73 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 73 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 182 mod 5. Return only the remainder as an integer.",
-        "answer": "2"
+        "question": "Compute 73 mod 4. Return only the remainder as an integer.",
+        "answer": "1"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 182 is divided by 5. Return an integer.",
-        "answer": "2"
+        "question": "Compute the remainder when 73 is divided by 4. Return an integer.",
+        "answer": "1"
       },
       {
         "step": 3,
         "question": "Report the final remainder from Step 2.",
-        "answer": "2"
+        "answer": "1"
       }
     ],
-    "final_answer": "2",
+    "final_answer": "1",
     "answer_type": "int",
     "difficulty": "easy"
   },
   {
-    "id": "ccc_050",
+    "id": "ccc_089",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 160 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 160 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 174 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 174 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
     "steps": [
       {
         "step": 1,
-        "question": "Compute 160 mod 4. Return only the remainder as an integer.",
+        "question": "Compute 174 mod 9. Return only the remainder as an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 174 is divided by 9. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "3"
+      }
+    ],
+    "final_answer": "3",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_090",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 109 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 109 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 109 mod 9. Return only the remainder as an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 109 is divided by 9. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "1"
+      }
+    ],
+    "final_answer": "1",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_091",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 103 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 103 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 103 mod 3. Return only the remainder as an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 103 is divided by 3. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "1"
+      }
+    ],
+    "final_answer": "1",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_092",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 150 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 150 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 150 mod 3. Return only the remainder as an integer.",
         "answer": "0"
       },
       {
         "step": 2,
-        "question": "Compute the remainder when 160 is divided by 4. Return an integer.",
+        "question": "Compute the remainder when 150 is divided by 3. Return an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "0"
+      }
+    ],
+    "final_answer": "0",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_093",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 189 mod 2. Return only the remainder as an integer.\nStep 2: Compute the remainder when 189 is divided by 2. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 189 mod 2. Return only the remainder as an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 189 is divided by 2. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "1"
+      }
+    ],
+    "final_answer": "1",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_094",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 48 mod 3. Return only the remainder as an integer.\nStep 2: Compute the remainder when 48 is divided by 3. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 48 mod 3. Return only the remainder as an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 48 is divided by 3. Return an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "0"
+      }
+    ],
+    "final_answer": "0",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_095",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 129 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 129 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 129 mod 7. Return only the remainder as an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 129 is divided by 7. Return an integer.",
+        "answer": "3"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "3"
+      }
+    ],
+    "final_answer": "3",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_096",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 118 mod 2. Return only the remainder as an integer.\nStep 2: Compute the remainder when 118 is divided by 2. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 118 mod 2. Return only the remainder as an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 118 is divided by 2. Return an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "0"
+      }
+    ],
+    "final_answer": "0",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_097",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 131 mod 9. Return only the remainder as an integer.\nStep 2: Compute the remainder when 131 is divided by 9. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 131 mod 9. Return only the remainder as an integer.",
+        "answer": "5"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 131 is divided by 9. Return an integer.",
+        "answer": "5"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "5"
+      }
+    ],
+    "final_answer": "5",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_098",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 149 mod 4. Return only the remainder as an integer.\nStep 2: Compute the remainder when 149 is divided by 4. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 149 mod 4. Return only the remainder as an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 149 is divided by 4. Return an integer.",
+        "answer": "1"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "1"
+      }
+    ],
+    "final_answer": "1",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_099",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 154 mod 7. Return only the remainder as an integer.\nStep 2: Compute the remainder when 154 is divided by 7. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 154 mod 7. Return only the remainder as an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 154 is divided by 7. Return an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 3,
+        "question": "Report the final remainder from Step 2.",
+        "answer": "0"
+      }
+    ],
+    "final_answer": "0",
+    "answer_type": "int",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ccc_100",
+    "subtype": "CCC",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Compute 192 mod 6. Return only the remainder as an integer.\nStep 2: Compute the remainder when 192 is divided by 6. Return an integer.\nStep 3: Report the final remainder from Step 2.",
+    "steps": [
+      {
+        "step": 1,
+        "question": "Compute 192 mod 6. Return only the remainder as an integer.",
+        "answer": "0"
+      },
+      {
+        "step": 2,
+        "question": "Compute the remainder when 192 is divided by 6. Return an integer.",
         "answer": "0"
       },
       {

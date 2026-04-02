@@ -1,4 +1,4 @@
-"""Generate CR items (40) for metacog_dataset.json"""
+"""Generate CR items (80) for metacog_dataset.json"""
 import json
 import math
 import random
@@ -33,7 +33,7 @@ def make_header(task: str) -> str:
 
 idx = 1
 
-for _ in range(8):
+for _ in range(16):
     a = random.randint(12, 99)
     b = random.randint(12, 99)
     c = random.randint(2, 9)
@@ -50,7 +50,7 @@ for _ in range(8):
     add_item(idx, prompt, "L2", f"{correct1} * {c} = {correct2}", "easy")
     idx += 1
 
-for _ in range(8):
+for _ in range(16):
     p = random.choice([3, 4, 5, 6, 7, 8, 9, 10])
     q = random.choice([3, 4, 5, 6, 7, 8, 9, 10])
     while q == p:
@@ -71,7 +71,7 @@ for _ in range(8):
     add_item(idx, prompt, "L3", f"{num}/{den} reduces to {num_r}/{den_r}", "medium")
     idx += 1
 
-for _ in range(8):
+for _ in range(16):
     a = random.randint(2, 9)
     b = random.randint(2, 9)
     correct = a ** b
@@ -86,7 +86,7 @@ for _ in range(8):
     add_item(idx, prompt, "L2", f"{a}^{b} = {correct}", "medium")
     idx += 1
 
-for _ in range(8):
+for _ in range(16):
     n = random.randint(4, 8)
     k = random.randint(0, n)
     ways = math.comb(n, k)
@@ -103,7 +103,7 @@ for _ in range(8):
     add_item(idx, prompt, "L1", f"C({n},{k}) = {ways}; probability = {correct}", "hard")
     idx += 1
 
-for _ in range(8):
+for _ in range(16):
     a = random.randint(20, 200)
     b = random.randint(2, 9)
     r = a % b

@@ -12,8 +12,8 @@ Current benchmarks test what a model knows, not whether it knows its own limits.
 ### Repository Contents
 - `benchmark_metacognition.ipynb`: Entry notebook summarizing the suite and dataset distributions.
 - `1_kbd_task.ipynb`, `2_ccc_task.ipynb`, `3_cr_task.ipynb`, `4_pressure_task.ipynb`: Kaggle Benchmarks task notebooks (`@kbench.task`).
-- `metacog_dataset.json`: 150 items for KBD/CCC/CR (60 KBD + 50 CCC + 40 CR).
-- `pressure_scenarios.json`: 25 items for the 3-turn Pressure task.
+- `metacog_dataset.json`: 300 items for KBD/CCC/CR (120 KBD + 100 CCC + 80 CR).
+- `pressure_scenarios.json`: 50 items for the 3-turn Pressure task.
 - `analysis_report.ipynb`: Aggregates exported `*.run.json` logs into model-by-task tables with uncertainty.
 - `item_response_analysis.ipynb`: Difficulty and per-item aggregation when logs include item identifiers.
 - `writeup.md`: Competition writeup (should match the notebooks and datasets exactly).
