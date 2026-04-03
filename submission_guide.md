@@ -109,7 +109,7 @@ Repeat the steps below for each of the four local notebooks.
 
 ## Phase 4: Evaluate at Least 5 Models (Leaderboard Requirement)
 
-1. From the benchmark page, click **Evaluate More Models**.
+1. From the benchmark page, click the **Add Models** button (located just above your list of tasks).
 2. Choose **at least 5 models**. To maximize the value of the benchmark results (and aim for the 9.0/10 prize tier), select models that span different architectures, sizes, and safety-tuning profiles to highlight behavioral variance. 
    **Mandatory 5 Models Strategy:**
    - **Gemini 2.5 Flash** (The default Kaggle runner; mandatory baseline)
