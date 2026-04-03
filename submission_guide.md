@@ -109,8 +109,14 @@ Repeat the steps below for each of the four local notebooks.
 
 ## Phase 4: Evaluate at Least 5 Models (Leaderboard Requirement)
 
-1. From the benchmark page (or each task page), click **Evaluate More Models**.
-2. Choose **at least 5 models** spanning providers/sizes (any valid list is acceptable).
+1. From the benchmark page, click **Evaluate More Models**.
+2. Choose **at least 5 models**. To maximize the value of the benchmark results (and aim for the 9.0/10 prize tier), select models that span different architectures, sizes, and safety-tuning profiles to highlight behavioral variance. 
+   **Recommended Selection Strategy:**
+   - **Gemini 2.5 Flash** (The default Kaggle runner; mandatory baseline)
+   - **GPT-4o** (Frontier proprietary standard; high RLHF)
+   - **Claude 3.5 Sonnet** (Frontier proprietary; distinct safety tuning)
+   - **Gemma 2 27B IT** or **Llama 3.1 70B** (Open weights; allows size vs capability analysis)
+   - **Gemini 1.5 Pro** (Strong reasoning baseline)
 3. Start the evaluations and wait for completion.
 
 **Sanity checks**
