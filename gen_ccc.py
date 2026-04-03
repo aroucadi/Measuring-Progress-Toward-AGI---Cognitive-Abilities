@@ -339,7 +339,7 @@ for weight, dose_per_kg, clearance, round_to in dosage_params:
         f"The patient has reduced organ function requiring a {clearance} adjustment factor. Multiply the raw dose from Step 1 by {clearance}. Return a number (decimal ok).",
         f"Round the adjusted dose from Step 2 to the nearest {round_to} mg. Return an integer.",
     ]
-    if add_item(idx, step_q, [str(raw), str(adjusted), str(final)], "int", "medium"):
+    if add_item(idx, step_q, [str(raw), str(round(adjusted, 2)), str(final)], "int", "medium"):
         idx += 1
 
 # ============================================================
@@ -559,33 +559,29 @@ for ctx, q1, q2, q3, answers, atype in finance_chains:
         idx += 1
 
 # ============================================================
-# BATCH 8: Fraction/ratio chains — deduplicated (10 items) — EASY
-# These are the "floor" items — kept explicitly as floor items
+# BATCH 8: System Scaling & Architecture (10 items) — HARD
+# Replaces trivial fraction conversions with genuine uncertainty 
 # ============================================================
-used_fracs = set()
-frac_count = 0
-for _ in range(50):  # over-generate to pick 10 unique
-    if frac_count >= 10:
-        break
-    x = random.randint(3, 25)
-    y = random.randint(3, 25)
-    if x == y:
-        continue
-    key = (min(x, y), max(x, y))
-    if key in used_fracs:
-        continue
-    used_fracs.add(key)
-    g = math.gcd(x, y)
-    xn, yn = x // g, y // g
-    dec = round(xn / yn, 4)
+scaling_params = [
+    # (base_rps, payload_kb, processing_ms)
+    (5000, 2.5, 150), (8000, 1.8, 200), (3000, 4.0, 100),
+    (10000, 1.5, 250), (7500, 2.2, 180), (15000, 0.8, 300),
+    (4500, 3.5, 120), (6000, 2.0, 160), (9500, 1.2, 220),
+    (12000, 1.0, 280)
+]
+for base_rps, payload_kb, processing_ms in scaling_params:
+    rps_peak = int(base_rps * 1.5)
+    bandwidth_gbps = round(rps_peak * payload_kb * 8 / 1e6, 2)
+    concurrent = rps_peak * (processing_ms / 1000)
+    servers = math.ceil(concurrent / 100)
+    
     step_q = [
-        f"Simplify the fraction {x}/{y} to lowest terms. Return as a reduced fraction a/b.",
-        "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "Report the decimal from Step 2 (4 decimal places).",
+        f"A web service averages {base_rps} requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        f"The average response payload is {payload_kb} KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        f"Each request requires {processing_ms} ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     ]
-    if add_item(idx, step_q, [frac(xn, yn), f"{dec:.4f}", f"{dec:.4f}"], "decimal", "easy"):
+    if add_item(idx, step_q, [str(rps_peak), f"{bandwidth_gbps:.2f}", str(servers)], "decimal", "hard"):
         idx += 1
-        frac_count += 1
 
 # ============================================================
 # Final output

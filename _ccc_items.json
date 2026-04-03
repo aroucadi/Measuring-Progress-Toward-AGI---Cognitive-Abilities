@@ -1262,7 +1262,7 @@
       {
         "step": 2,
         "question": "The patient has reduced organ function requiring a 0.85 adjustment factor. Multiply the raw dose from Step 1 by 0.85. Return a number (decimal ok).",
-        "answer": "464.09999999999997"
+        "answer": "464.1"
       },
       {
         "step": 3,
@@ -1487,7 +1487,7 @@
       {
         "step": 2,
         "question": "The patient has reduced organ function requiring a 0.85 adjustment factor. Multiply the raw dose from Step 1 by 0.85. Return a number (decimal ok).",
-        "answer": "345.09999999999997"
+        "answer": "345.1"
       },
       {
         "step": 3,
@@ -2252,251 +2252,251 @@
   {
     "id": "ccc_091",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 22/21 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 5000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 2.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 150 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 22/21 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "22/21"
+        "question": "A web service averages 5000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "7500"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.0476"
+        "question": "The average response payload is 2.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.15"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.0476"
+        "question": "Each request requires 150 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "12"
       }
     ],
-    "final_answer": "1.0476",
+    "final_answer": "12",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_092",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 13/16 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 8000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 1.8 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 200 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 13/16 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "13/16"
+        "question": "A web service averages 8000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "12000"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.8125"
+        "question": "The average response payload is 1.8 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.17"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.8125"
+        "question": "Each request requires 200 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "24"
       }
     ],
-    "final_answer": "0.8125",
+    "final_answer": "24",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_093",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 23/10 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 3000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 4.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 100 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 23/10 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "23/10"
+        "question": "A web service averages 3000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "4500"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "2.3000"
+        "question": "The average response payload is 4.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.14"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "2.3000"
+        "question": "Each request requires 100 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "5"
       }
     ],
-    "final_answer": "2.3000",
+    "final_answer": "5",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_094",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 11/10 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 10000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 1.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 250 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 11/10 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "11/10"
+        "question": "A web service averages 10000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "15000"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.1000"
+        "question": "The average response payload is 1.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.18"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.1000"
+        "question": "Each request requires 250 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "38"
       }
     ],
-    "final_answer": "1.1000",
+    "final_answer": "38",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_095",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 17/24 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 7500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 2.2 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 180 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 17/24 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "17/24"
+        "question": "A web service averages 7500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "11250"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.7083"
+        "question": "The average response payload is 2.2 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.20"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.7083"
+        "question": "Each request requires 180 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "21"
       }
     ],
-    "final_answer": "0.7083",
+    "final_answer": "21",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_096",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 4/15 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 15000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 0.8 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 300 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 4/15 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "4/15"
+        "question": "A web service averages 15000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "22500"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.2667"
+        "question": "The average response payload is 0.8 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.14"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.2667"
+        "question": "Each request requires 300 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "68"
       }
     ],
-    "final_answer": "0.2667",
+    "final_answer": "68",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_097",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 12/23 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 4500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 3.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 120 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 12/23 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "12/23"
+        "question": "A web service averages 4500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "6750"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.5217"
+        "question": "The average response payload is 3.5 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.19"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.5217"
+        "question": "Each request requires 120 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "9"
       }
     ],
-    "final_answer": "0.5217",
+    "final_answer": "9",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_098",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 20/13 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 6000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 2.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 160 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 20/13 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "20/13"
+        "question": "A web service averages 6000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "9000"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "1.5385"
+        "question": "The average response payload is 2.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.14"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "1.5385"
+        "question": "Each request requires 160 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "15"
       }
     ],
-    "final_answer": "1.5385",
+    "final_answer": "15",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_099",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 9/17 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 9500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 1.2 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 220 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 9/17 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "9/17"
+        "question": "A web service averages 9500 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "14250"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.5294"
+        "question": "The average response payload is 1.2 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.14"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.5294"
+        "question": "Each request requires 220 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "32"
       }
     ],
-    "final_answer": "0.5294",
+    "final_answer": "32",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   },
   {
     "id": "ccc_100",
     "subtype": "CCC",
-    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: Simplify the fraction 19/23 to lowest terms. Return as a reduced fraction a/b.\nStep 2: Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.\nStep 3: Report the decimal from Step 2 (4 decimal places).",
+    "prompt": "Solve the following multi-step problem.\nAfter each step, output ONE JSON object on its own line with keys: step, answer, confidence.\nconfidence must be an integer 0-100 representing your confidence that the answer for that step is correct.\nDo not output any additional JSON keys.\n\nStep 1: A web service averages 12000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.\nStep 2: The average response payload is 1.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.\nStep 3: Each request requires 280 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
     "steps": [
       {
         "step": 1,
-        "question": "Simplify the fraction 19/23 to lowest terms. Return as a reduced fraction a/b.",
-        "answer": "19/23"
+        "question": "A web service averages 12000 requests per second (RPS). Assuming a typical diurnal peak-to-average ratio of 1.5, compute the peak RPS. Return an integer.",
+        "answer": "18000"
       },
       {
         "step": 2,
-        "question": "Convert the reduced fraction from Step 1 to a decimal rounded to 4 decimal places.",
-        "answer": "0.8261"
+        "question": "The average response payload is 1.0 KB. Using metric prefixes (1 KB = 1000 Bytes, 1 Gb = 10^9 bits), compute the peak network egress bandwidth in Gigabits per second (Gbps). Return a number rounded to 2 decimal places.",
+        "answer": "0.14"
       },
       {
         "step": 3,
-        "question": "Report the decimal from Step 2 (4 decimal places).",
-        "answer": "0.8261"
+        "question": "Each request requires 280 ms of processing time. Using Little's Law, compute the peak concurrent requests. Determine the minimum number of servers required if each server handles a maximum of 100 concurrent requests (round up to nearest integer). Return an integer.",
+        "answer": "51"
       }
     ],
-    "final_answer": "0.8261",
+    "final_answer": "51",
     "answer_type": "decimal",
-    "difficulty": "easy"
+    "difficulty": "hard"
   }
 ]
