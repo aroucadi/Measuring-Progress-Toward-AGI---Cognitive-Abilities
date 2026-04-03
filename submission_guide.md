@@ -111,12 +111,19 @@ Repeat the steps below for each of the four local notebooks.
 
 1. From the benchmark page, click **Evaluate More Models**.
 2. Choose **at least 5 models**. To maximize the value of the benchmark results (and aim for the 9.0/10 prize tier), select models that span different architectures, sizes, and safety-tuning profiles to highlight behavioral variance. 
-   **Recommended Selection Strategy:**
+   **Mandatory 5 Models Strategy:**
    - **Gemini 2.5 Flash** (The default Kaggle runner; mandatory baseline)
-   - **GPT-4o** (Frontier proprietary standard; high RLHF)
-   - **Claude 3.5 Sonnet** (Frontier proprietary; distinct safety tuning)
-   - **Gemma 2 27B IT** or **Llama 3.1 70B** (Open weights; allows size vs capability analysis)
-   - **Gemini 1.5 Pro** (Strong reasoning baseline)
+   - **GPT-5.4** (OpenAI's frontier proprietary standard; high RLHF)
+   - **Claude Sonnet 4.6** (Anthropic's frontier; distinct safety tuning profile)
+   - **DeepSeek-R1** (Strong reasoning-focused model; tests capability vs pressure)
+   - **Gemma 4 31B** (Leading open-weights model; compares proprietary vs open behaviors)
+   
+   **5 Additional Models (If Extending for Deeper Analysis):**
+   - **Gemini 3.1 Pro Preview** (Compare scale/generation curves against 2.5 Flash)
+   - **Claude Opus 4.6** (Compare massive compute Opus against Sonnet behavior)
+   - **gpt-oss-120b** (Compare OpenAI closed vs OpenAI OSS weights)
+   - **DeepSeek V3.2** (Standard tuned model vs the R1 reasoning-focused model)
+   - **Gemma 3 1B** (Test the metacognition floor on a tiny parameter scale)
 3. Start the evaluations and wait for completion.
 
 **Sanity checks**
