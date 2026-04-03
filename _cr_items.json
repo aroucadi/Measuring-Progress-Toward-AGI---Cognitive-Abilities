@@ -2,641 +2,1178 @@
   {
     "id": "cr_001",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (17 + 48) * 7.\n\n[L1] Start by adding: 17 + 48 = 65.\n[L2] Multiply by 7: 65 * 7 = 469.\n[L3] Therefore the final answer is 469.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify the following historical account.\n\n[L1] The Declaration of Independence was adopted on July 4, 1776.\n[L2] It was primarily authored by Benjamin Franklin.\n[L3] The document declared the thirteen colonies free from British rule.",
     "error_location": "L2",
-    "correction": "65 * 7 = 455",
-    "difficulty": "easy"
+    "correction": "The Declaration of Independence was primarily authored by Thomas Jefferson.",
+    "accepted_corrections": [
+      "Thomas Jefferson",
+      "authored by Thomas Jefferson",
+      "Jefferson"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_002",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (75 + 28) * 9.\n\n[L1] Start by adding: 75 + 28 = 103.\n[L2] Multiply by 9: 103 * 9 = 918.\n[L3] Therefore the final answer is 918.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this account of World War I.\n\n[L1] World War I began in 1914 following the assassination of Archduke Franz Ferdinand.\n[L2] The war ended with the Treaty of Versailles, signed in 1920.\n[L3] The treaty imposed heavy reparations on Germany.",
     "error_location": "L2",
-    "correction": "103 * 9 = 927",
-    "difficulty": "easy"
+    "correction": "The Treaty of Versailles was signed on June 28, 1919.",
+    "accepted_corrections": [
+      "1919",
+      "signed in 1919",
+      "June 28, 1919"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_003",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (97 + 21) * 3.\n\n[L1] Start by adding: 97 + 21 = 118.\n[L2] Multiply by 3: 118 * 3 = 351.\n[L3] Therefore the final answer is 351.",
-    "error_location": "L2",
-    "correction": "118 * 3 = 354",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify these facts about the solar system.\n\n[L1] Jupiter is the largest planet in our solar system.\n[L2] Saturn is known for its prominent ring system.\n[L3] Mars is the closest planet to the Sun.",
+    "error_location": "L3",
+    "correction": "Mercury is the closest planet to the Sun.",
+    "accepted_corrections": [
+      "Mercury",
+      "Mercury is the closest planet to the Sun"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_004",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (60 + 80) * 4.\n\n[L1] Start by adding: 60 + 80 = 140.\n[L2] Multiply by 4: 140 * 4 = 552.\n[L3] Therefore the final answer is 552.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of human anatomy.\n\n[L1] The human body has 206 bones in adulthood.\n[L2] The femur, located in the upper arm, is the longest bone.\n[L3] Red blood cells are produced in bone marrow.",
     "error_location": "L2",
-    "correction": "140 * 4 = 560",
-    "difficulty": "easy"
+    "correction": "The femur is located in the upper leg (thigh), not the upper arm.",
+    "accepted_corrections": [
+      "upper leg",
+      "thigh",
+      "femur is in the thigh",
+      "femur is located in the upper leg"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_005",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (45 + 92) * 3.\n\n[L1] Start by adding: 45 + 92 = 137.\n[L2] Multiply by 3: 137 * 3 = 405.\n[L3] Therefore the final answer is 405.",
-    "error_location": "L2",
-    "correction": "137 * 3 = 411",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of the water cycle.\n\n[L1] Water evaporates from oceans, lakes, and rivers due to solar energy.\n[L2] Water vapor rises and cools, forming clouds through condensation.\n[L3] Precipitation falls as rain, snow, or sleet, returning water to the ground.\n[L4] Groundwater flows directly into the stratosphere to restart the cycle.",
+    "error_location": "L4",
+    "correction": "Groundwater flows into rivers, lakes, and oceans (not the stratosphere) to restart the cycle.",
+    "accepted_corrections": [
+      "rivers",
+      "oceans",
+      "not the stratosphere",
+      "groundwater flows into bodies of water"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_006",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (40 + 99) * 9.\n\n[L1] Start by adding: 40 + 99 = 139.\n[L2] Multiply by 9: 139 * 9 = 1260.\n[L3] Therefore the final answer is 1260.",
-    "error_location": "L2",
-    "correction": "139 * 9 = 1251",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check these facts about chemical elements.\n\n[L1] Gold has the chemical symbol Au and atomic number 79.\n[L2] Oxygen makes up approximately 21% of Earth's atmosphere.\n[L3] The lightest element is helium, with an atomic number of 2.",
+    "error_location": "L3",
+    "correction": "The lightest element is hydrogen (atomic number 1), not helium.",
+    "accepted_corrections": [
+      "hydrogen",
+      "hydrogen is the lightest",
+      "atomic number 1"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_007",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (77 + 18) * 5.\n\n[L1] Start by adding: 77 + 18 = 95.\n[L2] Multiply by 5: 95 * 5 = 480.\n[L3] Therefore the final answer is 480.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this account of the moon landing.\n\n[L1] NASA's Apollo 11 mission launched on July 16, 1969.\n[L2] Buzz Aldrin was the first person to walk on the Moon.\n[L3] The mission safely returned to Earth on July 24, 1969.",
     "error_location": "L2",
-    "correction": "95 * 5 = 475",
-    "difficulty": "easy"
+    "correction": "Neil Armstrong was the first person to walk on the Moon, not Buzz Aldrin.",
+    "accepted_corrections": [
+      "Neil Armstrong",
+      "Armstrong was the first",
+      "Neil Armstrong was first"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_008",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (76 + 59) * 8.\n\n[L1] Start by adding: 76 + 59 = 135.\n[L2] Multiply by 8: 135 * 8 = 1088.\n[L3] Therefore the final answer is 1088.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this geography description.\n\n[L1] The Nile is the longest river in Africa.\n[L2] Mount Kilimanjaro, the highest peak in Africa, is located in Kenya.\n[L3] The Sahara is the largest hot desert in the world.",
     "error_location": "L2",
-    "correction": "135 * 8 = 1080",
-    "difficulty": "easy"
+    "correction": "Mount Kilimanjaro is located in Tanzania, not Kenya.",
+    "accepted_corrections": [
+      "Tanzania",
+      "located in Tanzania"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_009",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (53 + 60) * 4.\n\n[L1] Start by adding: 53 + 60 = 113.\n[L2] Multiply by 4: 113 * 4 = 460.\n[L3] Therefore the final answer is 460.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify these facts about the periodic table.\n\n[L1] The noble gases are in Group 18 and include helium, neon, and argon.\n[L2] Sodium (Na) and potassium (K) are alkaline earth metals in Group 2.\n[L3] Carbon has four valence electrons and forms the basis of organic chemistry.",
     "error_location": "L2",
-    "correction": "113 * 4 = 452",
-    "difficulty": "easy"
+    "correction": "Sodium and potassium are alkali metals in Group 1, not alkaline earth metals in Group 2.",
+    "accepted_corrections": [
+      "alkali metals",
+      "Group 1",
+      "alkali metals in Group 1"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_010",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (61 + 42) * 6.\n\n[L1] Start by adding: 61 + 42 = 103.\n[L2] Multiply by 6: 103 * 6 = 606.\n[L3] Therefore the final answer is 606.",
-    "error_location": "L2",
-    "correction": "103 * 6 = 618",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this account of computer science history.\n\n[L1] Alan Turing proposed the concept of a universal computing machine in 1936.\n[L2] The first electronic general-purpose computer, ENIAC, was completed in 1945.\n[L3] Tim Berners-Lee invented the Internet in 1989.",
+    "error_location": "L3",
+    "correction": "Tim Berners-Lee invented the World Wide Web (not the Internet) in 1989. The Internet predates it.",
+    "accepted_corrections": [
+      "World Wide Web",
+      "WWW",
+      "the Web, not the Internet"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_011",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (62 + 53) * 5.\n\n[L1] Start by adding: 62 + 53 = 115.\n[L2] Multiply by 5: 115 * 5 = 580.\n[L3] Therefore the final answer is 580.",
-    "error_location": "L2",
-    "correction": "115 * 5 = 575",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this biological classification.\n\n[L1] Dolphins are fish that live in oceans and occasionally in rivers.\n[L2] They use echolocation to navigate and find prey.\n[L3] Dolphins are highly social and live in groups called pods.",
+    "error_location": "L1",
+    "correction": "Dolphins are mammals, not fish. They are marine mammals of the order Cetacea.",
+    "accepted_corrections": [
+      "mammals",
+      "dolphins are mammals",
+      "marine mammals"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_012",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (22 + 93) * 4.\n\n[L1] Start by adding: 22 + 93 = 115.\n[L2] Multiply by 4: 115 * 4 = 452.\n[L3] Therefore the final answer is 452.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this physics description.\n\n[L1] The speed of light in a vacuum is approximately 3 × 10⁸ m/s.\n[L2] Sound travels faster than light in all media.\n[L3] Light exhibits both wave and particle properties (wave-particle duality).",
     "error_location": "L2",
-    "correction": "115 * 4 = 460",
-    "difficulty": "easy"
+    "correction": "Light travels faster than sound in all media, not the reverse.",
+    "accepted_corrections": [
+      "light travels faster than sound",
+      "light is faster",
+      "sound is slower than light"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_013",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (46 + 86) * 4.\n\n[L1] Start by adding: 46 + 86 = 132.\n[L2] Multiply by 4: 132 * 4 = 524.\n[L3] Therefore the final answer is 524.",
-    "error_location": "L2",
-    "correction": "132 * 4 = 528",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this economic history.\n\n[L1] The Great Depression began with the stock market crash of October 1929.\n[L2] The depression lasted through most of the 1930s.\n[L3] The New Deal was introduced by President Herbert Hoover to combat the crisis.",
+    "error_location": "L3",
+    "correction": "The New Deal was introduced by President Franklin D. Roosevelt, not Herbert Hoover.",
+    "accepted_corrections": [
+      "Franklin D. Roosevelt",
+      "FDR",
+      "Roosevelt"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_014",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (27 + 98) * 6.\n\n[L1] Start by adding: 27 + 98 = 125.\n[L2] Multiply by 6: 125 * 6 = 738.\n[L3] Therefore the final answer is 738.",
-    "error_location": "L2",
-    "correction": "125 * 6 = 750",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check these statements about DNA.\n\n[L1] DNA stands for deoxyribonucleic acid.\n[L2] The double helix structure of DNA was discovered by Watson and Crick in 1953.\n[L3] DNA contains five base types: adenine, thymine, guanine, cytosine, and uracil.",
+    "error_location": "L3",
+    "correction": "DNA contains four bases: adenine, thymine, guanine, and cytosine. Uracil is found in RNA, not DNA.",
+    "accepted_corrections": [
+      "four bases",
+      "uracil is in RNA",
+      "DNA has four bases, not five"
+    ],
+    "difficulty": "medium",
+    "error_type": "factual"
   },
   {
     "id": "cr_015",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (72 + 96) * 9.\n\n[L1] Start by adding: 72 + 96 = 168.\n[L2] Multiply by 9: 168 * 9 = 1530.\n[L3] Therefore the final answer is 1530.",
-    "error_location": "L2",
-    "correction": "168 * 9 = 1512",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of photosynthesis.\n\n[L1] Photosynthesis occurs primarily in the mitochondria of plant cells.\n[L2] It converts carbon dioxide and water into glucose and oxygen.\n[L3] Light energy from the Sun drives the process.",
+    "error_location": "L1",
+    "correction": "Photosynthesis occurs in the chloroplasts, not the mitochondria.",
+    "accepted_corrections": [
+      "chloroplasts",
+      "occurs in chloroplasts",
+      "chloroplast"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_016",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute (27 + 76) * 7.\n\n[L1] Start by adding: 27 + 76 = 103.\n[L2] Multiply by 7: 103 * 7 = 735.\n[L3] Therefore the final answer is 735.",
-    "error_location": "L2",
-    "correction": "103 * 7 = 721",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this music history statement.\n\n[L1] Ludwig van Beethoven was a German composer born in 1770.\n[L2] He composed nine symphonies, including the famous Fifth.\n[L3] Beethoven was known for going blind later in his life, yet continuing to compose.",
+    "error_location": "L3",
+    "correction": "Beethoven went deaf, not blind, later in life.",
+    "accepted_corrections": [
+      "deaf",
+      "went deaf",
+      "Beethoven went deaf, not blind"
+    ],
+    "difficulty": "easy",
+    "error_type": "factual"
   },
   {
     "id": "cr_017",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/9 + 1/4 as a reduced fraction.\n\n[L1] Common denominator is 9*4 = 36.\n[L2] Convert: 1/9 = 4/36 and 1/4 = 9/36.\n[L3] Add numerators: 4+9 = 13, so the sum is 13/45.\n[L4] Reduced form is 13/45.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this logical argument.\n\n[L1] All mammals are warm-blooded.\n[L2] All dogs are mammals.\n[L3] Therefore, all warm-blooded animals are dogs.",
     "error_location": "L3",
-    "correction": "13/36 reduces to 13/36",
-    "difficulty": "medium"
+    "correction": "The conclusion does not follow. The correct conclusion is 'all dogs are warm-blooded' (affirming the consequent fallacy).",
+    "accepted_corrections": [
+      "all dogs are warm-blooded",
+      "affirming the consequent",
+      "invalid conclusion",
+      "does not follow"
+    ],
+    "difficulty": "easy",
+    "error_type": "logical"
   },
   {
     "id": "cr_018",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/7 + 1/5 as a reduced fraction.\n\n[L1] Common denominator is 7*5 = 35.\n[L2] Convert: 1/7 = 5/35 and 1/5 = 7/35.\n[L3] Add numerators: 5+7 = 12, so the sum is 12/28.\n[L4] Reduced form is 12/28.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this reasoning about correlation and causation.\n\n[L1] Ice cream sales increase during summer months.\n[L2] Drowning incidents also increase during summer months.\n[L3] Therefore, eating ice cream causes drowning.",
     "error_location": "L3",
-    "correction": "12/35 reduces to 12/35",
-    "difficulty": "medium"
+    "correction": "Correlation does not imply causation. Both are independently correlated with warm weather/summer.",
+    "accepted_corrections": [
+      "correlation does not imply causation",
+      "confounding variable",
+      "correlation not causation",
+      "warm weather"
+    ],
+    "difficulty": "easy",
+    "error_type": "logical"
   },
   {
     "id": "cr_019",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/5 + 1/6 as a reduced fraction.\n\n[L1] Common denominator is 5*6 = 30.\n[L2] Convert: 1/5 = 6/30 and 1/6 = 5/30.\n[L3] Add numerators: 6+5 = 11, so the sum is 11/25.\n[L4] Reduced form is 11/25.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this statistical argument.\n\n[L1] In a survey of 1,000 people, 60% said they exercise regularly.\n[L2] The survey was conducted at a gym.\n[L3] Therefore, 60% of the general population exercises regularly.",
     "error_location": "L3",
-    "correction": "11/30 reduces to 11/30",
-    "difficulty": "medium"
+    "correction": "The conclusion is invalid due to sampling bias — the survey at a gym is not representative of the general population.",
+    "accepted_corrections": [
+      "sampling bias",
+      "not representative",
+      "selection bias",
+      "biased sample"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_020",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/7 + 1/10 as a reduced fraction.\n\n[L1] Common denominator is 7*10 = 70.\n[L2] Convert: 1/7 = 10/70 and 1/10 = 7/70.\n[L3] Add numerators: 10+7 = 17, so the sum is 17/77.\n[L4] Reduced form is 17/77.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this conditional reasoning.\n\n[L1] If it rains, the ground gets wet.\n[L2] The ground is wet.\n[L3] Therefore, it rained.",
     "error_location": "L3",
-    "correction": "17/70 reduces to 17/70",
-    "difficulty": "medium"
+    "correction": "This is the fallacy of affirming the consequent. The ground could be wet for other reasons (sprinklers, flooding).",
+    "accepted_corrections": [
+      "affirming the consequent",
+      "other reasons",
+      "sprinklers",
+      "does not necessarily follow"
+    ],
+    "difficulty": "easy",
+    "error_type": "logical"
   },
   {
     "id": "cr_021",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/10 + 1/9 as a reduced fraction.\n\n[L1] Common denominator is 10*9 = 90.\n[L2] Convert: 1/10 = 9/90 and 1/9 = 10/90.\n[L3] Add numerators: 9+10 = 19, so the sum is 19/99.\n[L4] Reduced form is 19/99.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this argument about averages.\n\n[L1] The average salary in Department A is $80,000 (5 employees).\n[L2] The average salary in Department B is $60,000 (50 employees).\n[L3] Therefore, the average salary across both departments is $70,000.",
     "error_location": "L3",
-    "correction": "19/90 reduces to 19/90",
-    "difficulty": "medium"
+    "correction": "The combined average must be weighted by department size: (5×80000 + 50×60000)/55 ≈ $61,818, not the simple mean of the two averages.",
+    "accepted_corrections": [
+      "weighted average",
+      "$61,818",
+      "61818",
+      "must weight by department size"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_022",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/6 + 1/5 as a reduced fraction.\n\n[L1] Common denominator is 6*5 = 30.\n[L2] Convert: 1/6 = 5/30 and 1/5 = 6/30.\n[L3] Add numerators: 5+6 = 11, so the sum is 11/36.\n[L4] Reduced form is 11/36.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this argument about necessity and sufficiency.\n\n[L1] Being over 18 is necessary to vote in most countries.\n[L2] John is over 18.\n[L3] Therefore, John can definitely vote.",
     "error_location": "L3",
-    "correction": "11/30 reduces to 11/30",
-    "difficulty": "medium"
+    "correction": "Being over 18 is necessary but not sufficient to vote. Other conditions apply (citizenship, registration, etc.).",
+    "accepted_corrections": [
+      "not sufficient",
+      "necessary but not sufficient",
+      "citizenship",
+      "other conditions"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_023",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/6 + 1/8 as a reduced fraction.\n\n[L1] Common denominator is 6*8 = 48.\n[L2] Convert: 1/6 = 8/48 and 1/8 = 6/48.\n[L3] Add numerators: 8+6 = 14, so the sum is 14/54.\n[L4] Reduced form is 14/54.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this base rate reasoning.\n\n[L1] A rare disease affects 1 in 10,000 people.\n[L2] A test for the disease has a 99% accuracy rate.\n[L3] If someone tests positive, there is a 99% chance they have the disease.",
     "error_location": "L3",
-    "correction": "14/48 reduces to 7/24",
-    "difficulty": "medium"
+    "correction": "Due to the base rate fallacy, the actual probability is much lower (~1%). Most positives from a rare disease are false positives.",
+    "accepted_corrections": [
+      "base rate fallacy",
+      "false positives",
+      "much lower than 99%",
+      "base rate"
+    ],
+    "difficulty": "hard",
+    "error_type": "logical"
   },
   {
     "id": "cr_024",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/10 + 1/6 as a reduced fraction.\n\n[L1] Common denominator is 10*6 = 60.\n[L2] Convert: 1/10 = 6/60 and 1/6 = 10/60.\n[L3] Add numerators: 6+10 = 16, so the sum is 16/54.\n[L4] Reduced form is 16/54.",
-    "error_location": "L3",
-    "correction": "16/60 reduces to 4/15",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this argument about composition.\n\n[L1] Every brick in this wall weighs 2 kilograms.\n[L2] Therefore, this wall is light.\n[L3] Light things are easy to move.",
+    "error_location": "L2",
+    "correction": "This is the fallacy of composition. Individual bricks being light does not make the entire wall light.",
+    "accepted_corrections": [
+      "fallacy of composition",
+      "individual parts",
+      "wall has many bricks"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_025",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/3 + 1/5 as a reduced fraction.\n\n[L1] Common denominator is 3*5 = 15.\n[L2] Convert: 1/3 = 5/15 and 1/5 = 3/15.\n[L3] Add numerators: 5+3 = 8, so the sum is 8/18.\n[L4] Reduced form is 8/18.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this argument from authority.\n\n[L1] Dr. Smith is a renowned physicist.\n[L2] Dr. Smith says that this new diet plan is the healthiest option.\n[L3] Therefore, this diet plan is the healthiest option.",
     "error_location": "L3",
-    "correction": "8/15 reduces to 8/15",
-    "difficulty": "medium"
+    "correction": "This is an appeal to authority fallacy. Dr. Smith's expertise is in physics, not nutrition or dietetics.",
+    "accepted_corrections": [
+      "appeal to authority",
+      "not an expert in nutrition",
+      "irrelevant expertise",
+      "wrong field"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_026",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/8 + 1/4 as a reduced fraction.\n\n[L1] Common denominator is 8*4 = 32.\n[L2] Convert: 1/8 = 4/32 and 1/4 = 8/32.\n[L3] Add numerators: 4+8 = 12, so the sum is 12/24.\n[L4] Reduced form is 12/24.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this probabilistic reasoning.\n\n[L1] A fair coin has been flipped 9 times, landing heads each time.\n[L2] The coin is fair, so each flip is independent.\n[L3] Therefore, the next flip is more likely to be tails to 'balance out'.",
     "error_location": "L3",
-    "correction": "12/32 reduces to 3/8",
-    "difficulty": "medium"
+    "correction": "This is the gambler's fallacy. Each flip is independent; the probability of tails on the next flip remains 50%.",
+    "accepted_corrections": [
+      "gambler's fallacy",
+      "independent",
+      "50%",
+      "still 50%",
+      "each flip is independent"
+    ],
+    "difficulty": "easy",
+    "error_type": "logical"
   },
   {
     "id": "cr_027",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/9 + 1/8 as a reduced fraction.\n\n[L1] Common denominator is 9*8 = 72.\n[L2] Convert: 1/9 = 8/72 and 1/8 = 9/72.\n[L3] Add numerators: 8+9 = 17, so the sum is 17/81.\n[L4] Reduced form is 17/81.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this categorical syllogism.\n\n[L1] Some birds can fly.\n[L2] Penguins are birds.\n[L3] Therefore, penguins can fly.",
     "error_location": "L3",
-    "correction": "17/72 reduces to 17/72",
-    "difficulty": "medium"
+    "correction": "'Some birds can fly' does not imply all birds can fly. Penguins are flightless birds.",
+    "accepted_corrections": [
+      "not all birds can fly",
+      "penguins cannot fly",
+      "flightless",
+      "some does not mean all"
+    ],
+    "difficulty": "easy",
+    "error_type": "logical"
   },
   {
     "id": "cr_028",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/5 + 1/4 as a reduced fraction.\n\n[L1] Common denominator is 5*4 = 20.\n[L2] Convert: 1/5 = 4/20 and 1/4 = 5/20.\n[L3] Add numerators: 4+5 = 9, so the sum is 9/25.\n[L4] Reduced form is 9/25.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this argument about percentages.\n\n[L1] A store raises prices by 20%.\n[L2] Later, the store offers a 20% discount.\n[L3] The final price is the same as the original price.",
     "error_location": "L3",
-    "correction": "9/20 reduces to 9/20",
-    "difficulty": "medium"
+    "correction": "The final price is 96% of the original (1.20 × 0.80 = 0.96), not 100%. A 20% increase then 20% decrease does not cancel out.",
+    "accepted_corrections": [
+      "96%",
+      "0.96",
+      "not the same",
+      "does not cancel out",
+      "1.20 × 0.80 = 0.96"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_029",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/5 + 1/7 as a reduced fraction.\n\n[L1] Common denominator is 5*7 = 35.\n[L2] Convert: 1/5 = 7/35 and 1/7 = 5/35.\n[L3] Add numerators: 7+5 = 12, so the sum is 12/42.\n[L4] Reduced form is 12/42.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this ecological reasoning.\n\n[L1] Wolves were reintroduced to Yellowstone National Park in 1995.\n[L2] After reintroduction, elk populations decreased.\n[L3] Therefore, wolves eating elk is the sole reason for the ecosystem recovery.",
     "error_location": "L3",
-    "correction": "12/35 reduces to 12/35",
-    "difficulty": "medium"
+    "correction": "Wolf reintroduction had cascading effects (trophic cascade) beyond just elk predation, including changes in elk behavior, vegetation recovery, and river patterns. 'Sole reason' is incorrect.",
+    "accepted_corrections": [
+      "not the sole reason",
+      "trophic cascade",
+      "cascading effects",
+      "multiple factors"
+    ],
+    "difficulty": "hard",
+    "error_type": "logical"
   },
   {
     "id": "cr_030",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/8 + 1/3 as a reduced fraction.\n\n[L1] Common denominator is 8*3 = 24.\n[L2] Convert: 1/8 = 3/24 and 1/3 = 8/24.\n[L3] Add numerators: 3+8 = 11, so the sum is 11/32.\n[L4] Reduced form is 11/32.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this economic reasoning.\n\n[L1] Country X doubled its money supply over 5 years.\n[L2] Country X's GDP also doubled over the same period.\n[L3] Therefore, the standard of living in Country X has doubled.",
     "error_location": "L3",
-    "correction": "11/24 reduces to 11/24",
-    "difficulty": "medium"
+    "correction": "Doubling the money supply alongside GDP does not mean the standard of living doubled. Inflation, income distribution, and real vs nominal GDP must be considered.",
+    "accepted_corrections": [
+      "inflation",
+      "real vs nominal",
+      "standard of living not determined by GDP alone"
+    ],
+    "difficulty": "hard",
+    "error_type": "logical"
   },
   {
     "id": "cr_031",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/6 + 1/8 as a reduced fraction.\n\n[L1] Common denominator is 6*8 = 48.\n[L2] Convert: 1/6 = 8/48 and 1/8 = 6/48.\n[L3] Add numerators: 8+6 = 14, so the sum is 14/40.\n[L4] Reduced form is 14/40.",
-    "error_location": "L3",
-    "correction": "14/48 reduces to 7/24",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this survival analysis reasoning.\n\n[L1] Hospital A has a higher mortality rate than Hospital B.\n[L2] Both hospitals serve similar populations.\n[L3] Therefore, Hospital A provides worse care than Hospital B.",
+    "error_location": "L2",
+    "correction": "If Hospital A treats more severe cases (selection bias / Simpson's paradox), the comparison is invalid. The claim that they serve 'similar populations' is likely the hidden error.",
+    "accepted_corrections": [
+      "Simpson's paradox",
+      "severity of cases",
+      "case mix",
+      "selection bias"
+    ],
+    "difficulty": "hard",
+    "error_type": "logical"
   },
   {
     "id": "cr_032",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 1/8 + 1/9 as a reduced fraction.\n\n[L1] Common denominator is 8*9 = 72.\n[L2] Convert: 1/8 = 9/72 and 1/9 = 8/72.\n[L3] Add numerators: 9+8 = 17, so the sum is 17/80.\n[L4] Reduced form is 17/80.",
-    "error_location": "L3",
-    "correction": "17/72 reduces to 17/72",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this reasoning about natural selection.\n\n[L1] Giraffes with longer necks can reach more food in tall trees.\n[L2] Therefore, giraffes stretched their necks to reach higher branches.\n[L3] Over generations, this stretching was passed to offspring, resulting in long-necked giraffes.",
+    "error_location": "L2",
+    "correction": "This describes Lamarckian inheritance (acquired traits), which is incorrect. Natural selection favors giraffes born with longer necks, not stretching.",
+    "accepted_corrections": [
+      "Lamarckian",
+      "natural selection",
+      "born with longer necks",
+      "acquired traits are not inherited"
+    ],
+    "difficulty": "medium",
+    "error_type": "logical"
   },
   {
     "id": "cr_033",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 5^5.\n\n[L1] 5^5 means multiplying 5 by itself 5 times.\n[L2] So 5^5 = 3130.\n[L3] Final answer: 3130.",
-    "error_location": "L2",
-    "correction": "5^5 = 3125",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this unit conversion.\n\n[L1] A marathon is 42.195 kilometers.\n[L2] To convert to miles, divide by 1.609: 42.195 / 1.609 ≈ 26.2 miles.\n[L3] To convert to meters, multiply by 10: 42.195 × 10 = 421.95 meters.",
+    "error_location": "L3",
+    "correction": "To convert km to meters, multiply by 1000, not 10. 42.195 × 1000 = 42,195 meters.",
+    "accepted_corrections": [
+      "multiply by 1000",
+      "42195",
+      "42,195 meters",
+      "1000 not 10"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_034",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 8^7.\n\n[L1] 8^7 means multiplying 8 by itself 7 times.\n[L2] So 8^7 = 2097159.\n[L3] Final answer: 2097159.",
-    "error_location": "L2",
-    "correction": "8^7 = 2097152",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this speed calculation.\n\n[L1] A car travels 150 km in 2 hours.\n[L2] Average speed = distance / time = 150 / 2 = 75 km/h.\n[L3] Converting to m/s: 75 × 3.6 = 270 m/s.",
+    "error_location": "L3",
+    "correction": "To convert km/h to m/s, divide by 3.6, not multiply. 75 / 3.6 ≈ 20.83 m/s.",
+    "accepted_corrections": [
+      "divide by 3.6",
+      "20.83",
+      "20.8",
+      "divide not multiply"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_035",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 7^4.\n\n[L1] 7^4 means multiplying 7 by itself 4 times.\n[L2] So 7^4 = 2405.\n[L3] Final answer: 2405.",
-    "error_location": "L2",
-    "correction": "7^4 = 2401",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this area calculation.\n\n[L1] A rectangular room is 5 meters by 4 meters.\n[L2] Area = 5 × 4 = 20 square meters.\n[L3] Converting to square feet: 20 × 3.281 = 65.62 square feet.",
+    "error_location": "L3",
+    "correction": "To convert m² to ft², multiply by 3.281² ≈ 10.764, not 3.281. Answer: 20 × 10.764 ≈ 215.28 sq ft.",
+    "accepted_corrections": [
+      "10.764",
+      "215.28",
+      "3.281 squared",
+      "square the conversion factor"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_036",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 3^2.\n\n[L1] 3^2 means multiplying 3 by itself 2 times.\n[L2] So 3^2 = 6.\n[L3] Final answer: 6.",
-    "error_location": "L2",
-    "correction": "3^2 = 9",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this temperature conversion.\n\n[L1] Normal body temperature is 98.6°F.\n[L2] To convert to Celsius: (98.6 - 32) × 5/9 = 37°C.\n[L3] To convert to Kelvin: 37 + 373.15 = 410.15 K.",
+    "error_location": "L3",
+    "correction": "To convert Celsius to Kelvin, add 273.15 (not 373.15). 37 + 273.15 = 310.15 K.",
+    "accepted_corrections": [
+      "273.15",
+      "310.15",
+      "add 273.15 not 373.15"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_037",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 8^7.\n\n[L1] 8^7 means multiplying 8 by itself 7 times.\n[L2] So 8^7 = 2097144.\n[L3] Final answer: 2097144.",
-    "error_location": "L2",
-    "correction": "8^7 = 2097152",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this volume conversion.\n\n[L1] A fish tank holds 50 gallons of water.\n[L2] Converting to liters: 50 × 3.785 = 189.25 liters.\n[L3] Converting to cubic meters: 189.25 / 100 = 1.8925 cubic meters.",
+    "error_location": "L3",
+    "correction": "To convert liters to cubic meters, divide by 1000, not 100. 189.25 / 1000 = 0.18925 m³.",
+    "accepted_corrections": [
+      "divide by 1000",
+      "0.18925",
+      "0.189",
+      "1000 not 100"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_038",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 4^3.\n\n[L1] 4^3 means multiplying 4 by itself 3 times.\n[L2] So 4^3 = 60.\n[L3] Final answer: 60.",
-    "error_location": "L2",
-    "correction": "4^3 = 64",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this energy conversion.\n\n[L1] A light bulb uses 60 watts.\n[L2] Running for 10 hours uses 60 × 10 = 600 watt-hours.\n[L3] Converting to kilowatt-hours: 600 × 1000 = 600,000 kWh.",
+    "error_location": "L3",
+    "correction": "To convert Wh to kWh, divide by 1000, not multiply. 600 / 1000 = 0.6 kWh.",
+    "accepted_corrections": [
+      "divide by 1000",
+      "0.6 kWh",
+      "0.6",
+      "divide not multiply"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_039",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 5^2.\n\n[L1] 5^2 means multiplying 5 by itself 2 times.\n[L2] So 5^2 = 27.\n[L3] Final answer: 27.",
-    "error_location": "L2",
-    "correction": "5^2 = 25",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this pressure calculation.\n\n[L1] Standard atmospheric pressure is 101,325 pascals.\n[L2] This equals 101.325 kilopascals (divide by 1000).\n[L3] Converting to millibars: 101.325 × 100 = 10,132.5 millibars.",
+    "error_location": "L3",
+    "correction": "1 kPa = 10 mbar, so 101.325 kPa = 1013.25 mbar (multiply by 10, not 100).",
+    "accepted_corrections": [
+      "1013.25",
+      "multiply by 10",
+      "1013",
+      "10 not 100"
+    ],
+    "difficulty": "hard",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_040",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 3^3.\n\n[L1] 3^3 means multiplying 3 by itself 3 times.\n[L2] So 3^3 = 24.\n[L3] Final answer: 24.",
-    "error_location": "L2",
-    "correction": "3^3 = 27",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this distance-time calculation.\n\n[L1] Light travels at approximately 3 × 10⁸ m/s.\n[L2] The Sun is about 1.5 × 10⁸ km from Earth.\n[L3] Light travel time = 1.5 × 10⁸ / 3 × 10⁸ = 0.5 seconds.",
+    "error_location": "L3",
+    "correction": "Units mismatch: the distance is in km but speed is in m/s. Must convert km to m first: 1.5 × 10¹¹ m / 3 × 10⁸ m/s = 500 seconds ≈ 8.3 minutes.",
+    "accepted_corrections": [
+      "500 seconds",
+      "8.3 minutes",
+      "unit mismatch",
+      "convert km to m",
+      "8 minutes"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_041",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 9^2.\n\n[L1] 9^2 means multiplying 9 by itself 2 times.\n[L2] So 9^2 = 90.\n[L3] Final answer: 90.",
-    "error_location": "L2",
-    "correction": "9^2 = 81",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this density calculation.\n\n[L1] An object has mass 500 g and volume 200 cm³.\n[L2] Density = mass / volume = 500 / 200 = 2.5 g/cm³.\n[L3] Converting to kg/m³: 2.5 × 100 = 250 kg/m³.",
+    "error_location": "L3",
+    "correction": "1 g/cm³ = 1000 kg/m³. So 2.5 g/cm³ = 2500 kg/m³ (multiply by 1000, not 100).",
+    "accepted_corrections": [
+      "2500",
+      "multiply by 1000",
+      "2500 kg/m³",
+      "1000 not 100"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_042",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 5^2.\n\n[L1] 5^2 means multiplying 5 by itself 2 times.\n[L2] So 5^2 = 27.\n[L3] Final answer: 27.",
-    "error_location": "L2",
-    "correction": "5^2 = 25",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this data storage conversion.\n\n[L1] A file is 2.5 gigabytes (GB) in size.\n[L2] Converting to megabytes: 2.5 × 1024 = 2560 MB.\n[L3] Converting to kilobytes: 2560 × 100 = 256,000 KB.",
+    "error_location": "L3",
+    "correction": "To convert MB to KB, multiply by 1024, not 100. 2560 × 1024 = 2,621,440 KB.",
+    "accepted_corrections": [
+      "multiply by 1024",
+      "2621440",
+      "2,621,440",
+      "1024 not 100"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_043",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 3^6.\n\n[L1] 3^6 means multiplying 3 by itself 6 times.\n[L2] So 3^6 = 726.\n[L3] Final answer: 726.",
-    "error_location": "L2",
-    "correction": "3^6 = 729",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this force calculation.\n\n[L1] A 10 kg mass experiences gravitational acceleration of 9.81 m/s².\n[L2] Force = mass × acceleration = 10 × 9.81 = 98.1 newtons.\n[L3] Converting to kilonewtons: 98.1 × 1000 = 98,100 kN.",
+    "error_location": "L3",
+    "correction": "To convert N to kN, divide by 1000, not multiply. 98.1 / 1000 = 0.0981 kN.",
+    "accepted_corrections": [
+      "divide by 1000",
+      "0.0981",
+      "divide not multiply"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_044",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 2^7.\n\n[L1] 2^7 means multiplying 2 by itself 7 times.\n[L2] So 2^7 = 121.\n[L3] Final answer: 121.",
-    "error_location": "L2",
-    "correction": "2^7 = 128",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this time calculation.\n\n[L1] A process takes 7,200 seconds.\n[L2] Converting to minutes: 7200 / 60 = 120 minutes.\n[L3] Converting to hours: 120 / 24 = 5 hours.",
+    "error_location": "L3",
+    "correction": "To convert minutes to hours, divide by 60, not 24. 120 / 60 = 2 hours.",
+    "accepted_corrections": [
+      "divide by 60",
+      "2 hours",
+      "60 not 24"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_045",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 2^5.\n\n[L1] 2^5 means multiplying 2 by itself 5 times.\n[L2] So 2^5 = 27.\n[L3] Final answer: 27.",
-    "error_location": "L2",
-    "correction": "2^5 = 32",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this fuel efficiency conversion.\n\n[L1] A car achieves 35 miles per gallon (mpg).\n[L2] Converting to km/L: 35 × 1.609 / 3.785 = 14.87 km/L.\n[L3] Converting to L/100km: 14.87 × 100 = 1487 L/100km.",
+    "error_location": "L3",
+    "correction": "L/100km = 100 / (km/L). So 100 / 14.87 ≈ 6.72 L/100km, not 14.87 × 100.",
+    "accepted_corrections": [
+      "100 / km per liter",
+      "6.72",
+      "6.7",
+      "reciprocal",
+      "divide 100 by km/L"
+    ],
+    "difficulty": "hard",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_046",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 4^3.\n\n[L1] 4^3 means multiplying 4 by itself 3 times.\n[L2] So 4^3 = 68.\n[L3] Final answer: 68.",
-    "error_location": "L2",
-    "correction": "4^3 = 64",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this electrical calculation.\n\n[L1] A circuit has 12V and 2A of current.\n[L2] Power = V × I = 12 × 2 = 24 watts.\n[L3] Resistance = V / I² = 12 / 4 = 3 ohms.",
+    "error_location": "L3",
+    "correction": "Ohm's law: R = V / I = 12 / 2 = 6 ohms. The formula V/I² is incorrect.",
+    "accepted_corrections": [
+      "R = V / I",
+      "6 ohms",
+      "V/I not V/I²"
+    ],
+    "difficulty": "medium",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_047",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 3^9.\n\n[L1] 3^9 means multiplying 3 by itself 9 times.\n[L2] So 3^9 = 19674.\n[L3] Final answer: 19674.",
-    "error_location": "L2",
-    "correction": "3^9 = 19683",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this biological measurement.\n\n[L1] A healthy adult heart rate is approximately 72 beats per minute.\n[L2] In one hour, the heart beats 72 × 60 = 4,320 times.\n[L3] In one day, the heart beats 4,320 × 12 = 51,840 times.",
+    "error_location": "L3",
+    "correction": "There are 24 hours in a day, not 12. 4,320 × 24 = 103,680 beats per day.",
+    "accepted_corrections": [
+      "24 hours",
+      "103,680",
+      "103680",
+      "24 not 12"
+    ],
+    "difficulty": "easy",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_048",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 4^8.\n\n[L1] 4^8 means multiplying 4 by itself 8 times.\n[L2] So 4^8 = 65544.\n[L3] Final answer: 65544.",
-    "error_location": "L2",
-    "correction": "4^8 = 65536",
-    "difficulty": "medium"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this financial percentage calculation.\n\n[L1] An investment grows from $1,000 to $1,500 over 3 years.\n[L2] Total return = ($1,500 - $1,000) / $1,000 = 50%.\n[L3] Annual return = 50% / 3 = 16.67% per year.",
+    "error_location": "L3",
+    "correction": "Simple division gives simple average return, not compound annual return. CAGR = (1500/1000)^(1/3) - 1 ≈ 14.47%.",
+    "accepted_corrections": [
+      "14.47%",
+      "compound annual",
+      "CAGR",
+      "not simple division"
+    ],
+    "difficulty": "hard",
+    "error_type": "unit_dimensional"
   },
   {
     "id": "cr_049",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 4 times, compute P(exactly 0 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 0 heads out of 4 flips is C(4,0) = 0.\n[L2] Total outcomes is 2^4 = 16.\n[L3] Probability is 0/16.",
-    "error_location": "L1",
-    "correction": "C(4,0) = 1; probability = 1/16",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this research claim.\n\n[L1] A study of 50 patients found that Drug A reduced symptoms in 70% of cases.\n[L2] The p-value was 0.03, which is below the 0.05 threshold.\n[L3] Therefore, Drug A is proven to cure the condition.",
+    "error_location": "L3",
+    "correction": "'Statistically significant' does not mean 'proven to cure'. It means the result is unlikely due to chance alone. The study shows evidence of symptom reduction, not a cure.",
+    "accepted_corrections": [
+      "not proven",
+      "does not prove",
+      "evidence not proof",
+      "statistically significant is not proof"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_050",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 7 times, compute P(exactly 3 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 3 heads out of 7 flips is C(7,3) = 34.\n[L2] Total outcomes is 2^7 = 128.\n[L3] Probability is 34/128.",
-    "error_location": "L1",
-    "correction": "C(7,3) = 35; probability = 35/128",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this interpretation of a confidence interval.\n\n[L1] A poll estimates candidate support at 52% with a margin of error of ±3%.\n[L2] The 95% confidence interval is 49% to 55%.\n[L3] There is a 95% probability that the true support is between 49% and 55%.",
+    "error_location": "L3",
+    "correction": "Frequentist confidence intervals don't assign probability to the parameter. The correct interpretation is: if we repeated this poll many times, 95% of the intervals would contain the true value.",
+    "accepted_corrections": [
+      "doesn't assign probability",
+      "repeated sampling",
+      "frequentist interpretation",
+      "not a probability statement about the parameter"
+    ],
+    "difficulty": "hard",
+    "error_type": "statistical"
   },
   {
     "id": "cr_051",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 8 times, compute P(exactly 7 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 7 heads out of 8 flips is C(8,7) = 9.\n[L2] Total outcomes is 2^8 = 256.\n[L3] Probability is 9/256.",
-    "error_location": "L1",
-    "correction": "C(8,7) = 8; probability = 8/256",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this sample size reasoning.\n\n[L1] We surveyed 30 people from a city of 1,000,000.\n[L2] 80% of respondents preferred Brand A.\n[L3] We can confidently say 80% of the entire city prefers Brand A.",
+    "error_location": "L3",
+    "correction": "A sample of 30 is too small for reliable generalization to 1,000,000 people. The margin of error would be very large (~14-18%).",
+    "accepted_corrections": [
+      "too small",
+      "sample size",
+      "margin of error",
+      "cannot generalize from 30"
+    ],
+    "difficulty": "easy",
+    "error_type": "statistical"
   },
   {
     "id": "cr_052",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 7 times, compute P(exactly 5 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 5 heads out of 7 flips is C(7,5) = 19.\n[L2] Total outcomes is 2^7 = 128.\n[L3] Probability is 19/128.",
-    "error_location": "L1",
-    "correction": "C(7,5) = 21; probability = 21/128",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this regression interpretation.\n\n[L1] A regression model shows R² = 0.85 for predicting house prices.\n[L2] This means the model explains 85% of the variance in house prices.\n[L3] Therefore, the model's predictions are 85% accurate.",
+    "error_location": "L3",
+    "correction": "R² measures variance explained, not prediction accuracy. An R² of 0.85 does not mean 85% of predictions are correct.",
+    "accepted_corrections": [
+      "not prediction accuracy",
+      "variance explained",
+      "R² is not accuracy"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_053",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 8 times, compute P(exactly 1 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 1 heads out of 8 flips is C(8,1) = 6.\n[L2] Total outcomes is 2^8 = 256.\n[L3] Probability is 6/256.",
-    "error_location": "L1",
-    "correction": "C(8,1) = 8; probability = 8/256",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this claim about outliers.\n\n[L1] The average household income in our sample is $250,000.\n[L2] The median household income is $48,000.\n[L3] The data shows that most households earn around $250,000.",
+    "error_location": "L3",
+    "correction": "The large gap between mean ($250K) and median ($48K) indicates the mean is skewed by outliers. Most households earn closer to $48,000.",
+    "accepted_corrections": [
+      "skewed by outliers",
+      "median is more representative",
+      "$48,000",
+      "outliers inflate the mean"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_054",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 4 times, compute P(exactly 0 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 0 heads out of 4 flips is C(4,0) = 3.\n[L2] Total outcomes is 2^4 = 16.\n[L3] Probability is 3/16.",
-    "error_location": "L1",
-    "correction": "C(4,0) = 1; probability = 1/16",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this A/B test conclusion.\n\n[L1] Version A had a 2.1% conversion rate and Version B had a 2.3% conversion rate.\n[L2] The test ran for 2 days with 50 visitors per version.\n[L3] Version B is statistically significantly better than Version A.",
+    "error_location": "L3",
+    "correction": "With only 50 visitors per version and a 0.2% difference, the sample size is far too small for statistical significance.",
+    "accepted_corrections": [
+      "sample too small",
+      "not statistically significant",
+      "insufficient sample",
+      "50 is too few"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_055",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 6 times, compute P(exactly 3 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 3 heads out of 6 flips is C(6,3) = 18.\n[L2] Total outcomes is 2^6 = 64.\n[L3] Probability is 18/64.",
-    "error_location": "L1",
-    "correction": "C(6,3) = 20; probability = 20/64",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this survivorship bias example.\n\n[L1] We studied 100 successful startups to find common traits.\n[L2] 90% had founders with technical backgrounds.\n[L3] Therefore, having a technical founder significantly increases startup success.",
+    "error_location": "L3",
+    "correction": "This conclusion suffers from survivorship bias. Without studying failed startups (with or without technical founders), you can't draw this causal conclusion.",
+    "accepted_corrections": [
+      "survivorship bias",
+      "failed startups",
+      "need to study failures",
+      "selection on the outcome"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_056",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 7 times, compute P(exactly 7 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 7 heads out of 7 flips is C(7,7) = 0.\n[L2] Total outcomes is 2^7 = 128.\n[L3] Probability is 0/128.",
-    "error_location": "L1",
-    "correction": "C(7,7) = 1; probability = 1/128",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this misinterpretation of averages.\n\n[L1] The average number of legs per person in this room is 1.98.\n[L2] This means some people in the room have fewer than 2 legs.\n[L3] This is unusual and suggests a high proportion of amputees.",
+    "error_location": "L3",
+    "correction": "An average of 1.98 legs only requires a very small fraction of people with fewer than 2 legs. With 100 people, just 1 amputee gives an average of 1.99. This is not unusual.",
+    "accepted_corrections": [
+      "not unusual",
+      "very few amputees needed",
+      "small fraction",
+      "one or two people"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_057",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 8 times, compute P(exactly 5 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 5 heads out of 8 flips is C(8,5) = 57.\n[L2] Total outcomes is 2^8 = 256.\n[L3] Probability is 57/256.",
-    "error_location": "L1",
-    "correction": "C(8,5) = 56; probability = 56/256",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this ecological fallacy.\n\n[L1] Countries with higher average chocolate consumption have more Nobel laureates per capita.\n[L2] There is a strong positive correlation (r = 0.79).\n[L3] Therefore, eating chocolate improves individual cognitive ability.",
+    "error_location": "L3",
+    "correction": "This is the ecological fallacy — correlations at the country level cannot be applied to individuals. The correlation likely reflects confounding factors (wealth, education, research funding).",
+    "accepted_corrections": [
+      "ecological fallacy",
+      "country-level",
+      "confounding factors",
+      "cannot apply to individuals"
+    ],
+    "difficulty": "hard",
+    "error_type": "statistical"
   },
   {
     "id": "cr_058",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 7 times, compute P(exactly 5 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 5 heads out of 7 flips is C(7,5) = 20.\n[L2] Total outcomes is 2^7 = 128.\n[L3] Probability is 20/128.",
-    "error_location": "L1",
-    "correction": "C(7,5) = 21; probability = 21/128",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this misuse of standard deviation.\n\n[L1] Test scores have a mean of 75 and a standard deviation of 10.\n[L2] The range of one standard deviation from the mean is 65 to 85.\n[L3] Therefore, exactly 68% of students scored between 65 and 85.",
+    "error_location": "L3",
+    "correction": "The 68% rule (empirical rule) only applies to normally distributed data. Without knowing the distribution, we cannot claim exactly 68%.",
+    "accepted_corrections": [
+      "normal distribution",
+      "only if normally distributed",
+      "empirical rule assumes normality",
+      "distribution not specified"
+    ],
+    "difficulty": "hard",
+    "error_type": "statistical"
   },
   {
     "id": "cr_059",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 8 times, compute P(exactly 8 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 8 heads out of 8 flips is C(8,8) = 0.\n[L2] Total outcomes is 2^8 = 256.\n[L3] Probability is 0/256.",
-    "error_location": "L1",
-    "correction": "C(8,8) = 1; probability = 1/256",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this claim about multiple comparisons.\n\n[L1] We tested 20 different foods for correlation with cancer.\n[L2] One food showed a p-value of 0.04.\n[L3] This food is significantly correlated with cancer risk.",
+    "error_location": "L3",
+    "correction": "With 20 tests at α=0.05, we expect ~1 false positive by chance. This is the multiple comparisons problem; correction (e.g., Bonferroni) is needed.",
+    "accepted_corrections": [
+      "multiple comparisons",
+      "Bonferroni",
+      "false positive",
+      "expected by chance",
+      "multiple testing"
+    ],
+    "difficulty": "hard",
+    "error_type": "statistical"
   },
   {
     "id": "cr_060",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 6 times, compute P(exactly 6 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 6 heads out of 6 flips is C(6,6) = 0.\n[L2] Total outcomes is 2^6 = 64.\n[L3] Probability is 0/64.",
-    "error_location": "L1",
-    "correction": "C(6,6) = 1; probability = 1/64",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this interpretation of relative risk.\n\n[L1] Drug X doubles the risk of a rare side effect.\n[L2] The baseline risk is 1 in 100,000.\n[L3] Therefore, Drug X is extremely dangerous and should be banned.",
+    "error_location": "L3",
+    "correction": "Doubling a 1/100,000 risk means it becomes 2/100,000 — still extremely rare. The absolute risk increase is tiny (0.001%). Relative risk alone is misleading.",
+    "accepted_corrections": [
+      "absolute risk",
+      "still very rare",
+      "0.001%",
+      "relative vs absolute risk"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_061",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 6 times, compute P(exactly 4 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 4 heads out of 6 flips is C(6,4) = 14.\n[L2] Total outcomes is 2^6 = 64.\n[L3] Probability is 14/64.",
-    "error_location": "L1",
-    "correction": "C(6,4) = 15; probability = 15/64",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this selection bias in surveys.\n\n[L1] An online poll received 50,000 responses about public transit satisfaction.\n[L2] 85% of respondents expressed dissatisfaction.\n[L3] Therefore, 85% of the population is dissatisfied with public transit.",
+    "error_location": "L3",
+    "correction": "Online polls suffer from self-selection bias — people with strong negative opinions are more likely to respond. This is not representative of the general population.",
+    "accepted_corrections": [
+      "self-selection bias",
+      "not representative",
+      "voluntary response bias"
+    ],
+    "difficulty": "easy",
+    "error_type": "statistical"
   },
   {
     "id": "cr_062",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 6 times, compute P(exactly 5 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 5 heads out of 6 flips is C(6,5) = 5.\n[L2] Total outcomes is 2^6 = 64.\n[L3] Probability is 5/64.",
-    "error_location": "L1",
-    "correction": "C(6,5) = 6; probability = 6/64",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this claim about extrapolation.\n\n[L1] A child grew 3 inches per year between ages 5 and 10.\n[L2] This linear growth rate was consistent over the 5-year period.\n[L3] At this rate, by age 40 the child will be 7 feet 6 inches tall.",
+    "error_location": "L3",
+    "correction": "Linear extrapolation of childhood growth rates is invalid because growth slows and stops during adolescence.",
+    "accepted_corrections": [
+      "growth stops",
+      "puberty",
+      "cannot extrapolate",
+      "growth is not linear indefinitely"
+    ],
+    "difficulty": "easy",
+    "error_type": "statistical"
   },
   {
     "id": "cr_063",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 8 times, compute P(exactly 1 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 1 heads out of 8 flips is C(8,1) = 10.\n[L2] Total outcomes is 2^8 = 256.\n[L3] Probability is 10/256.",
-    "error_location": "L1",
-    "correction": "C(8,1) = 8; probability = 8/256",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this correlation coefficient interpretation.\n\n[L1] The correlation between study hours and exam scores is r = 0.45.\n[L2] This indicates a moderate positive relationship.\n[L3] Study hours explain 45% of the variance in exam scores.",
+    "error_location": "L3",
+    "correction": "R² = 0.45² = 0.2025. Study hours explain approximately 20% of the variance, not 45%.",
+    "accepted_corrections": [
+      "20%",
+      "R² = 0.2025",
+      "r squared",
+      "0.45 squared",
+      "20.25%"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_064",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: For a fair coin flipped 5 times, compute P(exactly 3 heads) as a reduced fraction.\n\n[L1] Number of ways to choose 3 heads out of 5 flips is C(5,3) = 8.\n[L2] Total outcomes is 2^5 = 32.\n[L3] Probability is 8/32.",
-    "error_location": "L1",
-    "correction": "C(5,3) = 10; probability = 10/32",
-    "difficulty": "hard"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Evaluate this reasoning about sample representativeness.\n\n[L1] A newspaper poll surveyed 10,000 of its subscribers about media trust.\n[L2] The large sample size (n=10,000) ensures high statistical power.\n[L3] The results are therefore representative of the general public's views on media trust.",
+    "error_location": "L3",
+    "correction": "Newspaper subscribers are not representative of the general public. Large sample size does not compensate for a biased sampling frame.",
+    "accepted_corrections": [
+      "not representative",
+      "biased sample",
+      "subscribers are not general public",
+      "sample size doesn't fix bias"
+    ],
+    "difficulty": "medium",
+    "error_type": "statistical"
   },
   {
     "id": "cr_065",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 45 mod 9.\n\n[L1] The remainder when 45 is divided by 9 is 1.\n[L2] Therefore 45 mod 9 = 1.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this biological classification.\n\n[L1] A whale is a large fish that lives in the ocean.\n[L2] Whales breathe air using lungs and nurse their young.\n[L3] Blue whales are the largest animals ever to have lived on Earth.",
     "error_location": "L1",
-    "correction": "45 mod 9 = 0",
-    "difficulty": "easy"
+    "correction": "Whales are mammals, not fish.",
+    "accepted_corrections": [
+      "mammals",
+      "whales are mammals",
+      "marine mammals"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_066",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 185 mod 8.\n\n[L1] The remainder when 185 is divided by 8 is 2.\n[L2] Therefore 185 mod 8 = 2.",
-    "error_location": "L1",
-    "correction": "185 mod 8 = 1",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of states of matter.\n\n[L1] Water freezes at 0°C and boils at 100°C at standard atmospheric pressure.\n[L2] Glass is a liquid that flows very slowly at room temperature.\n[L3] Metals expand when heated due to increased atomic vibration.",
+    "error_location": "L2",
+    "correction": "Glass is an amorphous solid, not a liquid. The idea that glass flows slowly is a popular myth.",
+    "accepted_corrections": [
+      "amorphous solid",
+      "glass is a solid",
+      "not a liquid",
+      "myth"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   },
   {
     "id": "cr_067",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 31 mod 7.\n\n[L1] The remainder when 31 is divided by 7 is 4.\n[L2] Therefore 31 mod 7 = 4.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this classification of fruits and vegetables.\n\n[L1] Tomatoes are vegetables commonly used in salads and sauces.\n[L2] Botanically, fruits develop from the flower of a plant and contain seeds.\n[L3] Lettuce and carrots are examples of vegetable plant parts.",
     "error_location": "L1",
-    "correction": "31 mod 7 = 3",
-    "difficulty": "easy"
+    "correction": "Botanically, tomatoes are fruits (they develop from the flower and contain seeds), not vegetables.",
+    "accepted_corrections": [
+      "fruit",
+      "tomatoes are fruits",
+      "botanically a fruit"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_068",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 181 mod 2.\n\n[L1] The remainder when 181 is divided by 2 is 0.\n[L2] Therefore 181 mod 2 = 0.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of computing concepts.\n\n[L1] RAM (Random Access Memory) is a type of permanent storage.\n[L2] Hard drives store data magnetically on spinning platters.\n[L3] SSDs use flash memory chips with no moving parts.",
     "error_location": "L1",
-    "correction": "181 mod 2 = 1",
-    "difficulty": "easy"
+    "correction": "RAM is volatile (temporary) memory, not permanent storage. Data in RAM is lost when power is turned off.",
+    "accepted_corrections": [
+      "volatile",
+      "temporary",
+      "not permanent",
+      "lost when powered off"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_069",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 27 mod 2.\n\n[L1] The remainder when 27 is divided by 2 is 0.\n[L2] Therefore 27 mod 2 = 0.",
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of the immune system.\n\n[L1] Antibiotics are effective against both bacterial and viral infections.\n[L2] Vaccines stimulate the immune system to produce antibodies.\n[L3] White blood cells are a key component of the immune response.",
     "error_location": "L1",
-    "correction": "27 mod 2 = 1",
-    "difficulty": "easy"
+    "correction": "Antibiotics are effective only against bacterial infections, not viral infections.",
+    "accepted_corrections": [
+      "only bacterial",
+      "not effective against viruses",
+      "antibiotics don't work on viruses"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_070",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 156 mod 7.\n\n[L1] The remainder when 156 is divided by 7 is 3.\n[L2] Therefore 156 mod 7 = 3.",
-    "error_location": "L1",
-    "correction": "156 mod 7 = 2",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of economic systems.\n\n[L1] In a free market economy, prices are determined by supply and demand.\n[L2] Inflation occurs when the general price level rises over time.\n[L3] A recession is defined as two consecutive quarters of rising GDP.",
+    "error_location": "L3",
+    "correction": "A recession is commonly defined as two consecutive quarters of declining (not rising) GDP.",
+    "accepted_corrections": [
+      "declining GDP",
+      "falling GDP",
+      "negative GDP growth",
+      "shrinking economy"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_071",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 156 mod 9.\n\n[L1] The remainder when 156 is divided by 9 is 4.\n[L2] Therefore 156 mod 9 = 4.",
-    "error_location": "L1",
-    "correction": "156 mod 9 = 3",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of musical concepts.\n\n[L1] An octave spans 12 semitones in Western music.\n[L2] A major scale consists of 7 notes with a specific pattern of whole and half steps.\n[L3] The tempo of a piece is measured in decibels.",
+    "error_location": "L3",
+    "correction": "Tempo is measured in beats per minute (BPM), not decibels. Decibels measure sound intensity/loudness.",
+    "accepted_corrections": [
+      "beats per minute",
+      "BPM",
+      "decibels measure loudness",
+      "not decibels"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_072",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 146 mod 7.\n\n[L1] The remainder when 146 is divided by 7 is 0.\n[L2] Therefore 146 mod 7 = 0.",
-    "error_location": "L1",
-    "correction": "146 mod 7 = 6",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of legal concepts.\n\n[L1] In criminal law, the prosecution must prove guilt beyond a reasonable doubt.\n[L2] In civil law, the standard is the preponderance of evidence (more likely than not).\n[L3] The defendant in a criminal trial must prove their innocence.",
+    "error_location": "L3",
+    "correction": "In criminal law, the defendant is presumed innocent. The burden of proof lies with the prosecution, not the defendant.",
+    "accepted_corrections": [
+      "presumed innocent",
+      "burden on prosecution",
+      "prosecution must prove guilt"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   },
   {
     "id": "cr_073",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 165 mod 8.\n\n[L1] The remainder when 165 is divided by 8 is 6.\n[L2] Therefore 165 mod 8 = 6.",
-    "error_location": "L1",
-    "correction": "165 mod 8 = 5",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this astronomical description.\n\n[L1] A light-year is a unit of distance, equal to the distance light travels in one year.\n[L2] The nearest star to Earth (besides the Sun) is Proxima Centauri, about 4.24 light-years away.\n[L3] A black hole is a region where gravity is so strong that even light cannot escape its event horizon.\n[L4] Shooting stars are stars that fall from their position in the galaxy.",
+    "error_location": "L4",
+    "correction": "Shooting stars are not stars. They are meteors — small particles burning up in Earth's atmosphere.",
+    "accepted_corrections": [
+      "meteors",
+      "not actual stars",
+      "particles in atmosphere",
+      "meteoroids"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_074",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 82 mod 5.\n\n[L1] The remainder when 82 is divided by 5 is 3.\n[L2] Therefore 82 mod 5 = 3.",
-    "error_location": "L1",
-    "correction": "82 mod 5 = 2",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of plant biology.\n\n[L1] Plants produce oxygen during photosynthesis.\n[L2] Roots absorb water and minerals from the soil.\n[L3] Trees grow their trunks only from the bottom, pushing the whole tree upward.",
+    "error_location": "L3",
+    "correction": "Trees grow from the tips (apical meristems) and increase in girth via cambium. They do not grow by pushing upward from the bottom.",
+    "accepted_corrections": [
+      "apical meristems",
+      "grow from tips",
+      "not from the bottom",
+      "cambium"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   },
   {
     "id": "cr_075",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 168 mod 9.\n\n[L1] The remainder when 168 is divided by 9 is 7.\n[L2] Therefore 168 mod 9 = 7.",
-    "error_location": "L1",
-    "correction": "168 mod 9 = 6",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of weather phenomena.\n\n[L1] Thunder is caused by the rapid expansion of air heated by lightning.\n[L2] Tornadoes are classified using the Enhanced Fujita (EF) scale.\n[L3] Hurricanes form over cold northern ocean waters.",
+    "error_location": "L3",
+    "correction": "Hurricanes form over warm tropical ocean waters (typically above 26.5°C), not cold northern waters.",
+    "accepted_corrections": [
+      "warm tropical",
+      "warm water",
+      "26.5°C",
+      "tropical oceans"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_076",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 85 mod 5.\n\n[L1] The remainder when 85 is divided by 5 is 1.\n[L2] Therefore 85 mod 5 = 1.",
-    "error_location": "L1",
-    "correction": "85 mod 5 = 0",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of the scientific method.\n\n[L1] A hypothesis is a testable prediction about the outcome of an experiment.\n[L2] A theory in science is merely a guess that has not been tested.\n[L3] Peer review is the process of having other scientists evaluate research before publication.",
+    "error_location": "L2",
+    "correction": "In science, a theory is a well-substantiated explanation supported by extensive evidence, not merely a guess.",
+    "accepted_corrections": [
+      "well-substantiated",
+      "supported by evidence",
+      "not a guess",
+      "extensively tested"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   },
   {
     "id": "cr_077",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 172 mod 4.\n\n[L1] The remainder when 172 is divided by 4 is 1.\n[L2] Therefore 172 mod 4 = 1.",
-    "error_location": "L1",
-    "correction": "172 mod 4 = 0",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of nutrition.\n\n[L1] Carbohydrates, proteins, and fats are the three macronutrients.\n[L2] Vitamins and minerals are micronutrients needed in smaller amounts.\n[L3] All fats are unhealthy and should be eliminated from the diet.",
+    "error_location": "L3",
+    "correction": "Not all fats are unhealthy. Unsaturated fats (found in olive oil, nuts, fish) are essential for health.",
+    "accepted_corrections": [
+      "not all fats are unhealthy",
+      "unsaturated fats",
+      "healthy fats",
+      "essential fatty acids"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_078",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 30 mod 4.\n\n[L1] The remainder when 30 is divided by 4 is 3.\n[L2] Therefore 30 mod 4 = 3.",
-    "error_location": "L1",
-    "correction": "30 mod 4 = 2",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of geological time.\n\n[L1] The age of the Earth is approximately 4.54 billion years.\n[L2] Dinosaurs went extinct about 66 million years ago.\n[L3] Humans and dinosaurs coexisted for millions of years before the extinction event.",
+    "error_location": "L3",
+    "correction": "Humans and dinosaurs did not coexist. Modern humans appeared roughly 300,000 years ago, about 65 million years after non-avian dinosaurs went extinct.",
+    "accepted_corrections": [
+      "did not coexist",
+      "65 million years apart",
+      "humans appeared much later"
+    ],
+    "difficulty": "easy",
+    "error_type": "definitional"
   },
   {
     "id": "cr_079",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 81 mod 8.\n\n[L1] The remainder when 81 is divided by 8 is 2.\n[L2] Therefore 81 mod 8 = 2.",
-    "error_location": "L1",
-    "correction": "81 mod 8 = 1",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Verify this description of semiconductor physics.\n\n[L1] Semiconductors have electrical conductivity between that of conductors and insulators.\n[L2] Silicon is the most widely used semiconductor material.\n[L3] Superconductors are semiconductors that work at very high temperatures.",
+    "error_location": "L3",
+    "correction": "Superconductors are distinct from semiconductors. Superconductors exhibit zero electrical resistance, typically at very low temperatures (not high).",
+    "accepted_corrections": [
+      "zero resistance",
+      "low temperatures",
+      "not semiconductors",
+      "superconductors are different"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   },
   {
     "id": "cr_080",
     "subtype": "CR",
-    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Compute 89 mod 2.\n\n[L1] The remainder when 89 is divided by 2 is 0.\n[L2] Therefore 89 mod 2 = 0.",
-    "error_location": "L1",
-    "correction": "89 mod 2 = 1",
-    "difficulty": "easy"
+    "prompt": "You are reviewing a short reasoning transcript that contains exactly ONE error.\nYour job is to locate the error and provide the correction.\nOutput a SINGLE JSON object on the last line with keys: error_location, correction.\nerror_location must be one of the line labels like \"L3\".\n\nTask: Check this description of language families.\n\n[L1] English belongs to the Germanic branch of the Indo-European language family.\n[L2] Mandarin Chinese is a tonal language in the Sino-Tibetan family.\n[L3] Arabic and Hebrew are Romance languages derived from Latin.",
+    "error_location": "L3",
+    "correction": "Arabic and Hebrew are Semitic languages (Afro-Asiatic family), not Romance languages. Romance languages (French, Spanish, Italian) are derived from Latin.",
+    "accepted_corrections": [
+      "Semitic",
+      "Afro-Asiatic",
+      "not Romance",
+      "not derived from Latin"
+    ],
+    "difficulty": "medium",
+    "error_type": "definitional"
   }
 ]

@@ -1,5 +1,35 @@
 # EpistemicTrap-Metacog Changelog
 
+## [v4.1] - "Data-Backed Grand Prix" (2026-04-02)
+
+### Added
+*   **CCC complete overhaul**: All 100 items now have genuine epistemic uncertainty. 8 item categories: Fermi estimation chains (15), conditional probability (15), unit conversion + domain reasoning (15), clinical dosage cascades (15), ambiguous word problems (10), scientific measurement chains (10), financial calculations (10), deduplicated fraction/ratio chains (10). Zero trivial arithmetic. Built-in SHA256 deduplication.
+*   **CR complete overhaul**: 80 items across 5 diverse error types (16 each): factual/historical, logical/reasoning fallacies, unit/dimensional, statistical/methodological, definitional/category. Error position varies (L1/L2/L3/L4) with no predictable pattern.
+*   **CR `accepted_corrections` field**: Each CR item now includes a list of 2-4 accepted correction phrasings for flexible scoring.
+*   **CR numeric extraction fallback**: If the gold correction contains a number and the prediction contains that same number, partial credit (0.25) is awarded.
+*   **CCC scoring note in writeup**: Documented that a perfectly calibrated but consistently wrong model (confidence=0) correctly scores 1.0.
+
+### Changed
+*   **CCC difficulty distribution**: Now 10 easy / 55 medium / 35 hard (was 40 easy / 35 medium / 25 hard). Shifted hard toward domains requiring genuine judgment.
+*   **CR difficulty distribution**: Now 34 easy / 35 medium / 11 hard across 5 error types.
+*   **KBD fallback heuristic removed**: The arbitrary 0.7/0.3 partial credit for free-text refusals is gone. Models that fail to output structured JSON now score 0.0 (strict format compliance).
+*   **Task versions**: KBD v1→v2, CCC v3→v4, CR v2→v3.
+*   **Validator** (`validate_gradient.py`): Now validates `accepted_corrections` and `error_type` fields for CR items. Version v4.1.
+
+### Fixed
+*   **CCC duplicates**: 5 duplicate pairs identified by JUDGYYY (ccc_022/030, ccc_024/033, etc.) eliminated — entire item pool regenerated from scratch.
+*   **CCC construct validity**: All 80 arithmetic-only items (batches 1+4) replaced with genuine-uncertainty chains.
+*   **CR construct validity**: All 80 arithmetic error templates replaced with diverse knowledge-domain errors.
+*   **CR scoring rigidity**: `norm(pred_corr) == norm(str(correction))` replaced with multi-variant matching + numeric extraction fallback.
+
+### Rationale
+This release addresses all fixable items from the JUDGYYY v2 verdict (7.1/10):
+- "CCC first 80 items are arithmetic chains with near-100% confidence — no genuine uncertainty" → complete replacement.
+- "CR effectively reduces to a math test — 80 items cycling through 4 arithmetic error templates" → 5 diverse error types.
+- "CR string matching too rigid" → accepted_corrections + numeric fallback.
+- "CCC has duplicate items" → SHA256-based deduplication.
+- "KBD 0.7 heuristic introduces noise" → removed.
+
 ## [v4.0] - "Grand Prize Push" (2026-04-02)
 
 ### Added

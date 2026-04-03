@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Extended validation script for EpistemicTrap-Metacog v3.1
+Extended validation script for EpistemicTrap-Metacog v4.1
 Validates all 4 task datasets before Kaggle submission
 """
 import json
@@ -55,6 +55,7 @@ def validate_ccc(items):
 def validate_cr(items):
     issues = []
     VALID_DIFFICULTY = {"easy", "medium", "hard"}
+    VALID_ERROR_TYPES = {"factual", "logical", "unit_dimensional", "statistical", "definitional"}
     for item in items:
         for field in ["id", "subtype", "prompt", "error_location", "correction", "difficulty"]:
             if field not in item or item[field] is None or (isinstance(item[field], str) and not item[field].strip()):
@@ -63,6 +64,14 @@ def validate_cr(items):
             issues.append(f"CR {item.get('id', '?')}: Invalid difficulty '{item.get('difficulty')}'")
         if not re.search(r"\[L\d+\]", item.get("prompt", "")):
             issues.append(f"CR {item.get('id', '?')}: Missing line labels in prompt")
+        # v4.1: validate accepted_corrections and error_type
+        ac = item.get("accepted_corrections")
+        if ac is not None:
+            if not isinstance(ac, list) or len(ac) == 0:
+                issues.append(f"CR {item.get('id', '?')}: accepted_corrections must be a non-empty list")
+        et = item.get("error_type")
+        if et is not None and et not in VALID_ERROR_TYPES:
+            issues.append(f"CR {item.get('id', '?')}: Invalid error_type '{et}'")
     return issues
 
 def validate_pressure(items):
@@ -117,7 +126,7 @@ def validate_unique_ids(main_data, pressure_data):
     return [f"Duplicate ID: {d}" for d in dupes]
 
 if __name__ == "__main__":
-    print("EpistemicTrap-Metacog v4.0 — Dataset Validation")
+    print("EpistemicTrap-Metacog v4.1 — Dataset Validation")
     print("=" * 50)
 
     main_data = load_json("metacog_dataset.json")
