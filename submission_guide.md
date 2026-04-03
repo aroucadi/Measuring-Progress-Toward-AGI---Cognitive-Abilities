@@ -1,4 +1,4 @@
-# Complete Submission Guide: EpistemicTrap-Metacog v4.0 (MULTI-NOTEBOOK)
+# Complete Submission Guide: EpistemicTrap-Metacog v4.1 (MULTI-NOTEBOOK)
 ## Kaggle AGI Hackathon — Metacognition Track (Benchmark + Writeup)
 
 This guide is written as an end-to-end checklist so the final submission has **everything judges might look for**: datasets, tasks, benchmark suite, 5+ model evaluations, leaderboard evidence, writeup, and reproducibility artifacts.
